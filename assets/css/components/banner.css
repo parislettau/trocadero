@@ -1,0 +1,66 @@
+.banner {
+    display: flex;
+    background-color: rgba(254, 252, 243, 1);
+    justify-content: space-between;
+    color: #393939, 100%;
+    font-size: 1.625rem;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    padding-top: 10px;
+    /* margin-top: 20px; */
+}
+
+/* .banner-space {
+    height: 12vh;
+} */
+
+.bullet {
+    margin-right: 3px;
+}
+
+.header {
+    width: 53vw;
+    /* margin-top: -10px; */
+}
+
+.nav-menu {
+    width: 27.75rem;
+    display: flex;
+    /* flex-grow: 1; */
+    font-size: 1.625rem;
+}
+
+.menu-items {
+    list-style: none;
+    display: flex;
+    position: sticky;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-top: 0;
+    padding-left: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: #393939;
+}
+
+.menu-items li {
+    margin-left: 5.5px;
+    margin-right: 5.5px;
+}
+
+.active-open:focus:before {
+    content: "•";
+}
+
+/* .space-banner {
+    height: 15px;
+    width: 100%;
+} */
+

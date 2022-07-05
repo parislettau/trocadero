@@ -1,0 +1,10 @@
+title: Shop
+
+sections:
+  link:
+    type: fields
+    fields:
+      link:
+        type: text
+        label: Shop URL
+        help: Enter the external Shop URL here.

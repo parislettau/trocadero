@@ -1,0 +1,60 @@
+title: Site
+
+tabs:
+
+  tab1:
+    label: HOME
+    sections:
+      information:
+        type: pages
+        help: Select each page to edit the content. <br> To edit the homepage grid, first add the exhibition details in the 'Programs' page. <br>Next, navigate to the 'Trocadero Projects Home' section and select the desired program to include in the grid.<br>Please ensure it is selected in one of the first four positions. <br><br>To update the address in both the footer and the 'Visit' section, make the edits within the 'Footer' tab.
+  tab2:
+    label: Footer
+    fields:
+      footerAddress:
+        width: 1/3
+        label: Footer Address
+        type: textarea
+        size: small
+        help: To create a line break, insert <br> between lines.
+      footerHours:
+        width: 1/3
+        label: Footer Hours & Access
+        type: textarea
+        size: small
+      footerCopyright:
+        width: 1/3
+        label: Footer Copyright
+        type: textarea
+        size: small
+      footerAccess:
+        width: 1/3
+        label: Footer Access
+        type: textarea
+        size: small
+      facebook:
+        width: 1/3
+        label: Facebook link
+        type: text
+        size: small
+      instagram:
+        width: 1/3
+        label: Instagram link
+        type: text
+        size: small
+      youtube:
+        width: 1/3
+        label: Youtube link
+        type: text
+        size: small
+      twitter:
+        width: 1/3
+        label: Twitter link
+        type: text
+        size: small
+      soundcloud:
+        width: 1/3
+        label: Soundcloud link
+        type: text
+        size: small
+      

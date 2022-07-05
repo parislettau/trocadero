@@ -1,0 +1,13 @@
+title: Exhibitions
+
+sections:
+  date:
+    type: fields
+    fields:
+      date:
+        type: number
+  programs:
+    type: pages
+    layout: cards
+    template: exhibition
+    help: Drag and drop the image tiles to reorder, the first four programs will appear as the home page grid.

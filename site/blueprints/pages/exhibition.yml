@@ -1,0 +1,58 @@
+title: Exhibition
+
+columns:
+  - width: 1/2
+    sections:
+      info:
+        type: fields
+        fields:
+          artist:
+            type: text
+          date:
+            type: text
+            width: 1/2            
+            label: Exhibit Dates
+            help: Please enter dates in DD.MM.YYYY — DD.MM.YYYY format
+          gallery:
+            label: Gallery
+            type: multiselect
+            options:
+              Gallery 1
+              Gallery 2 
+            width: 1/2  
+            help: If the item is an exhibition, please select the gallery.
+          # tags:
+          #   label: Tags
+          #   type: tags
+          #   options:
+          #     - Exhibition
+          #     - Talk
+          #     - Performance
+          #     - Online
+          #     - Announcement 
+          #   min: 1
+          #   help: Add tags to enable users to filter the programs page.<br>Tags available EXHIBITION, TALK, PERFORMANCE, ONLINE, ANNOUNCEMENT    
+          category:
+            label: Categories & Filters
+            type: multiselect
+            default: false
+            max: 2
+            options:
+              - Exhibition
+              - Talk
+              - Performance
+              - Online
+            max: 1
+            min: 1
+            width: 1/2 
+            help: Add tags to categorise
+               
+          information:
+            type: textarea
+            label: Exhibition Information
+            help: When you are ready to publish the program, be sure to change the status from 'Draft', to 'Public' on this page.<br> The first image will be the program's cover image on the Programs page.                 
+  - width: 1/2
+    sections:  
+      gallery:
+        type: files
+        layout: cards

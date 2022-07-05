@@ -1,0 +1,23 @@
+title: About
+
+sections:
+  info:
+    type: fields
+    fields:
+      text:
+        type: textarea
+        width: 1/2
+      bio:
+        type: textarea
+        width: 1/2
+        label: People Section Bio
+      committee:
+        type: textarea
+        width: 1/2
+        help: Insert committee members' and volunteers' names here, to create a new line follow each name with a line break.
+      volunteers:
+        type: textarea
+        width: 1/2
+      past:
+        type: textarea
+      

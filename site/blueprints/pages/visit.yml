@@ -1,0 +1,9 @@
+title: Visit
+
+sections:
+  covid:
+    type: fields
+    fields:
+      covidsafe:
+        type: textarea
+        label: COVIDSafe Information
