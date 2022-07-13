@@ -1,11 +1,17 @@
 {
-    "require": {
-      "getkirby/cms": "^3.7"
-    },
-    "config": {
-      "optimize-autoloader": true,
-        "allow-plugins": {
-            "getkirby/composer-installer": true
-        }
+  "require": {
+    "getkirby/cms": "^3.7"
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "allow-plugins": {
+      "getkirby/composer-installer": true
     }
+  },
+  "scripts": {
+    "start": [
+      "Composer\\Config::disableProcessTimeout",
+      "@php -S localhost:8000 kirby/router.php"
+    ]
   }
+}
