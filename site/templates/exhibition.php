@@ -1,13 +1,12 @@
 <?php snippet('header') ?>
 
-    
 <body>
-    
-    <div div id="main" class="page-container">
+
+    <div id="main" class="page-container">
         <div class="main-container">
             <?php snippet('visit_about') ?>
             <div class="space-banner">
-                
+
             </div>
             <?php snippet('banner') ?>
 

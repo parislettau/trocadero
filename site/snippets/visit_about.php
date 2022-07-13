@@ -1,9 +1,10 @@
-<div id="myTopSidebar" class="top-sidebar" style="display:none">
+<div id="myTopSidebar" class="top-sidebar">
+    <!-- <div id="myTopSidebar" class="top-sidebar" style="display:none"> -->
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">CLOSE</a>
     <div class="about-container">
         <span class="top-title">ABOUT</span><br>
         <p><?= page('about')->text() ?></p>
-        
+
     </div>
 
     <div class="people-container">
@@ -26,7 +27,7 @@
             <p><?= page('about')->past() ?></p>
         </div>
     </div>
-    
+
     <div class="visit-container">
         <span class="top-title">VISIT</span><br><br>
         <?= $site->footeraddress() ?><br><br>
