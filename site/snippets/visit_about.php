@@ -14,10 +14,12 @@
         </div>
         <div class="members-volunteers">
             <div class="members">
+                <br>
                 <span>COMMITTEE MEMBERS</span><br>
                 <?= page('about')->committee() ?>
             </div>
             <div class="volunteers">
+                <br>
                 <span>VOLUNTEERS</span><br>
                 <?= page('about')->volunteers() ?>
             </div>

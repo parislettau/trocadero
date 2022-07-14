@@ -2,7 +2,7 @@ Title: Like Cures Likes
 
 ----
 
-Artist: Chunxiao Qu
+Artist: 
 
 ----
 
@@ -50,6 +50,32 @@ Layout:
                     {
                         "content": {
                             "images": [
+                                "image-2.jpg",
+                                "chunxiao_edits-7272.jpg"
+                            ]
+                        },
+                        "id": "84ab4a49-61a2-4cd8-87dd-8dbd8a6b1571",
+                        "isHidden": false,
+                        "type": "gallery"
+                    }
+                ],
+                "id": "46079798-bf50-4b11-bbed-9b0cc4ff6e24",
+                "width": "1/1"
+            }
+        ],
+        "id": "352c3199-4e98-468e-8e9d-8cb0a64dee0c"
+    },
+    {
+        "attrs": {
+            "class": "",
+            "id": ""
+        },
+        "columns": [
+            {
+                "blocks": [
+                    {
+                        "content": {
+                            "images": [
                                 "chunxiao_edits-7272.jpg",
                                 "image-2.jpg"
                             ]
@@ -64,107 +90,6 @@ Layout:
             }
         ],
         "id": "f3474b8a-f402-4982-a01b-e91992b3dddd"
-    },
-    {
-        "attrs": {
-            "class": "",
-            "id": ""
-        },
-        "columns": [
-            {
-                "blocks": [
-                    {
-                        "content": {
-                            "location": "kirby",
-                            "image": [
-                                "chunxiao_edits-7272.jpg"
-                            ],
-                            "src": "",
-                            "alt": "",
-                            "caption": "",
-                            "link": "",
-                            "ratio": "",
-                            "crop": "false"
-                        },
-                        "id": "1927ffd1-14d4-474b-aef7-92f0face6198",
-                        "isHidden": false,
-                        "type": "image"
-                    }
-                ],
-                "id": "91f99e75-9cdf-42f4-93df-5cfd1187c915",
-                "width": "1/4"
-            },
-            {
-                "blocks": [
-                    {
-                        "content": {
-                            "location": "kirby",
-                            "image": [
-                                "chunxiao_edits-7272.jpg"
-                            ],
-                            "src": "",
-                            "alt": "",
-                            "caption": "",
-                            "link": "",
-                            "ratio": "",
-                            "crop": "false"
-                        },
-                        "id": "e222ec90-c5f9-4c30-9085-1c12fc4e382f",
-                        "isHidden": false,
-                        "type": "image"
-                    }
-                ],
-                "id": "b4e4c189-7d81-4497-8033-3ac5d07e5ef7",
-                "width": "1/4"
-            },
-            {
-                "blocks": [
-                    {
-                        "content": {
-                            "location": "kirby",
-                            "image": [
-                                "chunxiao_edits-7272.jpg"
-                            ],
-                            "src": "",
-                            "alt": "",
-                            "caption": "",
-                            "link": "",
-                            "ratio": "",
-                            "crop": "false"
-                        },
-                        "id": "ae8c8dde-ab44-4193-bded-ecafa8f01b4b",
-                        "isHidden": false,
-                        "type": "image"
-                    }
-                ],
-                "id": "0562e353-4381-4097-8a77-b9260f9f36e3",
-                "width": "1/4"
-            },
-            {
-                "blocks": [
-                    {
-                        "content": {
-                            "location": "kirby",
-                            "image": [
-                                "chunxiao_edits-7272.jpg"
-                            ],
-                            "src": "",
-                            "alt": "",
-                            "caption": "",
-                            "link": "",
-                            "ratio": "",
-                            "crop": "false"
-                        },
-                        "id": "baee0013-ac7f-4f0e-befd-63fe7248044d",
-                        "isHidden": false,
-                        "type": "image"
-                    }
-                ],
-                "id": "c9ca2a0c-551a-4226-9129-3683a352b4cc",
-                "width": "1/4"
-            }
-        ],
-        "id": "6244f9a5-f7d2-44ff-93f9-797fbfbd9a15"
     }
 ]
 
@@ -172,7 +97,7 @@ Layout:
 
 Cover:
 
-- image-2.jpg
+- chunxiao_edits-7272.jpg
 
 ----
 

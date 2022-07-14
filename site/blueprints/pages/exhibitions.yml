@@ -9,5 +9,7 @@ sections:
   programs:
     type: pages
     layout: cards
-    template: exhibition
+    templates:
+      - exhibition
+      - program
     help: Drag and drop the image tiles to reorder, the first four programs will appear as the home page grid.

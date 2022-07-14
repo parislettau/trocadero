@@ -1,6 +1,10 @@
 .about-container,
 .visit-container {
   width: 25%;
+
+  text-align: justify;
+  word-break: break-word;
+  hyphens: auto;
 }
 
 .people-container {
