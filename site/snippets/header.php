@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,7 +11,20 @@
     <!-- Google result description -->
     <meta name="description" content="Trocadero Art Space is an artist-run initiative focused on presenting new and contemporary art through a diverse and inclusive program of exhibitions; public programs; collaborative events; and community-based projects.">
     <!-- kirby css -->
-    <?= css('assets/css/style.css') ?>
+    <?= css([
+        'assets/css/lightbox.css',
+        'assets/css/style.css',
+        '@auto'
+    ]) ?>
+    <!-- kirby js -->
+    <?= js('assets/js/script.js') ?>
+    <?= js('assets/js/lightbox.js') ?>
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 </head>
 
-
+<body [date-template]="<?= $page->template() ?>">
+    <?php snippet('visit_about') ?>
+    <?php snippet('ticker') ?>
+    <?php snippet('nav') ?>

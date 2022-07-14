@@ -18,6 +18,68 @@ Category: Exhibition
 
 ----
 
+Layout:
+
+[
+    {
+        "attrs": {
+            "class": "",
+            "id": ""
+        },
+        "columns": [
+            {
+                "blocks": [
+                    {
+                        "content": {
+                            "text": "Like Cures Like\n\nChunxiao Qu is a Chinese native speaker, operating in the confines of English poetry in order to agitate our understanding of linguistic signifiers. Short bursts of neurotic speech are jotted down, then reformulated into designs that are then fabricated in neon lighting by factories in her homeland with which she has developed a working bond. By subverting capitalism’s mode of communication against itself, evoking homeopathic medicine’s theory of ‘like cures like’, Chunxiao hopes to attack our internalised dogmatic structures. \n\nWritten by: Lia Morgan"
+                        },
+                        "id": "ecac907b-3bd8-468c-bdb7-f87f803fbe15",
+                        "isHidden": false,
+                        "type": "markdown"
+                    }
+                ],
+                "id": "caee59cb-8ee9-48da-b856-635e1283abf0",
+                "width": "1/1"
+            }
+        ],
+        "id": "91b432f6-c71e-4b2b-9931-f9220b42b52f"
+    },
+    {
+        "attrs": {
+            "class": "",
+            "id": ""
+        },
+        "columns": [
+            {
+                "blocks": [
+                    {
+                        "content": {
+                            "images": [
+                                "chunxiao_edits-7272.jpg",
+                                "image-2.jpg"
+                            ]
+                        },
+                        "id": "82fe479d-62f3-43fe-9cf2-cb0befe48c58",
+                        "isHidden": false,
+                        "type": "gallery"
+                    }
+                ],
+                "id": "3291503e-7e12-4eb7-b2bb-52187a1e0123",
+                "width": "1/1"
+            }
+        ],
+        "id": "f3474b8a-f402-4982-a01b-e91992b3dddd"
+    }
+]
+
+----
+
+Cover:
+
+- image-2.jpg
+
+----
+
 Information:
 
 Like Cures Like
@@ -28,9 +90,7 @@ Written by: Lia Morgan
 
 ----
 
-Cover:
-
-- image-2.jpg
+Blocks: [{"content":{"images":["chunxiao_edits-7272.jpg","image-2.jpg"]},"id":"46c73f03-3502-4245-afec-66c0a2a4a023","isHidden":false,"type":"gallery"}]
 
 ----
 

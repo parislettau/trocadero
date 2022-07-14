@@ -34,4 +34,15 @@
         <img src="<?= url('/assets/img/footer-logos.png') ?>" alt="Maribyrnong Arts and Culture" class="footer-logo">
     </div>
 </div>
-
+<script>
+    // Lightbox
+    Array.from(document.querySelectorAll("[data-lightbox]")).forEach(
+        (element) => {
+            element.onclick = (e) => {
+                e.preventDefault();
+                basicLightbox.create(`<img src="${element.href}">`).show();
+            };
+        }
+    );
+</script>
+</body>
