@@ -2,9 +2,9 @@ html {
   font-size: calc(calc(60% + 0.8vmin));
 }
 
-* {
-  font-size: 1rem;
-}
+// * {
+//   font-size: 1rem;
+// }
 
 body {
   font-family: Arial, sans-serif;
@@ -142,10 +142,12 @@ a {
   .people-container,
   .visit-container {
     width: 95%;
+    text-align: justify;
   }
 
   .people-container {
     margin: 0;
+    text-align: justify;
   }
 
   /* projects */
