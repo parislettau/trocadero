@@ -1,4 +1,3 @@
-
 <div class="main-exhibition-container">
     <div class="year-column">
         <!-- </?= page()->date() ?> -->
@@ -11,7 +10,7 @@
 
     <div class="exhibition-card-container">
 
-        <?php foreach ($items = $pages->children()->listed()->paginate(4)->sortBy('date', 'desc') as $item): ?>
+        <?php foreach ($items = $pages->children()->listed()->paginate(4)->sortBy('date', 'desc') as $item) : ?>
             <div class="exhibition-card">
                 <div class="grid-header">
                     <div class="date">
@@ -24,7 +23,7 @@
 
                 <a href="<?= $item->url() ?>">
                     <div class="exhibit-image">
-                        <?php if($image = $item->image()): ?>
+                        <?php if ($image = $item->image()) : ?>
                             <img src="<?= $image->url() ?>" alt="exhibit-img">
                         <?php endif ?>
                     </div>
@@ -45,11 +44,11 @@
                 </a>
             </div>
 
-            
-        <?php endforeach ?>
-    
 
-        
+        <?php endforeach ?>
+
+
+
     </div>
 
 
@@ -59,6 +58,3 @@
     <a href="<?= $items->pagination()->prevPageUrl() ?>" aria-label="Previous">&larr;</a>
     <a href="<?= $items->pagination()->nextPageUrl() ?>" aria-label="Next">&rarr;</a>
 </nav>
-
-
-

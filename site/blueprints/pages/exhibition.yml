@@ -7,7 +7,18 @@ columns:
         type: fields
         fields:
           artist:
-            type: text
+            type: tags
+            icon: person
+          startDate:
+            label: Start Date
+            type: date
+            width: 1/2
+            display: DD.MM.YYYY
+          endDate:
+            label: End Date
+            type: date
+            width: 1/2
+            display: DD.MM.YYYY
           date:
             type: text
             width: 1/2
@@ -33,12 +44,10 @@ columns:
             min: 1
             width: 1/2
             help: Add tags to categorise
-          # information:
-          #   type: textarea
-          #   label: Exhibition Information
-          #   help: When you are ready to publish the program, be sure to change the status from 'Draft', to 'Public' on this page.<br> The first image will be the program's cover image on the Programs page.
-          # blocks:
-          #   type: blocks
+          information:
+            type: textarea
+            label: Exhibition Information
+            help: When you are ready to publish the program, be sure to change the status from 'Draft', to 'Public' on this page.<br> The first image will be the program's cover image on the Programs page.
           layout:
             type: layout
             pretty: true

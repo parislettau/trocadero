@@ -12,7 +12,7 @@
                                         </a>
                                 <?php endif; ?>
                                 <div class="image-info">
-                                        <span><?= $program->title() ?> <?= $program->artist() ?> <?= $program->date() ?> <?= $program->gallery() ?></span>
+                                        <span><?= $program->title() ?> <?= $program->artist() ?> <?= $program->startDate()->toDate("d.m.Y") ?><?php if ($program->startDate()->isNotEmpty() && $program->endDate()->isNotEmpty()) : ?>—<?php endif ?><?= $program->endDate()->toDate("d.m.Y") ?> <?= $program->gallery() ?></span>
                                 </div>
                         </div>
                 </div>

@@ -36,7 +36,7 @@
              <div class="exhibition-card <?php if ($filter = $item->category()) : ?> <?= $filter ?> <?php endif ?>">
                  <div class="grid-header">
                      <div class="date">
-                         <?= $item->date() ?>
+                         <?= $item->startDate()->toDate("d.m.Y") ?><?php if ($item->startDate()->isNotEmpty() && $item->endDate()->isNotEmpty()) : ?>—<?php endif ?><?= $item->endDate()->toDate("d.m.Y") ?>
                      </div>
                      <div class="gallery-type">
                          <?= $item->gallery() ?>
