@@ -279,6 +279,60 @@
             "install-path": "../getkirby/composer-installer"
         },
         {
+            "name": "johannschopplich/kirby-blurry-placeholder",
+            "version": "1.5.0",
+            "version_normalized": "1.5.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/johannschopplich/kirby-blurry-placeholder.git",
+                "reference": "33d1f792bdf8818008e09ce87e85dd63ca7e88fd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/johannschopplich/kirby-blurry-placeholder/zipball/33d1f792bdf8818008e09ce87e85dd63ca7e88fd",
+                "reference": "33d1f792bdf8818008e09ce87e85dd63ca7e88fd",
+                "shasum": ""
+            },
+            "require": {
+                "getkirby/composer-installer": "^1.2",
+                "php": ">=7.4.0"
+            },
+            "require-dev": {
+                "getkirby/cms": "^3.6"
+            },
+            "time": "2022-03-17T12:30:45+00:00",
+            "type": "kirby-plugin",
+            "extra": {
+                "kirby-cms-path": false
+            },
+            "installation-source": "dist",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Johann Schopplich",
+                    "email": "pkg@johannschopplich.com",
+                    "homepage": "https://johannschopplich.com"
+                }
+            ],
+            "description": "Blurry image placeholders and lazy loading for better UX",
+            "homepage": "https://github.com/johannschopplich/kirby-blurry-placeholder#readme",
+            "keywords": [
+                "image",
+                "kirby",
+                "lazyload",
+                "placeholder",
+                "seo"
+            ],
+            "support": {
+                "issues": "https://github.com/johannschopplich/kirby-blurry-placeholder/issues",
+                "source": "https://github.com/johannschopplich/kirby-blurry-placeholder/tree/v1.5.0"
+            },
+            "install-path": "../../site/plugins/kirby-blurry-placeholder"
+        },
+        {
             "name": "laminas/laminas-escaper",
             "version": "2.10.0",
             "version_normalized": "2.10.0.0",

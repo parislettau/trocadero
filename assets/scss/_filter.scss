@@ -1,0 +1,212 @@
+.exhibitions-filtered-container {
+  margin-left: 25%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 14px;
+
+  .exhibitions-item {
+    display: flex;
+    flex-direction: column;
+    &-head {
+      white-space: nowrap;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      .date {
+      }
+      .gallery {
+        text-align: right;
+      }
+    }
+    &-image {
+      filter: contrast(10) grayscale(90%) sepia(50%) opacity(80%);
+
+      &:hover {
+        mix-blend-mode: normal !important;
+        filter: none !important;
+      }
+    }
+    &-text {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 1rem;
+      line-height: 98%;
+
+      text-align: justify;
+      letter-spacing: 0.01rem;
+      color: #393939;
+
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  }
+}
+
+// .filter {
+//   font-size: var(--small);
+
+//   &-pane {
+//     height: calc(100vh - 3.5rem);
+//     width: 25vw;
+//     position: fixed;
+//     top: 3.5rem;
+//     bottom: 0;
+//     right: -30vw;
+//     background: var(--home);
+//     color: white;
+//     transition: right var(--normal) var(--ease);
+//     overflow: scroll;
+//     font-size: var(--small);
+//     line-height: 1.15;
+//     transition: var(--normal) var(--ease);
+//     font-family: union-regular, sans-serif;
+
+//     @media(max-width: $table_portrait) {
+//       width: 40%;
+//       right: -100%;
+//     }
+
+//     @media(max-width: $mobile) {
+//       top: unset;
+//       right: 0;
+//       bottom: -55vh;
+//       bottom: calc(var(--vh, 1vh) * -55);
+//       height: 50vh;
+//       height: calc(var(--vh, 1vh) * 50);
+//       width: 100vw;
+//       border-top-left-radius: 9px;
+//       border-top-right-radius: 9px;
+//       top: unset;
+//       //      bottom: unset;
+
+//     }
+
+//     &.show {
+//       right: 0;
+
+//       @media(max-width: $mobile) {
+//         //        top: 45vh;
+//         //        top: calc(var(--vh, 1vh) * 45);
+//         bottom: 0;
+
+//       }
+
+//     }
+
+//     p {
+//       font-size: var(--small);
+//     }
+
+//     &-inner {
+//       position: absolute;
+//       top: 0;
+//       overflow: scroll;
+//       padding: 0 var(--wide);
+//       width: 100%;
+//       height: 100%;
+
+//       & div:nth-child(5) {
+//         margin-bottom: var(--max);
+//       }
+
+//       & > div:nth-child(1) {
+//         background: var(--home);
+//         z-index: 10;
+//         padding-top: var(--wide);
+//         box-shadow: 0px 11px 16px 5px var(--home);
+//       }
+
+//     }
+
+//   }
+
+//   &-close {
+//     @include close_panes
+//   }
+// }
+
+// .filters {
+
+//   display: flex;
+//   flex-direction: column;
+
+//   &-venue {}
+
+//   &-author {
+//     //         display: none;
+//   }
+// }
+
+// .artists-trigger {
+//   cursor: pointer;
+
+//   &-icon {
+//     transform: rotate(-45deg);
+//     transition: 0.25s;
+//     width: 12px;
+//     height: 12px;
+//     background: transparent;
+//     border-right: 1px solid white;
+//     border-bottom: 1px solid white;
+//     border-left: none;
+//     border-top: none;
+//     margin: 0 var(--default) 0 0;
+
+//     &.rotate {
+//       transform: rotate(45deg)
+//     }
+//   }
+// }
+
+// .tag-filter {
+//   margin-top: var(--small);
+
+//   &:first-of-type {
+//     margin-top: 0;
+//   }
+
+//   a {
+//     text-decoration: none;
+//     color: white;
+//     display: flex;
+
+//     span {
+//       &.check-circle {
+//         margin-left: 10px;
+// //        padding-top: 2px;
+//       }
+//     }
+
+//     &.active {
+//       & > svg {
+
+//         &.checked {
+//           display: block;
+//         }
+
+//         &.unchecked {
+//           display: none;
+//         }
+//       }
+
+//       span.underline {
+//         text-decoration: underline;
+//       }
+
+//     }
+//   }
+
+//   .active {
+//     text-decoration: none;
+//   }
+// }
+
+// svg {
+//   transform: translateY(2px);
+
+//   &.checked {
+//     display: none;
+//   }
+// }

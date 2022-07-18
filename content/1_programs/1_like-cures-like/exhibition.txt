@@ -2,7 +2,7 @@ Title: Like Cures Likes
 
 ----
 
-Artist: Chunxiao Qu
+Artists: 
 
 ----
 
@@ -11,10 +11,6 @@ Startdate: 2022-07-16
 ----
 
 Enddate: 2020-04-04
-
-----
-
-Date: 18.03.2020 — 04.04.2020
 
 ----
 
@@ -50,7 +46,6 @@ Layout:
                     {
                         "content": {
                             "images": [
-                                "image-2.jpg",
                                 "chunxiao_edits-7272.jpg"
                             ]
                         },
@@ -76,8 +71,7 @@ Layout:
                     {
                         "content": {
                             "images": [
-                                "chunxiao_edits-7272.jpg",
-                                "image-2.jpg"
+                                "chunxiao_edits-7272.jpg"
                             ]
                         },
                         "id": "82fe479d-62f3-43fe-9cf2-cb0befe48c58",
@@ -95,9 +89,15 @@ Layout:
 
 ----
 
-Cover:
+Artist: Chunxiao Qu
 
-- chunxiao_edits-7272.jpg
+----
+
+Date: 18.03.2020 — 04.04.2020
+
+----
+
+Cover: - chunxiao_edits-7272.jpg
 
 ----
 

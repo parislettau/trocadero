@@ -2,11 +2,15 @@ Title: Living Room - Volume II
 
 ----
 
-Artist: Nina Sanadze
+Artists: 
 
 ----
 
-Date: 12.12.2021 — 13.12.2012
+Startdate: 
+
+----
+
+Enddate: 
 
 ----
 
@@ -32,6 +36,25 @@ Read Sanadze’s extended essay (link: https://docs.google.com/document/d/e/2PAC
 (link: http://www.trocaderoartspace.com.au/wp-content/uploads/2021/10/Pages-from-Bulletin_Issue68_July2021-1.pdf text: Read Azza Zein’s review of the series, first published in the Women’s Art Register Bulletin (July 2021).)
 
 (link: https://busprojects.org.au/program/living-room text: Volume I of this series has been presented by Bus Projects.)
+
+----
+
+Layout: 
+
+----
+
+Cover:
+
+- >
+  living-room_by-nina-sanadze_volume-ii-cover-image.jpeg
+
+----
+
+Artist: Nina Sanadze
+
+----
+
+Date: 12.12.2021 — 13.12.2012
 
 ----
 

@@ -6,7 +6,7 @@ columns:
       info:
         type: fields
         fields:
-          artist:
+          artists:
             type: tags
             icon: person
           startDate:
@@ -19,11 +19,11 @@ columns:
             type: date
             width: 1/2
             display: DD.MM.YYYY
-          date:
-            type: text
-            width: 1/2
-            label: Exhibit Dates
-            help: Please enter dates in DD.MM.YYYY — DD.MM.YYYY format
+          # date:
+          #   type: text
+          #   width: 1/2
+          #   label: Exhibit Dates
+          #   help: Please enter dates in DD.MM.YYYY — DD.MM.YYYY format
           gallery:
             label: Gallery
             type: multiselect
@@ -68,16 +68,17 @@ columns:
                   width: 1/2
   - width: 1/2
     sections:
-      cover:
-        type: fields
-        fields:
-          cover:
-            help: Upload an image processed with a "threshold" filter (you can Google it to do online or use Photoshop). It's very easy.
-            extends: sections/cover
-            template: cover
-            required: true
+      # cover:
+      #   type: fields
+      #   fields:
+      #     cover:
+      #       help: Upload an image processed with a "threshold" filter (you can Google it to do online or use Photoshop). It's very easy.
+      #       extends: sections/cover
+      #       template: cover
+      #       required: true
 
       gallery:
         type: files
         layout: cards
-        template: image
+        help: Drag images to change order. The first image will be the thumbnail.
+        # template: image

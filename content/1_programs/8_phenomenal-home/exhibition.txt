@@ -2,11 +2,15 @@ Title: Phenomenal Home
 
 ----
 
-Artist: MARLO W
+Artists: 
 
 ----
 
-Date: 23.06.2021 — 17.07.2021
+Startdate: 
+
+----
+
+Enddate: 
 
 ----
 
@@ -19,3 +23,21 @@ Category: Exhibition
 ----
 
 Information: Phenomenal Home is a series of works that investigate the idea of the human body as a home. By externalising internal negotiations of the mind/body divide, the works bring into question what it means to be ‘at home’ with oneself. The works also reflect the external physical home as an extension of a human subject, drawing attention to the performance of the union between mind, body, and home. Foremost it is a celebration of bodies, particularly agender and transgender peoples and queer connection.
+
+----
+
+Layout: 
+
+----
+
+Cover:
+
+- marlo-w-promo-72dpi-1.jpeg
+
+----
+
+Artist: MARLO W
+
+----
+
+Date: 23.06.2021 — 17.07.2021

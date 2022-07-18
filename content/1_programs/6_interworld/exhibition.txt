@@ -2,11 +2,15 @@ Title: Interworld
 
 ----
 
-Artist: Devika Bilimoria and A Hanley
+Artists: 
 
 ----
 
-Date: 12.12.2021 — 13.12.2012
+Startdate: 
+
+----
+
+Enddate: 
 
 ----
 
@@ -57,6 +61,25 @@ Engaging in improvisation, their site-responsive practice engages ethical and ph
 They have developed work and been commissioned by Liquid Architecture, McClelland Sculpture Park and Gallery, Brunswick Mechanics Institute, Speak Percussion, Avantwhatever Festival and Unlikely: Journal for Creative Arts. 
 
 Troc Talks Online is supported by Maribyrnong City Council.
+
+----
+
+Layout: 
+
+----
+
+Cover:
+
+- >
+  interworld2021_devika-bilimoria-a-hanley_photo-courtesy-of-artists_004.jpeg
+
+----
+
+Artist: Devika Bilimoria and A Hanley
+
+----
+
+Date: 12.12.2021 — 13.12.2012
 
 ----
 

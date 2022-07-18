@@ -2,11 +2,15 @@ Title: Beneath
 
 ----
 
-Artist: Clare Steele
+Artists: 
 
 ----
 
-Date: 4.12.2019 — 21.12.2019
+Startdate: 
+
+----
+
+Enddate: 
 
 ----
 
@@ -30,6 +34,24 @@ Image:
 Clare Steele
 Marked
 2019
+
+----
+
+Layout: 
+
+----
+
+Cover:
+
+- clare-steele-marked-640x360.jpeg
+
+----
+
+Artist: Clare Steele
+
+----
+
+Date: 4.12.2019 — 21.12.2019
 
 ----
 

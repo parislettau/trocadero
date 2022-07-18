@@ -19,6 +19,8 @@
     <!-- kirby js -->
     <?= js('assets/js/script.js') ?>
     <?= js('assets/js/lightbox.js') ?>
+    <!-- lazyloader for kirby-blurry-placeholder plugin -->
+    <script src="https://unpkg.com/loadeer" defer init></script>
     <!-- jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
