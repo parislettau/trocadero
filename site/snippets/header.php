@@ -28,5 +28,4 @@
 
 <body [date-template]="<?= $page->template() ?>">
     <?php snippet('visit_about') ?>
-    <?php snippet('ticker') ?>
     <?php snippet('nav') ?>

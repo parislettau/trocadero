@@ -2,11 +2,11 @@ Title: Like Cures Likes
 
 ----
 
-Artists: 
+Artists: Chunxiao Qu
 
 ----
 
-Startdate: 2022-07-16
+Startdate: 2020-03-18
 
 ----
 
@@ -14,11 +14,15 @@ Enddate: 2020-04-04
 
 ----
 
+Date: 
+
+----
+
 Gallery: Gallery 1
 
 ----
 
-Category: Exhibition
+Category: Exhibition, Talk
 
 ----
 
@@ -90,10 +94,6 @@ Layout:
 ----
 
 Artist: Chunxiao Qu
-
-----
-
-Date: 18.03.2020 — 04.04.2020
 
 ----
 

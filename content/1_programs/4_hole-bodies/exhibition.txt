@@ -2,15 +2,19 @@ Title: Hole Bodies
 
 ----
 
-Artists: 
+Artists: Annie Yuchen Song
 
 ----
 
-Startdate: 
+Startdate: 2020-02-05
 
 ----
 
-Enddate: 
+Enddate: 2020-02-22
+
+----
+
+Date: —
 
 ----
 
@@ -42,10 +46,6 @@ Cover:
 ----
 
 Artist: Annie Yuchen Song
-
-----
-
-Date: 05.02.2020 — 22.02.2020
 
 ----
 

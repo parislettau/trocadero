@@ -6,6 +6,7 @@
     <div class="main-container">
         <!-- exhibition filtered -->
         <?php snippet('exhibitions/filtered') ?>
+        <?php snippet('exhibitions/filter') ?>
     </div>
 </main>
 

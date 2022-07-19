@@ -1,4 +1,4 @@
-<div class="nav" id="nav">
+<nav class="nav" id="nav">
     <!-- logo -->
     <div class="header">
         <a href="<?= $site->url() ?>" class="logo">
@@ -23,4 +23,4 @@
             </li>
         </ul>
     </div>
-</div>
+</nav>

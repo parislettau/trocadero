@@ -3,23 +3,30 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 14px;
-
+  min-height: 85vh;
+  margin-top: 50px;
   .exhibitions-item {
     display: flex;
     flex-direction: column;
     &-head {
       white-space: nowrap;
-
       display: grid;
       grid-template-columns: 1fr 1fr;
-      .date {
+      margin-bottom: 14px;
+
+      .dates {
       }
       .gallery {
         text-align: right;
+        text-decoration: underline;
       }
     }
     &-image {
-      filter: contrast(10) grayscale(90%) sepia(50%) opacity(80%);
+      filter: grayscale(1);
+      // filter: contrast(10) grayscale(95%) sepia(0%) opacity(80%);
+      img {
+        width: 100%;
+      }
 
       &:hover {
         mix-blend-mode: normal !important;
@@ -27,19 +34,75 @@
       }
     }
     &-text {
+      margin-top: 14px;
       font-style: normal;
       font-weight: 700;
       font-size: 1rem;
-      line-height: 98%;
-
       text-align: justify;
-      letter-spacing: 0.01rem;
       color: #393939;
 
       display: -webkit-box;
-      -webkit-line-clamp: 3;
+      -webkit-line-clamp: 8;
       -webkit-box-orient: vertical;
       overflow: hidden;
+    }
+  }
+}
+
+.filter-pane {
+  // position: fixed;
+  // left: 0;
+  // bottom: 0;
+  padding-bottom: 14px;
+  position: sticky;
+  bottom: 0;
+  width: 25%;
+  padding-right: 14px;
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 107.5%;
+  color: #393939;
+  text-transform: uppercase;
+}
+
+.filter-trigger {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid rgb(0, 0, 0);
+  justify-content: space-between;
+  margin-bottom: 6px;
+
+  &-icon {
+    transform: rotate(-45deg);
+    transition: 0.25s;
+    width: 12px;
+    height: 12px;
+    background: transparent;
+    border-right: 1px solid rgb(0, 0, 0);
+    border-bottom: 1px solid rgb(0, 0, 0);
+    border-left: none;
+    border-top: none;
+    margin: 0 var(--default) 0 0;
+
+    &.rotate {
+      transform: rotate(45deg);
+    }
+  }
+}
+
+.tag-filter {
+  a {
+    &::before {
+      content: "〇 ";
+    }
+  }
+
+  a.active {
+    &::before {
+      content: "◉ ";
     }
   }
 }
@@ -136,27 +199,6 @@
 
 //   &-author {
 //     //         display: none;
-//   }
-// }
-
-// .artists-trigger {
-//   cursor: pointer;
-
-//   &-icon {
-//     transform: rotate(-45deg);
-//     transition: 0.25s;
-//     width: 12px;
-//     height: 12px;
-//     background: transparent;
-//     border-right: 1px solid white;
-//     border-bottom: 1px solid white;
-//     border-left: none;
-//     border-top: none;
-//     margin: 0 var(--default) 0 0;
-
-//     &.rotate {
-//       transform: rotate(45deg)
-//     }
 //   }
 // }
 

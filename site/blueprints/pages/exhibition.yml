@@ -19,11 +19,11 @@ columns:
             type: date
             width: 1/2
             display: DD.MM.YYYY
-          # date:
-          #   type: text
-          #   width: 1/2
-          #   label: Exhibit Dates
-          #   help: Please enter dates in DD.MM.YYYY — DD.MM.YYYY format
+          date:
+            type: text
+            width: 1/2
+            label: Exhibit Dates
+            help: Please enter dates in DD.MM.YYYY — DD.MM.YYYY format
           gallery:
             label: Gallery
             type: multiselect

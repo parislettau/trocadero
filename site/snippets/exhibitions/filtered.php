@@ -6,6 +6,13 @@
         <?php foreach ($program->artists()->split(',') as $tag) : ?>
         <?= str::slug($tag) ?>
         <?php endforeach ?>
+
+        <?= $program->startDate()->toDate("Y") ?>
+        
+        <?php foreach ($program->category()->split(',') as $tag) : ?>
+        <?= str::slug($tag) ?>
+        <?php endforeach ?>
+
         ">
 
             <!-- link -->
@@ -32,8 +39,8 @@
                 <div class="exhibitions-item-text">
                     <span>
                         <?= $program->title() ?><br>
-                        <?= $program->artist() ?><br>
-                        <?= $program->information()->excerpt($chars = 100, $strip = true, $rep = ' …') ?>
+                        <?= $program->artist() ?><br><br>
+                        <?= $program->information()->excerpt($chars = 400, $strip = true, $rep = ' …') ?>
                     </span>
                 </div>
             </a>

@@ -2,15 +2,19 @@ Title: Volliewood
 
 ----
 
-Artists: 
+Artists: Volliewood
 
 ----
 
-Startdate: 
+Startdate: 2021-12-12
 
 ----
 
-Enddate: 
+Enddate: 2021-12-13
+
+----
+
+Date: —
 
 ----
 
@@ -30,17 +34,11 @@ Layout:
 
 ----
 
-Cover:
-
-- volliewood.jpg
+Cover: - volliewood.jpg
 
 ----
 
 Artist: Patrick Zaia
-
-----
-
-Date: 12.12.2021 — 13.12.2012
 
 ----
 

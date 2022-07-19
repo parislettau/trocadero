@@ -2,15 +2,19 @@ Title: Living Room - Volume II
 
 ----
 
-Artists: 
+Artists: Nina Sanadze
 
 ----
 
-Startdate: 
+Startdate: 2021-12-12
 
 ----
 
-Enddate: 
+Enddate: 2021-12-13
+
+----
+
+Date: —
 
 ----
 
@@ -51,10 +55,6 @@ Cover:
 ----
 
 Artist: Nina Sanadze
-
-----
-
-Date: 12.12.2021 — 13.12.2012
 
 ----
 
