@@ -16,12 +16,14 @@ $(document).ready(function () {
 });
 
 function openNav() {
-  document.getElementById("nav").style.marginTop = "50vh";
+  // document.getElementById("nav").style.marginTop = "50vh";
+  document.getElementById("body").style.marginTop = "50vh";
   document.getElementById("myTopSidebar").style.top = "0";
 }
 
 function closeNav() {
-  document.getElementById("nav").style.marginTop = "0";
+  // document.getElementById("nav").style.marginTop = "0";
+  document.getElementById("body").style.marginTop = "0";
   document.getElementById("myTopSidebar").style.top = "-50vh";
 }
 

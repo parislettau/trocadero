@@ -53,18 +53,20 @@
   // position: fixed;
   // left: 0;
   // bottom: 0;
+
   padding-bottom: 14px;
   position: sticky;
   bottom: 0;
   width: 25%;
   padding-right: 14px;
-
   font-style: normal;
   font-weight: 700;
   font-size: 26px;
   line-height: 107.5%;
   color: #393939;
   text-transform: uppercase;
+  max-height: 80vh; // keep the filter pane in the visible window
+  overflow-y: scroll; // scroll through filter items
 }
 
 .filter-trigger {
@@ -74,6 +76,7 @@
   border-bottom: 1px solid rgb(0, 0, 0);
   justify-content: space-between;
   margin-bottom: 6px;
+  align-items: center;
 
   &-icon {
     transform: rotate(-45deg);
@@ -94,6 +97,9 @@
 }
 
 .tag-filter {
+  // background-color: var(--backgroundColor);
+  position: sticky;
+  top: 0;
   a {
     &::before {
       content: "〇 ";
