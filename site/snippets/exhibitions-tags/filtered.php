@@ -1,4 +1,4 @@
-<div class="exhibitions-filtered-container">
+<div class="exhibitions-filtered-container filtered">
 
     <?php foreach ($programs as $program) : ?>
 
@@ -36,5 +36,7 @@
             </a>
         </div>
     <?php endforeach ?>
+    <!-- pagination -->
+    <?php snippet('exhibitions-tags/pagination') ?>
 
 </div>

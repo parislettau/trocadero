@@ -35,6 +35,9 @@
     </div>
 </div>
 <script>
+    var offsetHeight = document.getElementById('myDiv').offsetHeight;
+</script>
+<script>
     // Lightbox
     Array.from(document.querySelectorAll("[data-lightbox]")).forEach(
         (element) => {

@@ -1,6 +1,6 @@
 <?php $pluck = $page->index(); ?>
 
-<section class="filter-pane" style="">
+<div class="filter-pane filter" style="">
 
     <div class="filter-pane-inner">
 
@@ -159,4 +159,4 @@
             //     // }
             // });
         </script>
-</section>
+    </div>

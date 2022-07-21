@@ -31,7 +31,7 @@ return function ($page) {
     }
 
     // apply pagination
-    $programs   = $programs->paginate(3);
+    $programs   = $programs->paginate(9);
     $pagination = $programs->pagination();
 
     return compact('programs', 'artists', 'artist', 'pagination');
