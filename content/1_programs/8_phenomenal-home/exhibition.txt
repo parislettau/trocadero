@@ -2,7 +2,7 @@ Title: Phenomenal Home
 
 ----
 
-Artists: 
+artists: 
 
 ----
 
@@ -38,4 +38,4 @@ Cover: - marlo-w-promo-72dpi-1.jpeg
 
 ----
 
-Artist: MARLO W
+artists: MARLO W

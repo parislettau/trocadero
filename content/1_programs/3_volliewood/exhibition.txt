@@ -2,7 +2,7 @@ Title: Volliewood
 
 ----
 
-Artists: Volliewood
+artists: Volliewood
 
 ----
 
@@ -38,7 +38,7 @@ Cover: - volliewood.jpg
 
 ----
 
-Artist: Patrick Zaia
+artists: Patrick Zaia
 
 ----
 

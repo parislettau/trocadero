@@ -3,7 +3,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 14px;
-  min-height: 85vh;
+  // min-height: calc(100vh - 120px);
   margin-top: 50px;
   .exhibitions-item {
     display: flex;

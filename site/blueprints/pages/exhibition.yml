@@ -7,6 +7,7 @@ columns:
         type: fields
         fields:
           artists:
+            label: Artists
             type: tags
             icon: person
           startDate:

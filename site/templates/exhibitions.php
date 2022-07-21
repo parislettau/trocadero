@@ -5,8 +5,12 @@
 <main id="main" class="page-container">
     <div class="main-container">
         <!-- exhibition filtered -->
-        <?php snippet('exhibitions/filtered') ?>
-        <?php snippet('exhibitions/filter') ?>
+        <?php snippet('exhibitions-tags/filtered') ?>
+        <!-- filter cloud -->
+        <?php snippet('exhibitions-tags/filter') ?>
+        <!-- pagination -->
+        <?php snippet('exhibitions-tags/pagination') ?>
+
     </div>
 </main>
 

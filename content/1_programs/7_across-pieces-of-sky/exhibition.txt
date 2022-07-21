@@ -2,7 +2,7 @@ Title: Across Pieces of Sky
 
 ----
 
-Artists: Shraddha Borawake, Dongyan Chen, Rochyne Delaney Mcnulty, Ivetta Sunyoung Kang, Sophie Morrow, Marcia Vaitsman
+artists: Shraddha Borawake, Dongyan Chen, Rochyne Delaney Mcnulty, Ivetta Sunyoung Kang, Sophie Morrow, Marcia Vaitsman
 
 ----
 
@@ -73,7 +73,7 @@ Cover:
 
 ----
 
-Artist: Group Show
+artists: Group Show
 
 ----
 
