@@ -1,7 +1,8 @@
 {
   "require": {
     "getkirby/cms": "^3.7",
-    "johannschopplich/kirby-blurry-placeholder": "^1.5"
+    "johannschopplich/kirby-blurry-placeholder": "^1.5",
+    "diesdasdigital/kirby-meta-knight": "^1.2"
   },
   "config": {
     "optimize-autoloader": true,

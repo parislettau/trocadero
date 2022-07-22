@@ -1,25 +1,24 @@
 <div class="main-footer" id="mainFooter">
     <div class="footer-section">
-        TROCADERO PROJECTS
-        <br><br><br><br>
-        <br><br><br><br>
-        <div class="foot-copyright">
-            <?= $site->footercopyright() ?>
+        <div class="title">
+            <?= $site->title()->kt() ?>
+        </div>
+        <div class="copyright footer-item">
+            <?= $site->footercopyright()->kt() ?>
         </div>
     </div>
     <div class="footer-section">
-        <?= $site->footeraddress() ?>
-        <br><br>
-        <?= $site->footerhours() ?>
-        <br><br><br>
-        ACCESS
-        <br>
-        <?= $site->footeraccess() ?>
+        <div class="information footer-item">
+            <?= $site->footerInfo()->kt() ?>
+        </div>
+
     </div>
-    <div class="footer-section">
-        TROC Peer-to-Peer is supported by the Victorian Governement through Creative Victoria.
-        <br><br>
-        <img src="<?= url('/assets/img/CreativeVictoriaLogo.png') ?>" alt="Creative Victoria Logo" class="footer-logo">
+    <div class="footer-section footer-left">
+        <div class="footer-item ">
+            <?= $site->footerLeft()->kt() ?>
+
+        </div>
+
         <!-- CONNECT
         <br><br>
         <a href="</?= $site->facebook() ?>" target="_blank">Facebook</a><br> 
@@ -28,10 +27,11 @@
         <a href="</?= $site->youtube() ?>" target="_blank">Youtube</a><br> 
         <a href="</?= $site->soundcloud() ?>" target="_blank">Soundcloud</a><br>    -->
     </div>
-    <div class="footer-section">
-        Trocadero Art Space is supported by the City of Maribyrnong.
-        <br><br>
-        <img src="<?= url('/assets/img/footer-logos.png') ?>" alt="Maribyrnong Arts and Culture" class="footer-logo">
+    <div class="footer-section footer-right">
+        <div class="footer-item ">
+            <?= $site->footerRight()->kt() ?>
+
+        </div>
     </div>
 </div>
 <script>

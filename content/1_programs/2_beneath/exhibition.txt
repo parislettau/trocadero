@@ -2,7 +2,7 @@ Title: Beneath
 
 ----
 
-artists: Clare Steele
+Artists: Clare Steele
 
 ----
 
@@ -14,15 +14,11 @@ Enddate: 2019-12-21
 
 ----
 
-Date: 
-
-----
-
 Gallery: Gallery 2
 
 ----
 
-Category: Exhibition
+Category: Exhibition, Online, Talk
 
 ----
 
@@ -45,11 +41,11 @@ Layout:
 
 ----
 
-Cover: - clare-steele-marked-640x360.jpeg
+Date: 
 
 ----
 
-artists: Clare Steele
+Cover: - clare-steele-marked-640x360.jpeg
 
 ----
 

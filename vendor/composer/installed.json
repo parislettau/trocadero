@@ -53,6 +53,51 @@
             "install-path": "../claviska/simpleimage"
         },
         {
+            "name": "diesdasdigital/kirby-meta-knight",
+            "version": "1.2.2",
+            "version_normalized": "1.2.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/diesdasdigital/kirby-meta-knight.git",
+                "reference": "9c3da53a3abee5ffdd95c1363d679e9395794715"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/diesdasdigital/kirby-meta-knight/zipball/9c3da53a3abee5ffdd95c1363d679e9395794715",
+                "reference": "9c3da53a3abee5ffdd95c1363d679e9395794715",
+                "shasum": ""
+            },
+            "require": {
+                "getkirby/composer-installer": "^1.1"
+            },
+            "time": "2021-11-16T12:41:33+00:00",
+            "type": "kirby-plugin",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "diesdasdigital\\kirby-meta-knight\\": "src/models/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Jonathan Muth",
+                    "email": "jonathan@diesdas.digital",
+                    "homepage": "https://diesdas.digital",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Meta Knight – SEO for Kirby",
+            "support": {
+                "issues": "https://github.com/diesdasdigital/kirby-meta-knight/issues",
+                "source": "https://github.com/diesdasdigital/kirby-meta-knight/tree/1.2.2"
+            },
+            "install-path": "../../site/plugins/kirby-meta-knight"
+        },
+        {
             "name": "filp/whoops",
             "version": "2.14.5",
             "version_normalized": "2.14.5.0",

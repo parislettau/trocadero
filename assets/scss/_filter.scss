@@ -61,7 +61,7 @@
   padding-right: 14px;
   font-style: normal;
   font-weight: 700;
-  font-size: 26px;
+  font-size: var(--bigFont);
   line-height: 107.5%;
   color: #393939;
   text-transform: uppercase;
@@ -96,10 +96,20 @@
   }
 }
 
+.tag,
+.tag > span {
+  font-size: var(--bigFont);
+  &-filter {
+    div {
+      font-size: var(--bigFont);
+    }
+  }
+}
+
 .tag-filter {
   // background-color: var(--backgroundColor);
-  // position: sticky;
-  // top: 0;
+  position: sticky;
+  top: 0;
   a {
     &::before {
       content: "〇 ";

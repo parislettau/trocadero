@@ -25,13 +25,13 @@
             </div>
         </div>
         <div class="past-members">
-            <span>Past Committee Members (2021 - )</span>
+            <span>Past Committee Members (2021-)</span>
             <p><?= page('about')->past() ?></p>
         </div>
     </div>
 
     <div class="visit-container">
-        <span class="top-title">VISIT</span><br><br>
+        <span class="top-title">VISIT</span><br>
         <?= $site->footeraddress() ?><br><br>
         <?= $site->footerhours() ?><br><br>
         <span>ACCESS</span><br><br>

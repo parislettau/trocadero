@@ -20,11 +20,11 @@ columns:
             type: date
             width: 1/2
             display: DD.MM.YYYY
-          date:
-            type: text
-            width: 1/2
-            label: Exhibit Dates
-            help: Please enter dates in DD.MM.YYYY — DD.MM.YYYY format
+          # date:
+          #   type: text
+          #   width: 1/2
+          #   label: Exhibit Dates
+          #   help: Please enter dates in DD.MM.YYYY — DD.MM.YYYY format
           gallery:
             label: Gallery
             type: multiselect
@@ -34,15 +34,9 @@ columns:
             help: If the item is an exhibition, please select the gallery.
           category:
             label: Categories & Filters
-            type: multiselect
-            default: false
-            max: 2
-            options:
-              - Exhibition
-              - Talk
-              - Performance
-              - Online
-            min: 1
+            type: tags
+            options: query
+            query: page.siblings.pluck("category", ",", true)
             width: 1/2
             help: Add tags to categorise
           information:

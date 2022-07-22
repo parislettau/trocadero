@@ -1,10 +1,7 @@
 html {
-  font-size: calc(calc(60% + 0.8vmin));
+  // font-size: calc(calc(60% + 0.8vmin));
+  font-size: 100%;
 }
-
-// * {
-//   font-size: 1rem;
-// }
 
 body {
   font-family: Arial, sans-serif;
@@ -15,6 +12,30 @@ body {
   padding: 0 14px;
   transition: margin-top 0.5s ease 0s;
   // font-size: 14px;
+}
+
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+footer {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+main {
+  //   min-height: 85vh;
+  position: relative;
+  bottom: 0;
+  flex: 1;
 }
 
 .page-container {
@@ -28,6 +49,7 @@ a {
 
 .main-container {
   width: 100%;
+  flex: 1;
 }
 
 .logo-img {
@@ -126,12 +148,12 @@ a {
   .top-sidebar {
     height: 45vh;
     background: #393939;
-    color: #fefcf3;
+    // color: var(--backgroundColor);
     width: inherit;
   }
 
   .closebtn {
-    color: #fefcf3;
+    // color: var(--backgroundColor);
   }
 
   #myTopSidebar {

@@ -2,14 +2,7 @@ Title: Trocadero Projects
 
 ----
 
-Footeraddress:
-
-Suite 1, Level 1, 119 Hopkins Street <br>
-Footscray VIC 3011, AUSTRALIA
-
-----
-
-Footerhours: Wednesday - Saturday: 12 - 5pm
+Acknowledgment: We acknowledge that we are on the traditional lands of the Boon Wurrung and Woi Wurrung people of the Kulin Nation. We offer our respect to the Elders of these traditional lands and, through them, to all Aboriginal and Torres Strait Islander peoples.
 
 ----
 
@@ -17,10 +10,38 @@ Footercopyright: Copyright 2021 TROCADERO PROJECTS INC
 
 ----
 
-Footeraccess:
+Footerinfo:
 
-1/119 Hopkins Street is not wheelchair accessible. <br>
-Please contact us to discuss any accessibility needs.
+Suite 1, Level 1, 119 Hopkins Street
+Footscray VIC 3011, AUSTRALIA
+
+Wednesday to Saturday, 12–5pm
+
+ACCESS
+1/119 Hopkins Street is not wheelchair accessible. Please contact us to discuss any accessibility needs.
+
+----
+
+Footerleft:
+
+TROC Peer-to-Peer is supported by the Victorian Governement through Creative Victoria.
+
+(image: creativevictorialogo.png)
+
+----
+
+Footerright:
+
+Trocadero Art Space is supported by the City of Maribyrnong.
+
+(image: footer-logos.png)
+
+----
+
+Logos:
+
+- creativevictorialogo.png
+- footer-logos.png
 
 ----
 
@@ -41,6 +62,242 @@ Twitter: https://twitter.com/TrocArtSpace
 ----
 
 Soundcloud: https://soundcloud.com/trocaderoartspace
+
+----
+
+Meta-title: 
+
+----
+
+Meta-description: Trocadero Art Space is an artist-run initiative focused on presenting new and contemporary art through a diverse and inclusive program of exhibitions; public programs; collaborative events; and community-based projects.
+
+----
+
+Meta-canonical-url: 
+
+----
+
+Meta-author: 
+
+----
+
+Meta-image: 
+
+----
+
+Meta-phone-number: 
+
+----
+
+Og-title: 
+
+----
+
+Og-description: 
+
+----
+
+Og-image: 
+
+----
+
+Og-site-name: 
+
+----
+
+Og-url: 
+
+----
+
+Og-audio: 
+
+----
+
+Og-video: 
+
+----
+
+Og-determiner: 
+
+----
+
+Og-type: 
+
+----
+
+Og-type-article-published-time: 
+
+----
+
+Og-type-article-modified-time: 
+
+----
+
+Og-type-article-expiration-time: 
+
+----
+
+Og-type-article-author: 
+
+----
+
+Og-type-article-section: 
+
+----
+
+Og-type-article-tag: 
+
+----
+
+Twitter-title: 
+
+----
+
+Twitter-description: 
+
+----
+
+Twitter-image: 
+
+----
+
+Twitter-card-type: 
+
+----
+
+Twitter-site: 
+
+----
+
+Twitter-creator: 
+
+----
+
+Robots-noindex: 
+
+----
+
+Robots-nofollow: 
+
+----
+
+Robots-noarchive: 
+
+----
+
+Robots-noimageindex: 
+
+----
+
+Robots-nosnippet: 
+
+----
+
+Gallery:
+
+- creativevictorialogo.png
+- footer-logos.png
+
+----
+
+Layout:
+
+[
+    {
+        "attrs": {
+            "class": "",
+            "id": ""
+        },
+        "columns": [
+            {
+                "blocks": [
+                    {
+                        "content": {
+                            "text": "One"
+                        },
+                        "id": "92ef52f4-143d-4fb7-b1d0-efd6179873e5",
+                        "isHidden": false,
+                        "type": "markdown"
+                    }
+                ],
+                "id": "26329828-10a7-4fea-b85e-1e3b9a4ab3b8",
+                "width": "1/3"
+            },
+            {
+                "blocks": [
+                    {
+                        "content": {
+                            "text": "One"
+                        },
+                        "id": "0c3451d6-5330-423f-9dcf-c02418d43917",
+                        "isHidden": false,
+                        "type": "markdown"
+                    }
+                ],
+                "id": "ea375f61-0b4c-471a-afd3-3609fc18d16b",
+                "width": "1/3"
+            },
+            {
+                "blocks": [
+                    {
+                        "content": {
+                            "text": "One"
+                        },
+                        "id": "e0f4d9cc-4c72-407a-80d7-4cd2849f7cf8",
+                        "isHidden": false,
+                        "type": "markdown"
+                    },
+                    {
+                        "content": {
+                            "location": "kirby",
+                            "image": [
+                                "g092093bef7d7a9b913a0a8f62f90c8b728d022f67a0b852a2652870db07a03798424082570652864e8f91d0ff26167f3_640.jpg"
+                            ],
+                            "src": "",
+                            "alt": "",
+                            "caption": "",
+                            "link": "",
+                            "ratio": "",
+                            "crop": "false"
+                        },
+                        "id": "863bdd80-161b-49bc-93fa-39b8760558b8",
+                        "isHidden": false,
+                        "type": "image"
+                    }
+                ],
+                "id": "8835f9bf-ec96-42c8-8883-c359696c8aa0",
+                "width": "1/3"
+            }
+        ],
+        "id": "4669c41e-ddb4-41ef-b5c0-d594fef1ed3f"
+    }
+]
+
+----
+
+Footeraddress:
+
+Suite 1, Level 1, 119 Hopkins Street
+Footscray VIC 3011, AUSTRALIA
+
+----
+
+Footerhours: Wednesday to Saturday, 12–5pm
+
+----
+
+Footeraccess:
+
+ACCESS
+1/119 Hopkins Street is not wheelchair accessible. Please contact us to discuss any accessibility needs.
+
+----
+
+Acknowledement: We acknowledge that we are on the traditional lands of the Boon Wurrung and Woi Wurrung people of the Kulin Nation. We offer our respect to the Elders of these traditional lands and, through them, to all Aboriginal and Torres Strait Islander peoples.
+
+----
+
+Acknowledgement: We acknowledge that we are on the traditional lands of the Boon Wurrung and Woi Wurrung people of the Kulin Nation. We offer our respect to the Elders of these traditional lands and, through them, to all Aboriginal and Torres Strait Islander peoples.
 
 ----
 

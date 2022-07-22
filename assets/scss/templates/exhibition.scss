@@ -1,3 +1,5 @@
+@import "../_variables.scss";
+
 .gallery {
   line-height: 0;
   columns: 2;
@@ -15,12 +17,16 @@
 }
 
 .main-img-container {
-  max-height: 64vh;
+  max-height: 75vh;
   margin-top: 30px;
   // max-width: 100%;
   width: calc(200vw / 3);
   overflow: hidden;
   img {
+    width: 100%;
+  }
+
+  @media (max-width: $mobile) {
     width: 100%;
   }
 }
@@ -30,7 +36,7 @@
   font-weight: 700;
   color: rgba(57, 57, 57, 1);
   margin-bottom: 10vh;
-  font-size: 1.2rem;
+  font-size: var(--normalFont);
   line-height: 1.1;
   text-align: justify;
   word-break: break-word;
@@ -39,6 +45,9 @@
     & + p {
       margin-bottom: 1.2rem;
     }
+  }
+  @media (max-width: $mobile) {
+    width: 100%;
   }
 }
 

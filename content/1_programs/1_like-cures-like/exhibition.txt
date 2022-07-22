@@ -2,7 +2,7 @@ Title: Like Cures Likes
 
 ----
 
-Artists: Chunxiao Qu, OneName, design
+Artists: Chunxiao Qu, Evelina Bravo, Cassia Rosario, Hope Whittaker, Stefano Hoover, Luciana Ramsey, Kezia Mcghee, Leigh Espinosa, Peter Holden, Cecily Daly, Ryder Seymour, Wyatt Melia, Brenna Foster, Nishat Rosas, Karla Gough, Rafael Haney, Sam Hodgson, Kiefer Burrows, Brandy Landry, Chantel Watt, Jadine Whyte, Renae Burns, Harvey Sanderson, Millie-Mae Washington, Zahra Olson, Aleyna Hinton, Mila-Rose Orozco, Rex Pitts, Donell Gardner, Romeo North, Stefania Patel, Arnav Curran, Bruno Jacobson, Mark Stacey, Beulah Mccullough, Misty Burks, Madison Winter, Brenda Chapman, Zack Dawson, Kaif Espinoza, Faizaan Drake, Elissa Vazquez, Tyler-Jay Gamble, Carol Nguyen, Alexander Pruitt, Dana Power, Terence Puckett, Ammar Sparks, Yaqub Crawford, Trey Davila, Ashton Neville, Samanta Potts, Carson Milne, Chaya Montoya, Hazel Blanchard, Darcie-Mae Meadows, Sultan Compton, Patrycja Morrow, Gethin Hutchings, Alessandro Boyd, Cally Gutierrez, Ayaz Ventura, Tabatha Aldred, Minahil Brett, Glyn Mill, Saad Elliott, Ana Wormald, Bobbi John, Candice Coulson, Ayaan Case, Summer Larsen, Caspar Dudley, Bethaney Braun, Waqar Peterson, Saffa Rudd, Mallory Ortiz, Elowen Mcintosh, Ilyas Britt, Ayana Hunt, Rome Escobar, Lina Chung, Conner Field, Kuba Huynh, Jodie Witt, Che Ross, Trent English, Chance Mustafa, Hattie Woodard, Arda Rogers, Delilah Henry, Garrett Finnegan, Joan Sumner, Bethany Ponce, Brooke Justice, Emmie Greenwood, Indiana Carson, Lochlan Campos, Fletcher Barrow, Kameron Durham, Corrie Mcneill, Isha Martin
 
 ----
 
@@ -11,10 +11,6 @@ Startdate: 2020-03-18
 ----
 
 Enddate: 2020-04-04
-
-----
-
-Date: 
 
 ----
 
@@ -39,6 +35,54 @@ Written by: Lia Morgan
 Layout:
 
 [
+    {
+        "attrs": {
+            "class": "",
+            "id": ""
+        },
+        "columns": [
+            {
+                "blocks": [
+                    {
+                        "content": {
+                            "images": [
+                                "g092093bef7d7a9b913a0a8f62f90c8b728d022f67a0b852a2652870db07a03798424082570652864e8f91d0ff26167f3_640.jpg",
+                                "g8be4f19009a23cb99f2d8ccf42cdc37eb756f6e38227a98e467104acc0e2b549e85bd547762fc005ad4966ca0c6d5356_640.jpg",
+                                "g95faeb488af9ebe090b325adea63b2ebd4d311a078094c21edf3660064e72329a8a14eb2853c9b2e7969e720bc1518ba_640.jpg",
+                                "g296257f0fc6150509bf1afcd9b1ddd6dc2a53d3902a6343a30d7f6f521b6c0154048b23a983a3955bea7b1b2032eca7e_640.jpg",
+                                "gf5367b043ab01ef224c1e61e695e450a7b3880130700ca10f4a317db40929a16cec6042c3e3b34f607849d1885504c0d_640.jpg"
+                            ]
+                        },
+                        "id": "f94f0d16-a7e0-4005-acac-fdd3902a13bb",
+                        "isHidden": false,
+                        "type": "gallery"
+                    }
+                ],
+                "id": "484169d6-2318-4ade-9ac5-2da98a03927f",
+                "width": "1/1"
+            }
+        ],
+        "id": "84d03910-69f1-458f-99da-cd4ef15aad34"
+    },
+    {
+        "attrs": {
+            "class": "",
+            "id": ""
+        },
+        "columns": [
+            {
+                "blocks": [],
+                "id": "11a27276-496c-4a6d-b049-e8c21654b7aa",
+                "width": "1/2"
+            },
+            {
+                "blocks": [],
+                "id": "96464a15-54d6-439b-b7c8-932956a4f3a4",
+                "width": "1/2"
+            }
+        ],
+        "id": "87650887-da74-4902-adb7-37fd07b55d32"
+    },
     {
         "attrs": {
             "class": "",
@@ -90,6 +134,10 @@ Layout:
         "id": "f3474b8a-f402-4982-a01b-e91992b3dddd"
     }
 ]
+
+----
+
+Date: 
 
 ----
 

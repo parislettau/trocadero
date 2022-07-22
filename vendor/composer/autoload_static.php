@@ -15,6 +15,10 @@ class ComposerStaticInit318012e4d56f2445b5aa2af1a9d2cdd4
     );
 
     public static $prefixLengthsPsr4 = array (
+        'd' => 
+        array (
+            'diesdasdigital\\kirby-meta-knight\\' => 33,
+        ),
         'W' => 
         array (
             'Whoops\\' => 7,
@@ -41,6 +45,10 @@ class ComposerStaticInit318012e4d56f2445b5aa2af1a9d2cdd4
     );
 
     public static $prefixDirsPsr4 = array (
+        'diesdasdigital\\kirby-meta-knight\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/site/plugins/kirby-meta-knight/src/models',
+        ),
         'Whoops\\' => 
         array (
             0 => __DIR__ . '/..' . '/filp/whoops/src/Whoops',

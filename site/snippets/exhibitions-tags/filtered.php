@@ -29,7 +29,7 @@
                 <div class="exhibitions-item-text">
                     <span>
                         <?= $program->title() ?><br>
-                        <?= $program->artist() ?><br><br>
+                        <?= $program->artists() ?><br><br>
                         <?= $program->information()->excerpt($chars = 400, $strip = true, $rep = ' …') ?>
                     </span>
                 </div>

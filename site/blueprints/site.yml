@@ -1,37 +1,64 @@
 title: Site
 
 tabs:
-
   tab1:
-    label: HOME
+    label: Home
     sections:
       information:
         type: pages
         help: Select each page to edit the content. <br> To edit the homepage grid, first add the exhibition details in the 'Programs' page. <br>Next, navigate to the 'Trocadero Projects Home' section and select the desired program to include in the grid.<br>Please ensure it is selected in one of the first four positions. <br><br>To update the address in both the footer and the 'Visit' section, make the edits within the 'Footer' tab.
   tab2:
-    label: Footer
+    label: Info
     fields:
-      footerAddress:
-        width: 1/3
-        label: Footer Address
+      acknowledgment:
+        width: 1
         type: textarea
         size: small
-        help: To create a line break, insert <br> between lines.
-      footerHours:
-        width: 1/3
-        label: Footer Hours & Access
-        type: textarea
-        size: small
+      # footerAddress:
+      #   width: 1/4
+      #   label: Footer Address
+      #   type: textarea
+      #   size: small
+      #   help: To create a line break, insert <br> between lines.
+      # footerHours:
+      #   width: 1/4
+      #   label: Footer Hours & Access
+      #   type: textarea
+      #   size: small
       footerCopyright:
-        width: 1/3
+        width: 1/2
         label: Footer Copyright
         type: textarea
         size: small
-      footerAccess:
-        width: 1/3
-        label: Footer Access
+      # footerInfo:
+      #   width: 1/2
+      #   label: Footer Access
+      #   type: textarea
+      #   size: small
+      # footerInfo:
+      #   width: 1/2
+      #   label: Footer Access
+      #   type: textarea
+      #   size: small
+      footerInfo:
+        width: 1/2
+        label: Footer Info
         type: textarea
         size: small
+      footerLeft:
+        width: 1/2
+        label: Right Footer 1
+        type: textarea
+        size: small
+      footerRight:
+        width: 1/2
+        label: Right Footer 2
+        type: textarea
+        size: small
+      logos:
+        type: files
+        layout: cards
+        help: Drag images to change order. The first image will be the thumbnail.
       facebook:
         width: 1/3
         label: Facebook link
@@ -57,4 +84,22 @@ tabs:
         label: Soundcloud link
         type: text
         size: small
-      
+      # layout:
+      #   type: layout
+      #   pretty: true
+      #   layouts:
+      #     - "1/1"
+      #     - "1/2, 1/2"
+      #     - "1/4, 1/4, 1/4, 1/4"
+      #     - "1/3, 2/3"
+      #     - "2/3, 1/3"
+      #     - "1/3, 1/3, 1/3"
+      #   settings:
+      #     fields:
+      #       class:
+      #         type: text
+      #         width: 1/2
+      #       id:
+      #         type: text
+      #         width: 1/2
+  seotab: seo

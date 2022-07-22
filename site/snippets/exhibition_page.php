@@ -1,5 +1,7 @@
 <div class="main-img-container">
-    <?= $page->image() ?>
+    <?php $image = $page->image() ?>
+    <img src="<?= $image->placeholderUri() ?>" data-src="<?= $image->url() ?>" data-lazyload alt="<?= $image->alt() ?>" />
+
 </div>
 <div class="main-exhibition-text-container">
     <?= $page->title() ?><br>

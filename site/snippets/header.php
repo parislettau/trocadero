@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Google result text -->
     <title><?= $site->title() ?></title>
-    <!-- Google result description -->
-    <meta name="description" content="Trocadero Art Space is an artist-run initiative focused on presenting new and contemporary art through a diverse and inclusive program of exhibitions; public programs; collaborative events; and community-based projects.">
+    <!--    seo -->
+    <?php snippet('meta_information'); ?>
+    <?php snippet('robots'); ?>
     <!-- kirby css -->
     <?= css([
         'assets/css/lightbox.css',
@@ -28,4 +28,4 @@
 
 <body id="body" [date-template]="<?= $page->template() ?>" style="">
     <?php snippet('visit_about') ?>
-    <?php snippet('nav') ?>
+    <?php snippet('acknowledgment') ?>
