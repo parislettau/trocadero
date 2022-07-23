@@ -87,10 +87,14 @@
 
 .pagination {
   display: flex;
-  justify-content: center;
-  padding: 1vw;
+  /* justify-content: center; */
+  padding: 1vw 0;
   color: rgba(57, 57, 57, 0.5);
-  align-items: center;
+  /* align-items: center; */
+  font-size: var(--bigFont);
+  text-transform: uppercase;
+  width: 100%;
+  justify-content: space-between;
 }
 
 .pagination span {
