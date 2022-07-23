@@ -1,7 +1,7 @@
 title: Exhibition
 
 columns:
-  - width: 1/2
+  - width: 2/3
     sections:
       info:
         type: fields
@@ -61,7 +61,7 @@ columns:
                 id:
                   type: text
                   width: 1/2
-  - width: 1/2
+  - width: 1/3
     sections:
       # cover:
       #   type: fields
@@ -75,5 +75,6 @@ columns:
       gallery:
         type: files
         layout: cards
+        size: tiny
         help: Drag images to change order. The first image will be the thumbnail.
         # template: image

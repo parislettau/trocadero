@@ -19,11 +19,13 @@ function openNav() {
   // document.getElementById("nav").style.marginTop = "50vh";
   document.getElementById("body").style.marginTop = "50vh";
   document.getElementById("myTopSidebar").style.top = "0";
+  document.getElementById("nav").style.top = "50vh";
 }
 
 function closeNav() {
   // document.getElementById("nav").style.marginTop = "0";
   document.getElementById("body").style.marginTop = "0";
+  document.getElementById("nav").style.top = "0";
   document.getElementById("myTopSidebar").style.top = "-50vh";
 }
 
