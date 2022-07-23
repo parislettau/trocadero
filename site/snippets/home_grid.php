@@ -1,5 +1,5 @@
 <div class="main-card-box">
-        <?php foreach ($site->find('programs')->children()->listed()->limit(4) as $program) : ?>
+        <?php foreach ($site->find('program-exhibition')->children()->listed()->limit(4) as $program) : ?>
                 <div class="card-tile">
                         <div class="fill-img">
                                 <?php if ($program->cover()->toFile()) : ?>

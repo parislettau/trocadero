@@ -7,10 +7,13 @@
     </div>
     <!--  menu -->
     <div class="nav-menu">
+
         <ul class="menu-items">
-            <li class="menu-open">
-                <a href="/programs"><?php if (page('programs')->isOpen()) : ?><span class="bullet">&#8226;</span><?php endif ?>PROGRAMS</a>
-            </li>
+            <?php foreach ($site->pages()->listed() as $child) : ?>
+                <li class="menu-open">
+                    <a href="<?= $child->url() ?>"><?php e($child->isActive(), ' <span class="bullet">&#8226;</span>') ?><?= $child->title() ?></a>
+                </li>
+            <?php endforeach ?>
             <li class="menu-open">
                 <a href="<?= page('shop')->link() ?>" class="active-open" target="_blank">SHOP</a>
             </li>
