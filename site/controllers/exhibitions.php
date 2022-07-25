@@ -3,7 +3,6 @@
 return function ($page) {
 
     // fetch the basic set of pages
-    // $articles = $page->children()->listed()->flip();
     $programs = $page->children()->listed();
 
     // fetch all tags
@@ -11,14 +10,12 @@ return function ($page) {
 
     // add the artist filter
     if ($artist = urldecode(param('artist'))) {
-        // $programs = $programs->filterBy('artists', "", ',');
         $programs = $programs->filterBy('artists', $artist, ',');
     }
 
     // add the year filter
     $year = $page->startDate('Y');
     if ($year = param('year')) {
-        // $programs = $programs->filterBy('artists', "", ',');
         $programs = $programs->filter(function ($page) use ($year) {
             return $page->startDate()->toDate('Y') === $year;
         });
@@ -26,7 +23,6 @@ return function ($page) {
 
     // add the category filter
     if ($category = urldecode(param('category'))) {
-        // $programs = $programs->filterBy('artists', "", ',');
         $programs = $programs->filterBy('category', $category, ',');
     }
 
