@@ -1,0 +1,13 @@
+:root {
+  --backgroundColor: #fefcf3;
+  // font sizes
+  --bigFont: calc(1.3rem + 0.5vw);
+  --normalFont: 1rem;
+  --smallFont: 0.875rem;
+}
+// PAGE BREAK POINTS:;
+$mobile: (576px);
+$tablet: (670px);
+$table_portrait: (992px);
+$laptop: (1500px);
+$desktop: (1920px);

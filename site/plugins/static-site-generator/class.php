@@ -4,7 +4,6 @@ namespace D4L;
 
 use Error;
 use Kirby\Cms\App;
-use Kirby\Cms\Ingredients;
 use Kirby\Cms\Page;
 use Kirby\Cms\Pages;
 use Kirby\Toolkit\A;
@@ -98,7 +97,8 @@ class StaticSiteGenerator
     $this->_skipCopyingMedia = $skipCopyingMedia;
   }
 
-  public function setCustomRoutes(array $customRoutes) {
+  public function setCustomRoutes(array $customRoutes)
+  {
     $this->_customRoutes = $customRoutes;
   }
 
@@ -118,8 +118,9 @@ class StaticSiteGenerator
     }
   }
 
-  protected function _modifyBaseUrl(string $baseUrl) {
-    $urls = array_map(function($url) use ($baseUrl) {
+  protected function _modifyBaseUrl(string $baseUrl)
+  {
+    $urls = array_map(function ($url) use ($baseUrl) {
       $newUrl = $url === '/' ? $baseUrl : $baseUrl . $url;
       return strpos($url, 'http') === 0 ? $url : $newUrl;
     }, $this->_kirby->urls()->toArray());
@@ -170,9 +171,14 @@ class StaticSiteGenerator
     $site = $kirby->site();
     $pages = $site->index();
 
-    foreach ($pages as $page) {
-      $page->content = null;
-      foreach ($page->files() as $file) {
+    $page->content = null;
+    foreach ($page->files() as $file) {
+      $file->content = null;
+    }
+
+    foreach ($pages as $pageItem) {
+      $pageItem->content = null;
+      foreach ($pageItem->files() as $file) {
         $file->content = null;
       }
     }
@@ -186,8 +192,9 @@ class StaticSiteGenerator
     $site->visit($page, $languageCode);
   }
 
-  protected function _resetCollections() {
-    (function() {
+  protected function _resetCollections()
+  {
+    (function () {
       $this->collections = null;
     })->bindTo($this->_kirby, 'Kirby\\Cms\\App')($this->_kirby);
   }
@@ -287,7 +294,9 @@ class StaticSiteGenerator
 
   protected function _getFileList(string $path, bool $recursively = false)
   {
-    $items = Dir::read($path, [], true);
+    $items = array_map(function ($item) {
+      return str_replace('/', DIRECTORY_SEPARATOR, $item);
+    }, Dir::read($path, [], true));
     if (!$recursively) {
       return $items;
     }
@@ -321,6 +330,7 @@ class StaticSiteGenerator
   protected function _cleanPath(string $path): string
   {
     $path = str_replace('//', '/', $path);
+    $path = preg_replace('/([^\/]+\.[a-z]{2,5})\/index.html$/i', '$1', $path);
 
     if (strpos($path, '//') !== false) {
       return $this->_cleanPath($path);
@@ -345,7 +355,7 @@ class StaticSiteGenerator
     }
 
     $fileList = array_map(function ($path) use ($folder) {
-      return str_replace($folder . '/', '', $path);
+      return str_replace($folder . DIRECTORY_SEPARATOR, '', $path);
     }, $this->_getFileList($folder));
 
     if (in_array('index.html', $fileList) || in_array('.kirbystatic', $fileList)) {

@@ -1,0 +1,18 @@
+.main-img-container img {
+    height: 64vh;
+    margin-top: 30px;
+    /* margin-top: 120px; */
+}
+
+.main-exhibition-text-container {
+    width: 45vw;
+    font-size: 14px;
+    font-family: arial;
+    font-weight: 700;
+    color: rgba(57, 57, 57, 1);
+    margin-bottom: 10vh;
+}
+
+input.reg-checkbox:checked {
+    background-color: rgba(57, 57, 57, 1);
+}

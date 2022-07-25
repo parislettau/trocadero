@@ -1,0 +1,56 @@
+@import "../_variables.scss";
+
+.gallery {
+  line-height: 0;
+  columns: 2;
+  column-gap: 1.5rem;
+}
+.gallery li {
+  display: block;
+  margin-bottom: 1.5rem;
+  break-inside: avoid;
+}
+@media screen and (min-width: 60rem) {
+  .gallery {
+    columns: 2;
+  }
+}
+
+.main-img-container {
+  max-height: 75vh;
+  margin-top: 30px;
+  // max-width: 100%;
+  width: calc(200vw / 3);
+  overflow: hidden;
+  img {
+    width: 100%;
+  }
+
+  @media (max-width: $mobile) {
+    width: 100%;
+  }
+}
+.main-exhibition-text-container {
+  width: 50%;
+  font-family: arial;
+  font-weight: 700;
+  color: rgba(57, 57, 57, 1);
+  margin-bottom: 10vh;
+  font-size: var(--normalFont);
+  line-height: 1.1;
+  text-align: justify;
+  word-break: break-word;
+  hyphens: auto;
+  p {
+    & + p {
+      margin-bottom: 1.2rem;
+    }
+  }
+  @media (max-width: $mobile) {
+    width: 100%;
+  }
+}
+
+input.reg-checkbox:checked {
+  background-color: rgba(57, 57, 57, 1);
+}

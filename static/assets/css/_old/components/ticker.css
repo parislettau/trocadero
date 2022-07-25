@@ -1,0 +1,89 @@
+.ticker-content {
+  font-size: 14px;
+  margin: 0;
+}
+
+/* .marquee {
+    margin: auto;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    color: #393939, 100%;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+    box-sizing: border-box;
+    position: relative;
+   }
+  
+   .marquee-content {
+    width: 100%;
+    display: flex;
+    line-height: 5vh;
+    position: absolute;
+    animation: marquee 15s linear infinite;
+   } */
+  
+  
+  /* hover effect */
+   /* .marquee-content:hover {
+    animation-play-state: paused;
+   }
+  
+   .list-inline {
+    display: flex;
+    justify-content: space-around;
+    width: 0%;
+    list-style: none;
+    padding-left: 10px;
+    margin: 0;
+    white-space: nowrap;
+   }
+  
+   @keyframes marquee {
+    0% { left: 0; }
+    100% { left: -100%; }
+  } */
+  
+  /* .tcontainer {
+    width: 100%;
+    overflow: hidden;
+    margin: auto;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    color: #393939, 100%;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  .ticker-wrap {
+    width: 100%;
+    padding-left: 100%; */
+    /* background-color: red; */
+  /* }
+
+  @keyframes ticker {
+    100% { transform: translate3d(-100%, 0, 0); }
+  }
+
+  .ticker-move {
+    display: inline-block;
+    white-space: nowrap;
+    padding-right: 100%;
+    animation-timing-function: linear;
+    animation: ticker 90s infinite;
+  }
+
+  .ticker-move:hover {
+    animation-play-state: paused;
+  }
+
+  .ticker-item {
+    display: inline-block;
+    padding: 0 40px;
+    font-size: 12px;
+  } */

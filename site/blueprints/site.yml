@@ -10,6 +10,8 @@ tabs:
   tab2:
     label: Info
     fields:
+      staticSiteGenerator:
+        label: Generate a static version of the site
       acknowledgment:
         width: 1
         type: textarea

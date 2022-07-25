@@ -1,0 +1,101 @@
+#acknowledgment,
+.acknowledgment {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(254, 252, 243, 0.95);
+  display: none;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 14px;
+
+  &-text {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 110%;
+    text-align: justify;
+    letter-spacing: 0.01em;
+    padding-right: 28px;
+  }
+
+  #close {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    font-size: 15px;
+    line-height: 19px;
+    text-align: right;
+    font-family: loos-compressed, sans-serif;
+    font-weight: 700;
+    padding: 7px;
+    color: black;
+    opacity: 0.8;
+  }
+
+  .mydivcontent {
+    padding: 10px;
+  }
+
+  .unset {
+    all: unset;
+  }
+}
+
+.block-type-video {
+  margin: auto;
+  display: table;
+  -webkit-filter: none;
+  filter: none;
+  width: 50%;
+  @media (max-width: 768px) {
+    width: 90%;
+  }
+  figure {
+    position: relative;
+    // overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+    /* Then style the iframe to fit in the container div with full height and width */
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  }
+}
+.block-type-image {
+  margin: auto;
+  display: table;
+  -webkit-filter: none;
+  filter: none;
+  width: 50%;
+  @media (max-width: 768px) {
+    width: 90%;
+  }
+  figure {
+    display: table;
+    margin: auto;
+    img {
+      max-height: 80%;
+      max-width: 90%;
+      margin: auto;
+      display: table;
+      -webkit-filter: none;
+      filter: none;
+    }
+    figcaption {
+      display: table-caption;
+      caption-side: bottom;
+      text-align: center;
+    }
+  }
+}

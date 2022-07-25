@@ -29,6 +29,7 @@ Alternatively, create a `static-site-generator` folder in `site/plugins`, downlo
 - Customizable output folder
 - Preserve individual files / folders in the output folder
 - Custom routes (click [here](#custom-routes) for more information)
+- Custom pages filtering (click [here](#custom-filters) for more information)
 
 ## What doesn't work
 
@@ -78,6 +79,7 @@ return [
         'skip_media' => false, # set to true to skip copying media files, e.g. when they are already on a CDN; combinable with 'preserve' => ['media']
         'skip_templates' => [], # ignore pages with given templates (home is always rendered)
         'custom_routes' => [] # see below for more information on custom routes
+        'custom_filters' => [] # see below for more information on custom filters
       ]
     ]
 ];
@@ -129,6 +131,8 @@ If `languageCode` is not provided, the given page is rendered in the default lan
 
 If `baseUrl` is not provided, the default base url is taken.
 
+`path` may also end with a file name, in which case the given file is created instead of using the `<path>/index.html` schema.
+
 To pass custom data to the controller or template, use `data`. [Click here](https://getkirby.com/docs/guide/templates/controllers#arguments-from-page-render-in-route) for more information how to use it.
 
 ⚠️ Have a look [here](https://getkirby.com/docs/reference/system/options/ready) in case you want to dynamically generate the custom routes based on a specific page or point to pages in the config. Kirby comes with a `ready` option for this purpose.
@@ -146,6 +150,32 @@ $staticSiteGenerator->setCustomRoutes($customRoutes);
 ```php
 'd4l.static_site_generator.custom_routes' => $customRoutes
 ```
+
+## Custom filters
+
+When using the endpoint or `static-site-generator` field, this plugin will by default render all pages and subpages (using `pages()->index()`).
+You can filter the pages to be rendered by providing an array of custom filters in config option `custom_filters`.
+
+```php
+'d4l.static_site_generator.custom_filters' => $customFilters
+```
+
+Each element of this array must be an array of arguments accepted by [`$pages->filterBy()` method](https://getkirby.com/docs/cookbook/content/filtering).
+Here is an example array, showing some filters you could use (not exhaustive):
+
+```php
+$customFilters = [
+  ['slug', '==', 'foo'], // will render page if its slug is exactly 'foo'
+  ['url', '!*=', 'bar'], // will render page if its url doesn't contain 'bar'
+  ['uri', '*', '/[1-9]/'], // will render page if its uri match regex '/[1-9]/'
+  ['depth', '>', '2'], // will render page if its depth is greater than 2
+  ['category', 'bar'], // will render page if its value in 'category' field is 'bar' ('category' being a single value field)
+  ['tags', 'bar', ','], // will render page if its value in 'tags' field includes 'bar' ('tags' being a field accepting a comma-separated list of values)
+  ['date', 'date >', '2018-01-01'], // will render page if its date is after '2018-01-01'
+];
+```
+
+⚠️ Here again, you can use [Kirby's `ready` option](https://getkirby.com/docs/reference/system/options/ready) to dynamically generate the custom filters.
 
 ## Warnings
 

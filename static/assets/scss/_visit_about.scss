@@ -1,0 +1,83 @@
+.about-container,
+.visit-container {
+  // width: 25%;
+  text-align: justify;
+  word-break: break-word;
+  hyphens: auto;
+}
+
+.people-container {
+  // width: 45%;
+  // margin: 0 16px;
+  text-align: justify;
+}
+
+.top-title {
+  font-size: var(--bigFont);
+  font-weight: 700;
+}
+
+.members-volunteers {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.members {
+  // margin-right: 10rem;
+}
+
+.top-sidebar {
+  height: 50vh;
+  width: 100%;
+  position: fixed;
+  z-index: 9999;
+  // top: 0;
+  left: 0;
+  background-color: var(--backgroundColor);
+  overflow-x: hidden;
+  /* transition: 0.5s; */
+  padding: 14px;
+  font-size: 14px;
+  font-weight: 700;
+  /* margin-left: 5px; */
+  transition: 0.5s;
+  top: -50vh;
+  // display: flex;
+  grid-gap: 14px;
+  open {
+    top: 0;
+  }
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  @media (max-width: $mobile) {
+    grid-template-columns: 1fr;
+    font-size: 1rem;
+  }
+}
+
+.openbtn {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  color: #393939 !important;
+}
+
+#main {
+  transition: margin-top 0.5s;
+}
+
+.visit-exhibitions-display {
+  display: inline !important;
+}
+
+.closebtn {
+  top: 14px;
+  right: 14px;
+
+  position: absolute;
+  font-size: 18px;
+  color: #393939;
+}

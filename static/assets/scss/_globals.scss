@@ -1,0 +1,212 @@
+html {
+  // font-size: calc(calc(60% + 0.8vmin));
+  font-size: 100%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: rgba(254, 252, 243, 1);
+  padding: 0;
+  color: #393939;
+  font-weight: 700;
+  padding: 0 14px;
+  transition: margin-top 0.5s ease 0s;
+  // font-size: 14px;
+}
+
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+footer {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+main {
+  //   min-height: 85vh;
+  position: relative;
+  bottom: 0;
+  flex: 1;
+}
+
+.page-container {
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+  color: #393939;
+}
+
+.main-container {
+  width: 100%;
+  flex: 1;
+}
+
+.logo-img {
+  object-fit: unset !important;
+  width: 49vw;
+}
+
+/* MEDIA QUERIES */
+
+/* Home Page */
+
+/* for the homepage image grid and links to be responsive and in a grid until screen is less than 700px wide */
+@media (max-width: 900px) {
+  .main-card-box {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 380px) {
+  .fill-img {
+    height: 45vh;
+  }
+}
+
+@media (max-width: 500px) {
+  .menu-items {
+    display: inline-block;
+  }
+}
+
+@media (max-width: 1100px) {
+  .main-card-box {
+    justify-content: center;
+    margin: auto;
+    /* margin-top: 120px; */
+    align-items: center;
+  }
+  .fill-img {
+    flex-shrink: 0;
+  }
+}
+
+/* Side Nav Bar */
+/* to make the sidenav bar stretch to fill the screen */
+
+@media (min-width: 1509px) {
+  .sidenav {
+    display: table;
+    width: 100%;
+  }
+}
+
+/* Exhibition Grid Page  */
+@media screen and (min-width: 1609px) {
+  .exhibition-card-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .exhibition-card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .main-footer {
+    position: unset;
+  }
+
+  .banner {
+    display: inline;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .logo-img {
+    width: 90vw;
+  }
+
+  .exhibition-card-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  /*div#myTopSidebar.top-sidebar {
+          display: inline !important;
+      }*/
+}
+
+/* mobile view CSS */
+
+@media only screen and (max-width: 640px) {
+  /* header and menu */
+
+  .banner {
+    top: 16px;
+  }
+
+  .top-sidebar {
+    height: 45vh;
+    background: #393939;
+    // color: var(--backgroundColor);
+    width: inherit;
+  }
+
+  .closebtn {
+    // color: var(--backgroundColor);
+  }
+
+  #myTopSidebar {
+    flex-direction: column;
+    width: 100vw;
+  }
+
+  .about-container,
+  .people-container,
+  .visit-container {
+    width: 95%;
+    text-align: justify;
+  }
+
+  .people-container {
+    margin: 0;
+    text-align: justify;
+  }
+
+  /* projects */
+
+  .filter-checkbox {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+  .main-exhibition-container {
+    flex-direction: column;
+  }
+
+  .exhibition-card-container {
+    width: 100%;
+    display: block;
+    grid-template-columns: none;
+    flex-grow: none;
+    grid-auto-rows: none;
+    grid-gap: none;
+  }
+
+  .filter-item {
+    width: 100vw;
+  }
+
+  .exhibition-card {
+    width: 100%;
+  }
+
+  .exhibit-image {
+    height: 45vh;
+  }
+
+  .exhibit-image img {
+    width: 100%;
+  }
+}
