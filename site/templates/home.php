@@ -4,7 +4,7 @@
 <!-- content -->
 <main id="main" class="page-container">
     <div class="main-container">
-        <?php snippet('home_grid') ?>
+        <?php snippet('home/grid') ?>
     </div>
 </main>
 
