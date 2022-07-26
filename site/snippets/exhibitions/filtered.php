@@ -1,19 +1,9 @@
-<div class="exhibitions-filtered-container">
-    <?php foreach ($kirby->collection("exhibitions") as $program) : ?>
+<div class="exhibitions-filtered-container filtered">
+
+    <?php foreach ($programs as $program) : ?>
 
         <!--      ARTICLE ITEMS WITH FILTER TAGS-->
-        <div class="exhibition exhibitions-item h2" data-tags="
-        <?php foreach ($program->artists()->split(',') as $tag) : ?>
-        <?= str::slug($tag) ?>
-        <?php endforeach ?>
-
-        <?= $program->startDate()->toDate("Y") ?>
-        
-        <?php foreach ($program->category()->split(',') as $tag) : ?>
-        <?= str::slug($tag) ?>
-        <?php endforeach ?>
-
-        ">
+        <div class="exhibition exhibitions-item h2">
 
             <!-- link -->
             <a class=" " href="<?= $program->url() ?>">
@@ -39,11 +29,14 @@
                 <div class="exhibitions-item-text">
                     <span>
                         <?= $program->title() ?><br>
-                        <?= $program->artist() ?><br><br>
+                        <?= $program->artists() ?><br><br>
                         <?= $program->information()->excerpt($chars = 400, $strip = true, $rep = ' …') ?>
                     </span>
                 </div>
             </a>
         </div>
     <?php endforeach ?>
+    <!-- pagination -->
+    <?php snippet('exhibitions-tags/pagination') ?>
+
 </div>
