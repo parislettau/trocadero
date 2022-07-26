@@ -1,13 +1,12 @@
-<nav class="nav" id="nav">
+<header class="header" id="header">
     <!-- logo -->
-    <div class="header">
+    <div class="logo-container">
         <a href="<?= $site->url() ?>" class="logo">
             <img src="<?= url('/assets/img/logo.png') ?>" alt="Trocadero Projects" class="logo-img">
         </a>
     </div>
     <!--  menu -->
-    <div class="nav-menu">
-
+    <nav class="nav-menu">
         <ul class="menu-items">
             <?php foreach ($site->pages()->listed() as $child) : ?>
                 <li class="menu-open">
@@ -25,5 +24,5 @@
                 <button class="openbtn active-open" onClick="openNav()">ABOUT</button>
             </li>
         </ul>
-    </div>
-</nav>
+    </nav>
+</header>

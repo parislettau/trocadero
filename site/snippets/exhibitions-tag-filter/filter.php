@@ -7,13 +7,13 @@
         <!-- artists -->
         <div style="margin-top:var(--small);">
             <div class="tag-filter filter-trigger" style="">
-                <div class="">Artist</div>
+                <div class="filter-label">Artist</div>
                 <div class="filter-trigger-icon"></div>
             </div>
 
             <div class="filters filters-artists" style="list-style:none;display:none;">
                 <!-- artists -->
-                <div class="tag-filter">
+                <div class="tag-filter artist">
                     <?php $tags = $pluck->pluck('artists', ',', true) ?>
                     <?php sort($tags); ?>
                     <?php foreach ($tags as $tag) : ?>
@@ -27,7 +27,7 @@
         <!-- year -->
         <div style="margin-top:var(--small);">
             <div class="tag-filter filter-trigger" style="">
-                <div class="">Year</div>
+                <div class="filter-label year">Year</div>
                 <div class="filter-trigger-icon"></div>
             </div>
 
@@ -58,7 +58,7 @@
         <!-- category -->
         <div style="margin-top:var(--small);">
             <div class="tag-filter filter-trigger" style="">
-                <div class="">Category</div>
+                <div class="filter-label category">Category</div>
                 <div class="filter-trigger-icon"></div>
             </div>
 

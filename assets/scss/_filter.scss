@@ -7,6 +7,7 @@
   margin-top: 50px;
   @media (max-width: $tablet) {
     grid-template-columns: 1fr;
+    margin-top: $global-gap-width;
   }
   .exhibitions-item {
     display: flex;
@@ -66,10 +67,10 @@
   text-transform: uppercase;
   max-height: 80vh; // keep the filter pane in the visible window
   overflow-y: scroll; // scroll through filter items
+  border-top: 4px solid $global-backgrond-color;
   background-color: var(--backgroundColor);
 
   @media (max-width: $tablet) {
-    border-top: $global-gap-width solid $global-backgrond-color;
     max-height: calc(100vh / 3);
   }
 }
@@ -126,6 +127,10 @@
     &::before {
       content: "◉ ";
     }
+  }
+
+  .filter-label {
+    padding: 4px 0;
   }
 }
 

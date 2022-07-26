@@ -1,10 +1,3 @@
-:root {
-  --backgroundColor: #fefcf3;
-  // font sizes
-  --bigFont: calc(1.3rem + 0.5vw);
-  --normalFont: 1rem;
-  --smallFont: 0.875rem;
-}
 // PAGE BREAK POINTS:;
 $mobile: (768px);
 $tablet: (768px);
@@ -36,3 +29,14 @@ $global-font-weight: 700;
 
 $global-gap-width: 14px;
 $global-backgrond-color: rgba(254, 252, 243, 1);
+
+:root {
+  --backgroundColor: #fefcf3;
+  // font sizes
+  --bigFont: calc(1rem + 0.5vw);
+  --normalFont: 1rem;
+  --smallFont: 0.875rem;
+  @media (max-width: $mobile) {
+    --bigFont: ;
+  }
+}

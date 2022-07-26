@@ -28,7 +28,11 @@
                 <!-- image -->
                 <div class="exhibitions-item-image">
                     <?php
-                    $original = $program->image();
+                    if ($program->cover()->toFile()) {
+                        $original = $program->cover()->toFile();
+                    } else {
+                        $original = $program->image();
+                    }
                     $cropped = $original->crop(500, 400);
                     ?>
                     <img src="<?= $original->placeholderUri(5 / 4) ?>" data-src="<?= $cropped->url() ?>" data-lazyload alt="<?= $original->alt() ?>" />
