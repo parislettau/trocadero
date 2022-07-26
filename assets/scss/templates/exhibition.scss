@@ -3,7 +3,7 @@
 .gallery {
   line-height: 0;
   columns: 2;
-  column-gap: 1.5rem;
+  column-gap: $global-gap-width;
 }
 .gallery li {
   display: block;
@@ -35,7 +35,7 @@
   font-family: arial;
   font-weight: 700;
   color: rgba(57, 57, 57, 1);
-  margin-bottom: 10vh;
+  margin-bottom: $global-gap-width;
   font-size: var(--normalFont);
   line-height: 1.1;
   text-align: justify;
@@ -43,7 +43,7 @@
   hyphens: auto;
   p {
     & + p {
-      margin-bottom: 1.2rem;
+      margin-top: 1.2rem;
     }
   }
   @media (max-width: $mobile) {

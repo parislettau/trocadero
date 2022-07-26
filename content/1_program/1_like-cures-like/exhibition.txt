@@ -2,7 +2,7 @@ Title: Like Cures Likes
 
 ----
 
-Artists: Chunxiao Qu
+Artists: 
 
 ----
 
@@ -133,27 +133,6 @@ Layout:
             {
                 "blocks": [
                     {
-                        "content": [],
-                        "id": "4fb55fe7-2c1d-4ace-b791-d95893941f22",
-                        "isHidden": false,
-                        "type": "line"
-                    }
-                ],
-                "id": "df231b9d-5ea2-47ab-9a6a-c5d568bf34d7",
-                "width": "1/1"
-            }
-        ],
-        "id": "cc7748e2-0c7a-4ea3-986e-79a49157f41a"
-    },
-    {
-        "attrs": {
-            "class": "",
-            "id": ""
-        },
-        "columns": [
-            {
-                "blocks": [
-                    {
                         "content": {
                             "url": "https://www.youtube.com/watch?v=9jXwWCyMJyc&ab_channel=LarryWilliams",
                             "caption": ""
@@ -200,61 +179,67 @@ Layout:
         "columns": [
             {
                 "blocks": [],
-                "id": "1aac385d-bcf2-49a9-859c-9fad0b8410a3",
+                "id": "69e8e352-a1c4-4eda-8002-2710f59b62f0",
+                "width": "1/4"
+            },
+            {
+                "blocks": [],
+                "id": "b8aabd93-a895-473f-b5fc-cca151a553e6",
                 "width": "1/4"
             },
             {
                 "blocks": [
                     {
                         "content": {
-                            "text": "<p>Plain text</p>"
+                            "location": "kirby",
+                            "image": [
+                                "g092093bef7d7a9b913a0a8f62f90c8b728d022f67a0b852a2652870db07a03798424082570652864e8f91d0ff26167f3_640.jpg"
+                            ],
+                            "src": "",
+                            "alt": "",
+                            "caption": "Caption",
+                            "link": "",
+                            "ratio": "",
+                            "crop": "false"
                         },
-                        "id": "5ecfb12a-66ef-4d01-a0c3-ad4aa8a38780",
+                        "id": "02025d83-71c2-4d7f-8809-2d767bc5f35a",
                         "isHidden": false,
-                        "type": "text"
+                        "type": "image"
                     }
                 ],
-                "id": "44dc9346-80ea-4cd9-9b7c-a22f4db2c418",
+                "id": "bc388eb6-9ed2-426f-8f7e-0dbd18aa516a",
                 "width": "1/4"
             },
             {
                 "blocks": [
                     {
                         "content": {
-                            "text": "<ul><li>list 1</li><li>list 2</li></ul>"
+                            "url": "https://www.youtube.com/watch?v=oBcFLmu_tlc&ab_channel=ThePhilosopherKing",
+                            "caption": "Caption to a video"
                         },
-                        "id": "9b68ec0f-6976-41cc-a224-9611a01850ae",
+                        "id": "25d12ff7-3358-4285-ac05-52d16904751a",
                         "isHidden": false,
-                        "type": "list"
+                        "type": "video"
                     }
                 ],
-                "id": "6ed2bf81-b5bc-4d66-9a26-1d7c3c6e6901",
-                "width": "1/4"
-            },
-            {
-                "blocks": [
-                    {
-                        "content": [],
-                        "id": "18650a7a-dd0f-4119-b9c3-0c8ed51e7826",
-                        "isHidden": false,
-                        "type": "line"
-                    }
-                ],
-                "id": "fee210b8-e48a-4772-a7e9-25926f4062de",
+                "id": "787d01af-440a-47eb-8ab7-54f42efac1b0",
                 "width": "1/4"
             }
         ],
-        "id": "e9511ec1-67f0-4be4-9c72-d6bd620dac3b"
+        "id": "bbb97260-dc6b-4d6a-8f83-35d7a4a4d39c"
     }
 ]
 
 ----
 
-Date: 
+Cover:
+
+- >
+  g8be4f19009a23cb99f2d8ccf42cdc37eb756f6e38227a98e467104acc0e2b549e85bd547762fc005ad4966ca0c6d5356_640.jpg
 
 ----
 
-Cover: - chunxiao_edits-7272.jpg
+Date: 
 
 ----
 

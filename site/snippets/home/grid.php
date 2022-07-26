@@ -4,7 +4,7 @@
                         <div class="fill-img">
                                 <?php if ($program->cover()->toFile()) : ?>
                                         <a href="<?= $program->url() ?>">
-                                                <?php $image = $program->image() ?>
+                                                <?php $image = $program->cover()->toFile() ?>
                                                 <img src="<?= $image->placeholderUri() ?>" data-src="<?= $image->url() ?>" data-lazyload alt="<?= $image->alt() ?>" />
                                         </a>
                                 <?php else : ?>

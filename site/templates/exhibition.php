@@ -7,7 +7,7 @@
     <!-- container -->
     <div class="main-container">
         <!-- filtered result -->
-        <?php snippet('exhibition_page') ?>
+        <?php snippet('exhibition/exhibition') ?>
     </div>
 </main>
 <!-- footer -->

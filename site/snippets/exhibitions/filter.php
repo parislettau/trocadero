@@ -28,7 +28,7 @@
                     <?php $activeTag = urlencode(urldecode(param('artist'))); ?>
                     <?php sort($artists); ?>
                     <?php foreach ($artists as $artist) : ?>
-                        <a class="tag <?= $activeTag === urlencode($artist)  ? ' active' : '' ?>" href="<?= url($page->url(), ['params' => ['artist' => urlencode($artist)]]) ?>" style="display:block"><span class="underline" data-filter="<?= str::slug($artist) ?>"><?= html($artist) ?></span></a>
+                        <a id="<?= urlencode($artist) ?>" class="tag <?= $activeTag === urlencode($artist)  ? ' active' : '' ?>" href="<?= $activeTag === urlencode($artist)  ? url($page->url()) : url($page->url(), ['params' => ['artist' => urlencode($artist)]]) ?> " style="display:block"><span class="underline" data-filter="<?= str::slug($artist) ?>"><?= html($artist) ?></span></a>
                     <?php endforeach ?>
                 </div>
 
@@ -65,7 +65,7 @@
                     <?php $activeTag = urlencode(urldecode(param('year'))); ?>
                     <?php sort($years); ?>
                     <?php foreach ($years as $year) : ?>
-                        <a class="tag <?= $activeTag === urlencode($year)  ? ' active' : '' ?>" href="<?= url($page->url(), ['params' => ['year' => urlencode($year)]]) ?>" style="display:block"><span class="underline" data-filter="<?= str::slug($year) ?>"><?= html($year) ?></span></a>
+                        <a class="tag <?= $activeTag === urlencode($year)  ? ' active' : '' ?>" href="<?= $activeTag === urlencode($year)  ? url($page->url()) : url($page->url(), ['params' => ['year' => urlencode($year)]]) ?>" style="display:block"><span class="underline" data-filter="<?= str::slug($year) ?>"><?= html($year) ?></span></a>
                     <?php endforeach ?>
                 </div>
 
@@ -76,8 +76,8 @@
         <?php
         $category = param('category');
         if ($category == "") {
-            $toggle = "";
-            $rotate = "rotate";
+            $toggle = "display:none";
+            $rotate = "";
         } else {
             $toggle = "";
             $rotate = "rotate";
@@ -96,7 +96,9 @@
                     <?php $activeTag = urlencode(urldecode(param('category'))); ?>
                     <?php sort($category); ?>
                     <?php foreach ($category as $category) : ?>
-                        <a class="tag <?= $activeTag === urlencode($category)  ? ' active' : '' ?>" href="<?= url($page->url(), ['params' => ['category' => urlencode($category)]]) ?>" style="display:block"><span class="underline" data-filter="<?= str::slug($category) ?>"><?= html($category) ?></span></a>
+
+
+                        <a class="tag <?= $activeTag === urlencode($category)  ? ' active' : '' ?>" href=" <?= $activeTag === urlencode($category) ? $page->url() : url($page->url(), ['params' => ['category' => urlencode($category)]]) ?>" style="display:block"><span class="underline" data-filter="<?= str::slug($category) ?>"><?= html($category) ?></span></a>
                     <?php endforeach ?>
                 </div>
 

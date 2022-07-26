@@ -3,7 +3,8 @@
     "getkirby/cms": "^3.7",
     "johannschopplich/kirby-blurry-placeholder": "^1.5",
     "diesdasdigital/kirby-meta-knight": "^1.2",
-    "d4l/kirby-static-site-generator": "^1.5"
+    "d4l/kirby-static-site-generator": "^1.5",
+    "medienbaecker/autoresize": "^2.1"
   },
   "config": {
     "optimize-autoloader": true,

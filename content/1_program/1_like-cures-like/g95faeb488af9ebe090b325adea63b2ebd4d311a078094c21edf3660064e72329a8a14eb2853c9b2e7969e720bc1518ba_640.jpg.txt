@@ -3,3 +3,7 @@ Caption:
 ----
 
 Template: blocks/image
+
+----
+
+Sort: 1

@@ -51,7 +51,7 @@
 
 .exhibition-title {
   //   margin-bottom: 15px;
-  //   font-size: 14px;
+  //   font-size: $global-gap-width;
   color: #393939;
 }
 
@@ -65,7 +65,7 @@
 }
 
 .exhibition-info-text {
-  // font-size: 14px;
+  // font-size: $global-gap-width;
   color: #393939;
   display: -webkit-box;
   -webkit-line-clamp: 5;
@@ -79,7 +79,7 @@
 }
 
 .artist-name {
-  //   font-size: 14px;
+  //   font-size: $global-gap-width;
   color: #393939;
 }
 
@@ -98,8 +98,8 @@
 }
 
 .pagination span {
-  padding-right: 14px;
-  padding-left: 14px;
+  padding-right: $global-gap-width;
+  padding-left: $global-gap-width;
   font-size: var(--normalFont);
 }
 

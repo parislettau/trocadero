@@ -1,8 +1,8 @@
 .main-card-box {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 10px;
-  margin-top: 12px;
+  grid-gap: 14px;
+  margin-top: 14px;
   padding-bottom: 20px;
   @media (max-width: $mobile) {
     grid-template-columns: 1fr;
@@ -11,9 +11,14 @@
 
 .fill-img {
   width: 100%;
-  height: 500px;
-  @media (max-width: $mobile) {
-    height: unset;
+  // height: 500px;
+  a {
+    img {
+      height: calc(100vw / 3);
+      @media (max-width: $mobile) {
+        height: unset;
+      }
+    }
   }
 }
 
@@ -38,7 +43,7 @@
 }
 
 .card-tile {
-  height: 520px;
+  // height: 520px;
   @media (max-width: $mobile) {
     height: unset;
   }

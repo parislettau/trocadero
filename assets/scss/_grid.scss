@@ -1,6 +1,6 @@
 .grid {
   --columns: 12;
-  --gutter: 3rem;
+  --gutter: 14px;
   display: grid;
   grid-gap: var(--gutter);
   grid-template-columns: 1fr;

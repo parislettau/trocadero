@@ -2,10 +2,10 @@
   // margin-left: 25%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 14px;
+  grid-gap: $global-gap-width;
   // min-height: calc(100vh - 120px);
   margin-top: 50px;
-  @media (max-width: $mobile) {
+  @media (max-width: $tablet) {
     grid-template-columns: 1fr;
   }
   .exhibitions-item {
@@ -15,7 +15,7 @@
       white-space: nowrap;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      margin-bottom: 14px;
+      margin-bottom: $global-gap-width;
 
       .dates {
       }
@@ -37,7 +37,7 @@
       }
     }
     &-text {
-      margin-top: 14px;
+      margin-top: $global-gap-width;
       font-style: normal;
       font-weight: 700;
       font-size: 1rem;
@@ -53,11 +53,11 @@
 }
 
 .filter-pane {
-  padding-bottom: 14px;
+  padding-bottom: $global-gap-width;
   position: sticky;
   bottom: 0;
   width: 25%;
-  // padding-right: 14px;
+  // padding-right: $global-gap-width;
   font-style: normal;
   font-weight: 700;
   font-size: var(--bigFont);
@@ -68,8 +68,9 @@
   overflow-y: scroll; // scroll through filter items
   background-color: var(--backgroundColor);
 
-  @media (max-width: $mobile) {
-    padding-top: 14px;
+  @media (max-width: $tablet) {
+    border-top: $global-gap-width solid $global-backgrond-color;
+    max-height: calc(100vh / 3);
   }
 }
 
@@ -126,6 +127,15 @@
       content: "◉ ";
     }
   }
+}
+
+.tag-filter.filter-trigger {
+  z-index: 2000;
+  background: $global-backgrond-color;
+}
+
+.filters.filters-artists {
+  z-index: 100;
 }
 
 // .filter {

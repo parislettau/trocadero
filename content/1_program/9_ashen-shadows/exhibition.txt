@@ -2,7 +2,7 @@ Title: Ashen Shadows
 
 ----
 
-artists: 
+Artists: Hannah Beilharz
 
 ----
 
@@ -11,10 +11,6 @@ Startdate: 2021-05-05
 ----
 
 Enddate: 2021-05-29
-
-----
-
-Date: 
 
 ----
 
@@ -34,4 +30,11 @@ Layout:
 
 ----
 
-artists: Hannah Beilharz
+Cover:
+
+- >
+  ashen-shadows-beilharz-2020-video-still-300dpi-2048x1258.jpeg
+
+----
+
+Date: 
