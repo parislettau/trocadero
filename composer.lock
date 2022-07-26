@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bb16ed1ff23cc9b106794b2bf30c5744",
+    "content-hash": "02fa0968e843b7a334c6deb8daec4603",
     "packages": [
         {
             "name": "claviska/simpleimage",
@@ -54,6 +54,52 @@
                 }
             ],
             "time": "2021-12-01T12:42:55+00:00"
+        },
+        {
+            "name": "coyl/git",
+            "version": "0.1.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/coyl/git.git",
+                "reference": "bc9893d096fab1bdd0fac8ee2f30b8b1dcbf8d63"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/coyl/git/zipball/bc9893d096fab1bdd0fac8ee2f30b8b1dcbf8d63",
+                "reference": "bc9893d096fab1bdd0fac8ee2f30b8b1dcbf8d63",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~3.7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Vasil coylOne Kulakov",
+                    "email": "iam@vasiliy.pro",
+                    "homepage": "http://github.com/coyl"
+                }
+            ],
+            "description": "PHP library for manipulations on git repository. Based on kbjr/Git.php and it's forks",
+            "homepage": "https://github.com/coyl/Git.php",
+            "keywords": [
+                "git",
+                "git-client",
+                "php-git"
+            ],
+            "support": {
+                "source": "https://github.com/coyl/git/tree/master"
+            },
+            "time": "2017-09-12T08:37:07+00:00"
         },
         {
             "name": "d4l/kirby-static-site-generator",
@@ -1005,6 +1051,44 @@
                 }
             ],
             "time": "2022-05-24T11:49:31+00:00"
+        },
+        {
+            "name": "thathoff/kirby-git-content",
+            "version": "v4.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thathoff/kirby-git-content.git",
+                "reference": "72e079438e0af861a75074d95c7ee24643bff5f9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thathoff/kirby-git-content/zipball/72e079438e0af861a75074d95c7ee24643bff5f9",
+                "reference": "72e079438e0af861a75074d95c7ee24643bff5f9",
+                "shasum": ""
+            },
+            "require": {
+                "coyl/git": "^0.1.7",
+                "getkirby/composer-installer": "^1.1"
+            },
+            "type": "kirby-plugin",
+            "extra": {
+                "installer-name": "git-content"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Thathoff\\GitContent\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Plugin to track changes to content in a git repository.",
+            "support": {
+                "issues": "https://github.com/thathoff/kirby-git-content/issues",
+                "source": "https://github.com/thathoff/kirby-git-content/tree/v4.1.0"
+            },
+            "time": "2021-02-19T12:55:16+00:00"
         }
     ],
     "packages-dev": [],

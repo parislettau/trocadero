@@ -23,6 +23,10 @@ class ComposerStaticInit318012e4d56f2445b5aa2af1a9d2cdd4
         array (
             'Whoops\\' => 7,
         ),
+        'T' => 
+        array (
+            'Thathoff\\GitContent\\' => 20,
+        ),
         'S' => 
         array (
             'Symfony\\Polyfill\\Mbstring\\' => 26,
@@ -52,6 +56,10 @@ class ComposerStaticInit318012e4d56f2445b5aa2af1a9d2cdd4
         'Whoops\\' => 
         array (
             0 => __DIR__ . '/..' . '/filp/whoops/src/Whoops',
+        ),
+        'Thathoff\\GitContent\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/site/plugins/git-content/src',
         ),
         'Symfony\\Polyfill\\Mbstring\\' => 
         array (
@@ -86,6 +94,7 @@ class ComposerStaticInit318012e4d56f2445b5aa2af1a9d2cdd4
 
     public static $fallbackDirsPsr4 = array (
         0 => __DIR__ . '/..' . '/league/color-extractor/src',
+        1 => __DIR__ . '/..' . '/coyl/git/src',
     );
 
     public static $prefixesPsr0 = array (
@@ -107,6 +116,17 @@ class ComposerStaticInit318012e4d56f2445b5aa2af1a9d2cdd4
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'Coyl\\Git\\Console' => __DIR__ . '/..' . '/coyl/git/src/Coyl/Git/Console.php',
+        'Coyl\\Git\\ConsoleException' => __DIR__ . '/..' . '/coyl/git/src/Coyl/Git/ConsoleException.php',
+        'Coyl\\Git\\DTO\\Branch' => __DIR__ . '/..' . '/coyl/git/src/Coyl/Git/DTO/Branch.php',
+        'Coyl\\Git\\DTO\\Reference' => __DIR__ . '/..' . '/coyl/git/src/Coyl/Git/DTO/Reference.php',
+        'Coyl\\Git\\DTO\\Tag' => __DIR__ . '/..' . '/coyl/git/src/Coyl/Git/DTO/Tag.php',
+        'Coyl\\Git\\Exception\\BranchNotFoundException' => __DIR__ . '/..' . '/coyl/git/src/Coyl/Git/Exception/BranchNotFoundException.php',
+        'Coyl\\Git\\Exception\\InvalidArgumentException' => __DIR__ . '/..' . '/coyl/git/src/Coyl/Git/Exception/InvalidArgumentException.php',
+        'Coyl\\Git\\Git' => __DIR__ . '/..' . '/coyl/git/src/Coyl/Git/Git.php',
+        'Coyl\\Git\\GitException' => __DIR__ . '/..' . '/coyl/git/src/Coyl/Git/GitException.php',
+        'Coyl\\Git\\GitRepo' => __DIR__ . '/..' . '/coyl/git/src/Coyl/Git/GitRepo.php',
+        'Coyl\\Git\\RepoUtils' => __DIR__ . '/..' . '/coyl/git/src/Coyl/Git/RepoUtils.php',
         'Kirby\\Api\\Api' => __DIR__ . '/../..' . '/kirby/src/Api/Api.php',
         'Kirby\\Api\\Collection' => __DIR__ . '/../..' . '/kirby/src/Api/Collection.php',
         'Kirby\\Api\\Model' => __DIR__ . '/../..' . '/kirby/src/Api/Model.php',
@@ -396,6 +416,8 @@ class ComposerStaticInit318012e4d56f2445b5aa2af1a9d2cdd4
         'Symfony\\Polyfill\\Intl\\Idn\\Resources\\unidata\\Regex' => __DIR__ . '/..' . '/symfony/polyfill-intl-idn/Resources/unidata/Regex.php',
         'Symfony\\Polyfill\\Intl\\Normalizer\\Normalizer' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/Normalizer.php',
         'Symfony\\Polyfill\\Mbstring\\Mbstring' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/Mbstring.php',
+        'Thathoff\\GitContent\\KirbyGit' => __DIR__ . '/../..' . '/site/plugins/git-content/src/KirbyGit.php',
+        'Thathoff\\GitContent\\KirbyGitHelper' => __DIR__ . '/../..' . '/site/plugins/git-content/src/KirbyGitHelper.php',
         'Whoops\\Exception\\ErrorException' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Exception/ErrorException.php',
         'Whoops\\Exception\\Formatter' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Exception/Formatter.php',
         'Whoops\\Exception\\Frame' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Exception/Frame.php',

@@ -18,5 +18,14 @@ return [
             'custom_routes' => [], # see below for more information on custom routes
             'custom_filters' => [] # see below for more information on custom filters
         ]
-    ]
+    ],
+
+    # https://github.com/thathoff/kirby-git-content
+    // other configuration options
+    // 'thathoff' => [
+    //     'git-content' => [
+    //         'commit' => true,
+    //         'path' => kirby()->root("static"),
+    //     ],
+    // ],
 ];

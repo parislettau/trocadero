@@ -4,7 +4,8 @@
     "johannschopplich/kirby-blurry-placeholder": "^1.5",
     "diesdasdigital/kirby-meta-knight": "^1.2",
     "d4l/kirby-static-site-generator": "^1.5",
-    "medienbaecker/autoresize": "^2.1"
+    "medienbaecker/autoresize": "^2.1",
+    "thathoff/kirby-git-content": "^4.1"
   },
   "config": {
     "optimize-autoloader": true,

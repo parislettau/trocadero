@@ -17,6 +17,7 @@
     align-self: end;
     grid-area: filter;
     width: 100%;
+    overflow-x: hidden;
   }
   .filtered {
     // position: sticky;
