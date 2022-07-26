@@ -107,6 +107,7 @@
                 //          $(this).parent().find('a').not(this).removeClass('active');
                 $('body').find('a').not(this).removeClass('active');
                 dofilter(); // Then do the filter
+                $(window).scrollTop(0); // scroll to the top
             })
 
             function dofilter() {
