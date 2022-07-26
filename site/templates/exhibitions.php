@@ -7,9 +7,9 @@
     <!-- container -->
     <div class="main-container">
         <!-- filtered result -->
-        <?php snippet('exhibitions/filtered') ?>
+        <?php snippet('exhibitions-tag-filter/filtered') ?>
         <!-- filter cloud -->
-        <?php snippet('exhibitions/filter') ?>
+        <?php snippet('exhibitions-tag-filter/filter') ?>
     </div>
 </main>
 <!-- footer -->

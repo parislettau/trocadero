@@ -1,4 +1,4 @@
-<div class="exhibitions-filtered-container">
+<div class="exhibitions-filtered-container filtered">
     <?php foreach ($kirby->collection("exhibitions") as $program) : ?>
 
         <!--      ARTICLE ITEMS WITH FILTER TAGS-->

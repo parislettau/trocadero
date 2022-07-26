@@ -115,51 +115,5 @@
             });
         </script>
 
-        <script>
-            // $(document).ready(function() {
 
-            //     //FUNCTION TO SHOW ALL TAGS AND REMOVE ALL FILTERS
-            //     $('.tag-all').on('click', function(event) {
-            //         event.preventDefault();
-            //         $(this).addClass('active'); // check this
-            //         $('body').find('a').not(this).removeClass('active'); // uncheck not this
-            //         $('[data-tags]').show(); // then show all articles
-            //     })
-            //     // 
-            //     $('.tag').on('click', function(event) {
-            //         event.preventDefault(); // prevent the default action
-            //         $(this).toggleClass('active'); // check this
-            //         $('.tag-all').removeClass('active')
-            //         //Uncheck not this
-            //         //          $(this).parent().find('a').not(this).removeClass('active');
-            //         $('body').find('a').not(this).removeClass('active');
-            //         dofilter(); // Then do the filter
-            //     })
-
-            //     // function dofilter() {
-            //     //     var active = $('a.active').find('span').map(function() {
-            //     //         return $(this).attr('data-filter')
-            //     //     }).toArray()
-
-            //     //     if (active.length) {
-            //     //         $('[data-tags]').each(function() {
-            //     //             var tags = $(this).attr('data-tags').split(' ').filter(function(t) {
-            //     //                 return t
-            //     //             })
-            //     //             console.log(matches)
-            //     //             var matches = tags.filter(function(t) {
-            //     //                 return active.includes(t)
-            //     //             })
-            //     //             if (matches.length === active.length) {
-            //     //                 $(this).show()
-            //     //             } else {
-            //     //                 $(this).hide()
-            //     //             }
-            //     //         })
-            //     //     } else {
-            //     //         $('[data-tags]').show()
-            //     //     }
-            //     // }
-            // });
-        </script>
     </div>
