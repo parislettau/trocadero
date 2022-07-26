@@ -1,7 +1,18 @@
 <?php
 
 return [
-    'debug' => true,
+    'debug' => true, // turn to false once finished
+    // https://github.com/getkirby/staticache 
+    'cache' => [
+        'pages' => [
+            'active' => true,
+            'type' => 'static',
+            // 'ignore' => function ($page) {
+            //     return $page->template()->name() === 'blog';
+            // }
+        ]
+    ],
+    // https://github.com/d4l-data4life/kirby3-static-site-generator
     'd4l' => [
         'static_site_generator' => [
             'endpoint' => 'd4l.static_site_generator.endpoint', # set to any string like 'generate-static-site' to use the built-in endpoint (necessary when using the blueprint field)
@@ -15,5 +26,3 @@ return [
         ]
     ]
 ];
-
-// turn to false once finished

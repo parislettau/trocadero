@@ -173,23 +173,23 @@ Twitter-creator:
 
 ----
 
-Robots-noindex: 
+Robots-noindex: enabled
 
 ----
 
-Robots-nofollow: 
+Robots-nofollow: enabled
 
 ----
 
-Robots-noarchive: 
+Robots-noarchive: enabled
 
 ----
 
-Robots-noimageindex: 
+Robots-noimageindex: enabled
 
 ----
 
-Robots-nosnippet: 
+Robots-nosnippet: enabled
 
 ----
 

@@ -76,8 +76,8 @@
         <?php
         $category = param('category');
         if ($category == "") {
-            $toggle = "";
-            $rotate = "rotate";
+            $toggle = "display:none";
+            $rotate = "";
         } else {
             $toggle = "";
             $rotate = "rotate";

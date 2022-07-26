@@ -16,17 +16,15 @@ $(document).ready(function () {
 });
 
 function openNav() {
-  // document.getElementById("nav").style.marginTop = "50vh";
-  document.getElementById("body").style.marginTop = "50vh";
-  document.getElementById("myTopSidebar").style.top = "0";
-  document.getElementById("nav").style.top = "50vh";
+  $("body").addClass("top-sidebar-open");
+  $("#myTopSidebar").addClass("top-sidebar-open");
+  $("#nav").addClass("top-sidebar-open");
 }
 
 function closeNav() {
-  // document.getElementById("nav").style.marginTop = "0";
-  document.getElementById("body").style.marginTop = "0";
-  document.getElementById("nav").style.top = "0";
-  document.getElementById("myTopSidebar").style.top = "-50vh";
+  $("body").removeClass("top-sidebar-open");
+  $("#myTopSidebar").removeClass("top-sidebar-open");
+  $("#nav").removeClass("top-sidebar-open");
 }
 
 // //////////////////////////////

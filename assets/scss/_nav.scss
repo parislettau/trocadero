@@ -21,6 +21,12 @@ nav,
   @media (max-width: $mobile) {
     flex-direction: column;
   }
+  &.top-sidebar-open {
+    top: 50vh;
+    @media (max-width: $mobile) {
+      top: 100vh;
+    }
+  }
 }
 
 /* .banner-space {

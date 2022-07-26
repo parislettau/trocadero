@@ -12,6 +12,15 @@ body {
   padding: 0 14px;
   transition: margin-top 0.5s ease 0s;
   // font-size: 14px;
+  &.top-sidebar-open {
+    margin-top: 50vh;
+
+    @media (max-width: $mobile) {
+      margin-top: 100vh;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+  }
 }
 
 .page-wrapper {
@@ -148,8 +157,10 @@ a {
   .top-sidebar {
     height: 45vh;
     background: #393939;
-    // color: var(--backgroundColor);
     width: inherit;
+    &.top-sidebar-open {
+      top: 0;
+    }
   }
 
   .closebtn {
