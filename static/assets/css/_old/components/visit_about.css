@@ -1,0 +1,64 @@
+
+.about-container, .visit-container {
+    width: 25%;
+}
+
+.people-container {
+    width: 45%;
+    margin: 0 16px;
+}
+
+.top-title {
+    font-size: 1.625rem;
+    font-weight: 700;
+}
+
+.members-volunteers {
+    display: flex;
+}
+
+.members {
+    margin-right: 10rem;
+}
+
+.top-sidebar {
+    height: 40%;
+    width: 100%;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0; 
+    background-color: #fefcf3;
+    overflow-x: hidden;
+    /* transition: 0.5s; */
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    /* margin-left: 5px; */
+}
+
+.openbtn {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    color: #393939 !important;
+}
+
+#main {
+    transition: margin-top .5s;
+}
+
+.visit-exhibitions-display {
+    display: inline !important;
+}
+
+.closebtn {
+    top: 10px;
+    right: 32px;
+    position: absolute;
+    font-size: 18px;
+    color: #393939;
+}

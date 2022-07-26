@@ -1,0 +1,46 @@
+#acknowledgment,
+.acknowledgment {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(254, 252, 243, 0.95);
+  display: none;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: $global-gap-width;
+
+  &-text {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 110%;
+    text-align: justify;
+    letter-spacing: 0.01em;
+    padding-right: 28px;
+  }
+
+  #close {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    font-size: 15px;
+    line-height: 19px;
+    text-align: right;
+    font-family: loos-compressed, sans-serif;
+    font-weight: 700;
+    padding: 7px;
+    color: black;
+    opacity: 0.8;
+  }
+
+  .mydivcontent {
+    padding: 10px;
+  }
+
+  .unset {
+    all: unset;
+  }
+}

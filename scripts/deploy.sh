@@ -1,5 +1,6 @@
 #!/usr/bin/env sh
-PROJECT=~/sites/memoreview
+PROJECT=trocadero
+LOCAL=~/sites/$PROJECT
 
 # Ask the user for a descripion of push
 echo Hello, please enter short description of the push:
@@ -7,7 +8,7 @@ read varname
 
 DESCRIPTION=$varname
 
-cd $PROJECT
+cd $LOCAL
 git pull
 git add .
 git commit -m "$DESCRIPTION"
@@ -15,7 +16,7 @@ git push
 
 USER=root
 HOST=149.28.168.105
-WEBROOT=/var/www/memoreview
+WEBROOT=/var/www/$PROJECT
 
 ssh -A $USER@$HOST /bin/bash <<EOF
   cd $WEBROOT
