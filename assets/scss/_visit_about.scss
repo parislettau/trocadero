@@ -1,15 +1,23 @@
 .about-container,
 .visit-container {
-  // width: 25%;
-  text-align: justify;
   word-break: break-word;
   hyphens: auto;
 }
 
+.about-container,
+.visit-container,
 .people-container {
   // width: 45%;
   // margin: 0 16px;
   text-align: justify;
+  .members-volunteers,
+  .past-members {
+    text-align: left;
+  }
+
+  @media (max-width: $mobile) {
+    // text-align: left;
+  }
 }
 
 .top-title {
@@ -83,6 +91,6 @@
   right: $global-gap-width;
 
   position: absolute;
-  font-size: 18px;
+  font-size: var(--bigFont);
   color: #393939;
 }

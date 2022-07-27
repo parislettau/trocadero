@@ -20,7 +20,6 @@ return [
         ]
     ],
 
-
     # https://getkirby.com/docs/reference/objects/cms/file/srcset
     'thumbs' => [
         'driver' => 'im',                                           // https://getkirby.com/docs/reference/system/options/thumbs#thumbs-driver

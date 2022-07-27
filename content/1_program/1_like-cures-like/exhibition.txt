@@ -103,21 +103,7 @@ Layout:
                 "width": "1/2"
             },
             {
-                "blocks": [
-                    {
-                        "content": {
-                            "images": [
-                                "g092093bef7d7a9b913a0a8f62f90c8b728d022f67a0b852a2652870db07a03798424082570652864e8f91d0ff26167f3_640.jpg",
-                                "g95faeb488af9ebe090b325adea63b2ebd4d311a078094c21edf3660064e72329a8a14eb2853c9b2e7969e720bc1518ba_640.jpg",
-                                "g296257f0fc6150509bf1afcd9b1ddd6dc2a53d3902a6343a30d7f6f521b6c0154048b23a983a3955bea7b1b2032eca7e_640.jpg",
-                                "gf5367b043ab01ef224c1e61e695e450a7b3880130700ca10f4a317db40929a16cec6042c3e3b34f607849d1885504c0d_640.jpg"
-                            ]
-                        },
-                        "id": "2022df91-172d-4f24-b0a0-45d8351cf10c",
-                        "isHidden": false,
-                        "type": "gallery"
-                    }
-                ],
+                "blocks": [],
                 "id": "ff063c07-7a49-44f6-973e-b722759b5dcf",
                 "width": "1/2"
             }
@@ -134,7 +120,7 @@ Layout:
                 "blocks": [
                     {
                         "content": {
-                            "url": "https://www.youtube.com/watch?v=9jXwWCyMJyc&ab_channel=LarryWilliams",
+                            "url": "https://www.youtube.com/watch?v=nXD5EsEilV0&ab_channel=MonashUniversityArt%2CDesign%26Architecture",
                             "caption": ""
                         },
                         "id": "cb2974df-4027-4d0f-b2bf-53d8cf02b267",
@@ -170,63 +156,6 @@ Layout:
             }
         ],
         "id": "404a120b-7d9e-44d9-839f-18c475ec5b11"
-    },
-    {
-        "attrs": {
-            "class": "",
-            "id": ""
-        },
-        "columns": [
-            {
-                "blocks": [],
-                "id": "69e8e352-a1c4-4eda-8002-2710f59b62f0",
-                "width": "1/4"
-            },
-            {
-                "blocks": [],
-                "id": "b8aabd93-a895-473f-b5fc-cca151a553e6",
-                "width": "1/4"
-            },
-            {
-                "blocks": [
-                    {
-                        "content": {
-                            "location": "kirby",
-                            "image": [
-                                "g092093bef7d7a9b913a0a8f62f90c8b728d022f67a0b852a2652870db07a03798424082570652864e8f91d0ff26167f3_640.jpg"
-                            ],
-                            "src": "",
-                            "alt": "",
-                            "caption": "Caption",
-                            "link": "",
-                            "ratio": "",
-                            "crop": "false"
-                        },
-                        "id": "02025d83-71c2-4d7f-8809-2d767bc5f35a",
-                        "isHidden": false,
-                        "type": "image"
-                    }
-                ],
-                "id": "bc388eb6-9ed2-426f-8f7e-0dbd18aa516a",
-                "width": "1/4"
-            },
-            {
-                "blocks": [
-                    {
-                        "content": {
-                            "url": "https://www.youtube.com/watch?v=oBcFLmu_tlc&ab_channel=ThePhilosopherKing",
-                            "caption": "Caption to a video"
-                        },
-                        "id": "25d12ff7-3358-4285-ac05-52d16904751a",
-                        "isHidden": false,
-                        "type": "video"
-                    }
-                ],
-                "id": "787d01af-440a-47eb-8ab7-54f42efac1b0",
-                "width": "1/4"
-            }
-        ],
-        "id": "bbb97260-dc6b-4d6a-8f83-35d7a4a4d39c"
     }
 ]
 

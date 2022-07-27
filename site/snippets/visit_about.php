@@ -35,7 +35,7 @@
         <?= $site->footeraddress() ?><br><br>
         <?= $site->footerhours() ?><br><br>
         <span>ACCESS</span><br><br>
-        <?= $site->footeraccess() ?><br><br><br>
+        <?= $site->footeraccess() ?><br><br>
         <span>COVIDSafe Information</span><br><br>
         <?= page('visit')->covidsafe() ?>
     </div>
