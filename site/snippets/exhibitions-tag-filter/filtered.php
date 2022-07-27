@@ -35,8 +35,53 @@
                     }
                     $cropped = $original->crop(500, 400);
                     ?>
-                    <img src="<?= $original->placeholderUri(5 / 4) ?>" data-src="<?= $cropped->url() ?>" data-lazyload alt="<?= $original->alt() ?>" />
+                    <picture>
+                        <source srcset="<?= $original->srcset([
+                                            '1x' => [
+                                                'width' => 500,
+                                                'height' => 400,
+                                                'crop' => 'center',
+                                                'format' => 'avif'
 
+                                            ],
+                                            '2x' => [
+                                                'width' => 500,
+                                                'height' => 400,
+                                                'crop' => 'center',
+                                                'format' => 'avif'
+                                            ],
+                                            '3x' => [
+                                                'width' => 500,
+                                                'height' => 400,
+                                                'crop' => 'center',
+                                                'format' => 'avif'
+                                            ]
+                                        ])
+                                        ?>" type="image/avif">
+                        <source srcset="<?= $original->srcset([
+                                            '1x' => [
+                                                'width' => 500,
+                                                'height' => 400,
+                                                'crop' => 'center',
+                                                'format' => 'webp'
+
+                                            ],
+                                            '2x' => [
+                                                'width' => 500,
+                                                'height' => 400,
+                                                'crop' => 'center',
+                                                'format' => 'webp'
+                                            ],
+                                            '3x' => [
+                                                'width' => 500,
+                                                'height' => 400,
+                                                'crop' => 'center',
+                                                'format' => 'webp'
+                                            ]
+                                        ])
+                                        ?>" type="image/webp">
+                        <img src="<?= $original->placeholderUri(5 / 4) ?>" data-src="<?= $cropped->url() ?>" data-lazyload alt="<?= $original->alt() ?>" />
+                    </picture>
                 </div>
 
                 <!-- text -->
