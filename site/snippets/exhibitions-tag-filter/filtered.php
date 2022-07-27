@@ -41,11 +41,9 @@
 
                 <!-- text -->
                 <div class="exhibitions-item-text">
-                    <span>
-                        <?= $program->title() ?><br>
-                        <?= $program->artist() ?><br><br>
-                        <?= $program->information()->excerpt($chars = 400, $strip = true, $rep = ' …') ?>
-                    </span>
+                    <?= $program->title()->kt() ?>
+                    <?= $program->artist()->kt() ?>
+                    <?= $program->information()->excerpt($chars = 350, $strip = true, $rep = ' …')->kt() ?>
                 </div>
             </a>
         </div>

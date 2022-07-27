@@ -234,8 +234,7 @@ Layout:
 
 Cover:
 
-- >
-  g8be4f19009a23cb99f2d8ccf42cdc37eb756f6e38227a98e467104acc0e2b549e85bd547762fc005ad4966ca0c6d5356_640.jpg
+- chunxiao_edits-7272.jpg
 
 ----
 

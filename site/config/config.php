@@ -20,12 +20,5 @@ return [
         ]
     ],
 
-    # https://github.com/thathoff/kirby-git-content
-    // other configuration options
-    // 'thathoff' => [
-    //     'git-content' => [
-    //         'commit' => true,
-    //         'path' => kirby()->root("static"),
-    //     ],
-    // ],
+
 ];

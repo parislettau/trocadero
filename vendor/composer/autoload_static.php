@@ -93,8 +93,8 @@ class ComposerStaticInit318012e4d56f2445b5aa2af1a9d2cdd4
     );
 
     public static $fallbackDirsPsr4 = array (
-        0 => __DIR__ . '/..' . '/league/color-extractor/src',
-        1 => __DIR__ . '/..' . '/coyl/git/src',
+        0 => __DIR__ . '/..' . '/coyl/git/src',
+        1 => __DIR__ . '/..' . '/league/color-extractor/src',
     );
 
     public static $prefixesPsr0 = array (

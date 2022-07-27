@@ -59,7 +59,6 @@ columns:
               - image
               - video
               - gallery
-
             settings:
               fields:
                 class:

@@ -38,7 +38,7 @@
       }
     }
     &-text {
-      margin-top: $global-gap-width;
+      // margin-top: $global-gap-width;
       font-style: normal;
       font-weight: 700;
       font-size: 1rem;
@@ -46,7 +46,7 @@
       color: #393939;
 
       display: -webkit-box;
-      -webkit-line-clamp: 8;
+      -webkit-line-clamp: 6;
       -webkit-box-orient: vertical;
       overflow: hidden;
     }
@@ -54,7 +54,7 @@
 }
 
 .filter-pane {
-  padding-bottom: $global-gap-width;
+  padding-bottom: calc(#{$global-gap-width} / 2);
   position: sticky;
   bottom: 0;
   width: 25%;
