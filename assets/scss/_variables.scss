@@ -9,6 +9,8 @@ $global-font-family: arial, sans-serif;
 $global-font-size: 16px;
 $global-line-height: 1.1;
 $global-font-weight: 700;
+$global-main-margin: 4vh;
+
 // $global-xxlarge-font-size: ;
 // $global-xlarge-font-size: ;
 // $global-large-font-size: ;
@@ -26,6 +28,9 @@ $global-font-weight: 700;
 // $global-secondary-text-transform: ;
 // $global-secondary-letter-spacing: ;
 // $elobal-secondary-font-stvle: ;
+@media (max-width: $mobile) {
+  $global-main-margin: 2vh;
+}
 
 $global-gap-width: 14px;
 $global-backgrond-color: rgba(254, 252, 243, 1);
