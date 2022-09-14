@@ -1,6 +1,7 @@
 html {
   // font-size: calc(calc(60% + 0.8vmin));
   font-size: $global-font-size;
+  line-height: 1.1;
 }
 
 body {
@@ -10,6 +11,7 @@ body {
   color: #393939;
   font-weight: $global-font-weight;
   padding: 0 $global-gap-width;
+
   transition: margin-top 0.5s ease 0s;
   &.top-sidebar-open {
     margin-top: 50vh;
@@ -58,7 +60,7 @@ footer {
 
 main {
   //   min-height: 85vh;
-  margin-top: $global-main-margin;
+  // margin-top: $global-main-margin;
   position: relative;
   bottom: 0;
   flex: 1;

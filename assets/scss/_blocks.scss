@@ -23,6 +23,7 @@
 .block-type-markdown {
   p {
     text-align: justify;
+    hyphens: auto;
     & + p {
       margin-top: 1.2rem;
     }

@@ -64,10 +64,13 @@ nav.nav-menu {
   font-weight: 700;
   margin-top: 0;
   padding-left: 0;
+
   gap: $global-gap-width;
   @media (max-width: $mobile) {
     justify-content: space-between;
     width: 100%;
+    margin-top: 6px;
+    font-size: calc(var(--normalFont) * 1.1);
   }
 }
 
