@@ -22,7 +22,7 @@ return [
 
     # https://getkirby.com/docs/reference/objects/cms/file/srcset
     'thumbs' => [
-        'driver' => 'im',                                           // https://getkirby.com/docs/reference/system/options/thumbs#thumbs-driver
+        // 'driver' => 'im',                                           // https://getkirby.com/docs/reference/system/options/thumbs#thumbs-driver
         'srcsets' => [                                              // https://getkirby.com/docs/cookbook/performance/responsive-images
             'default' => [
                 '300w'  => ['width' => 300],
