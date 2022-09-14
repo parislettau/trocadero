@@ -1,6 +1,7 @@
 {
   "require": {
     "getkirby/cms": "^3.7",
+    "php": ">=7.1.0 || ^8.0",
     "johannschopplich/kirby-blurry-placeholder": "^1.5",
     "diesdasdigital/kirby-meta-knight": "^1.2",
     "d4l/kirby-static-site-generator": "^1.5",

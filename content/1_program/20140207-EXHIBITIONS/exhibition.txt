@@ -1,0 +1,35 @@
+Title: EXHIBITIONS
+----
+Date: 02/07/2014
+----
+Category: 
+----
+
+Artists:
+
+----
+
+Startdate:
+
+----
+
+Enddate: 
+
+----
+Gallery:
+
+----
+
+Category: Exhibition
+
+----
+
+Layout: 
+
+----
+
+Tags: 
+----
+Cover:
+----
+Information: 
