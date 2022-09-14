@@ -1,26 +1,26 @@
 Title: PEER-TO-PEER CALLOUT
 ----
-Date: 07/10/2021
+Startdate: 07/10/2021
 ----
-Category: 
+Artists: 
 ----
 
 Artists:
 
 ----
 
-Startdate:
+StartStartdate:
 
 ----
 
-Enddate: 
+EndStartdate: 
 
 ----
 Gallery:
 
 ----
 
-Category: Exhibition
+Artists: Exhibition
 
 ----
 
@@ -32,7 +32,7 @@ Tags:
 ----
 Cover:
 ----
-Information: [![](http://www.trocaderoartspace.com.au/wp-content/uploads/2021/07/Peer-to-Peer-Web.png)](http://www.trocaderoartspace.com.au/wp-content/uploads/2021/07/Peer-to-Peer-Web.png)
+Text: [![](http://www.trocaderoartspace.com.au/wp-content/uploads/2021/07/Peer-to-Peer-Web.png)](http://www.trocaderoartspace.com.au/wp-content/uploads/2021/07/Peer-to-Peer-Web.png)
 
 ##### **Our TROC Peer-to-Peer call out has been extended!**
 

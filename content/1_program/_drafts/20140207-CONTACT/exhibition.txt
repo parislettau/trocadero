@@ -1,26 +1,26 @@
 Title: CONTACT
 ----
-Date: 02/07/2014
+Startdate: 02/07/2014
 ----
-Category: 
+Artists: 
 ----
 
 Artists:
 
 ----
 
-Startdate:
+StartStartdate:
 
 ----
 
-Enddate: 
+EndStartdate: 
 
 ----
 Gallery:
 
 ----
 
-Category: Exhibition
+Artists: Exhibition
 
 ----
 
@@ -32,6 +32,6 @@ Tags:
 ----
 Cover:
 ----
-Information: \[contact-form-7 id="3443" title="contact form 2 (new)"\]
+Text: \[contact-form-7 id="3443" title="contact form 2 (new)"\]
 
 ---

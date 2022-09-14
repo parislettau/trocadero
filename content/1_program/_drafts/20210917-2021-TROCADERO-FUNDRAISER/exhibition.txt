@@ -1,26 +1,26 @@
 Title: 2021 TROCADERO FUNDRAISER
 ----
-Date: 09/17/2021
+Startdate: 09/17/2021
 ----
-Category: 
+Artists: 
 ----
 
 Artists:
 
 ----
 
-Startdate:
+StartStartdate:
 
 ----
 
-Enddate: 
+EndStartdate: 
 
 ----
 Gallery:
 
 ----
 
-Category: Exhibition
+Artists: Exhibition
 
 ----
 
@@ -32,7 +32,7 @@ Tags:
 ----
 Cover:
 ----
-Information: [![](http://www.trocaderoartspace.com.au/wp-content/uploads/2021/09/Troc_Fundrasier_2021_Graphic_Gif_Pink.gif)](https://trocaderoartspace.bigcartel.com/products)We're counting down the days - Troc's 2021 Fundraiser officially launches on Friday 15 October!
+Text: [![](http://www.trocaderoartspace.com.au/wp-content/uploads/2021/09/Troc_Fundrasier_2021_Graphic_Gif_Pink.gif)](https://trocaderoartspace.bigcartel.com/products)We're counting down the days - Troc's 2021 Fundraiser officially launches on Friday 15 October!
 
 2021 marks 17 years since Trocadero first established roots in Hopkins Street, Footscray on Boon Wurrung and Woi Wurrung land.  
   

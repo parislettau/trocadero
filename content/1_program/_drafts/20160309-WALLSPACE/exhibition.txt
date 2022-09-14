@@ -1,26 +1,26 @@
 Title: WALLSPACE
 ----
-Date: 03/09/2016
+Startdate: 03/09/2016
 ----
-Category: 
+Artists: 
 ----
 
 Artists:
 
 ----
 
-Startdate:
+StartStartdate:
 
 ----
 
-Enddate: 
+EndStartdate: 
 
 ----
 Gallery:
 
 ----
 
-Category: Exhibition
+Artists: Exhibition
 
 ----
 
@@ -32,7 +32,7 @@ Tags:
 ----
 Cover:
 ----
-Information: WALLSPACE showcases painting, paste-ups, screen print, and graffiti. Available twice a year WALLSPACE is a free.
+Text: WALLSPACE showcases painting, paste-ups, screen print, and graffiti. Available twice a year WALLSPACE is a free.
 
 WALLSPACE is not currently accepting proposals. [![resized pic of wallspace](http://www.trocaderoartspace.com.au/wp-content/uploads/2016/03/resized-pic-of-wallspace.jpg)](http://www.trocaderoartspace.com.au/wp-content/uploads/2016/03/resized-pic-of-wallspace.jpg)WALLSPACE / Susannah Jo FOSTER / GRUNDIES January 31 – July 14 (2018)
 

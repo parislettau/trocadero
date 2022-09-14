@@ -39,7 +39,9 @@ columns:
             query: page.siblings.pluck("category", ",", true)
             width: 1/2
             help: Add tags to categorise
-          information:
+          tags:
+            type: tags
+          text:
             type: textarea
             label: Exhibition Information
             help: When you are ready to publish the program, be sure to change the status from 'Draft', to 'Public' on this page.<br> The first image will be the program's cover image on the Programs page.

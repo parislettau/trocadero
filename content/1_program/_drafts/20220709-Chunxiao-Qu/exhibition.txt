@@ -1,26 +1,26 @@
 Title: Chunxiao Qu
 ----
-Date: 07/09/2022
+Startdate: 07/09/2022
 ----
-Category: 
+Artists: 
 ----
 
 Artists:
 
 ----
 
-Startdate:
+StartStartdate:
 
 ----
 
-Enddate: 
+EndStartdate: 
 
 ----
 Gallery:
 
 ----
 
-Category: Exhibition
+Artists: Exhibition
 
 ----
 
@@ -32,7 +32,7 @@ Tags:
 ----
 Cover:
 ----
-Information: ***Dreaming is free so I am a millionaire*, 2021**  
+Text: ***Dreaming is free so I am a millionaire*, 2021**  
 **LED neon work**
 
 Chunxiao Qu is a Chinese native speaker, operating in the confines of English poetry in order to agitate our understanding of linguistic signifiers. Short bursts of neurotic speech are jotted down, then reformulated into designs that are then fabricated in neon lighting by factories in her homeland with which she has developed a working bond. By subverting capitalism’s mode of communication against itself, Chunxiao hopes to attack our internalised dogmatic structures.

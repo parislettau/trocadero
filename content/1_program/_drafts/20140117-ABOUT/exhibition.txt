@@ -1,26 +1,26 @@
 Title: ABOUT
 ----
-Date: 01/17/2014
+Startdate: 01/17/2014
 ----
-Category: 
+Artists: 
 ----
 
 Artists:
 
 ----
 
-Startdate:
+StartStartdate:
 
 ----
 
-Enddate: 
+EndStartdate: 
 
 ----
 Gallery:
 
 ----
 
-Category: Exhibition
+Artists: Exhibition
 
 ----
 
@@ -32,7 +32,7 @@ Tags:
 ----
 Cover:
 ----
-Information: Trocadero Projects is an artist-run initiative presenting a diverse and experimental program of exhibitions and events. A non-profit art space run by volunteers, Trocadero strives to provide a safe and engaging environment for artists to exhibit in, develop from, and contribute to the Maribyrnong community.
+Text: Trocadero Projects is an artist-run initiative presenting a diverse and experimental program of exhibitions and events. A non-profit art space run by volunteers, Trocadero strives to provide a safe and engaging environment for artists to exhibit in, develop from, and contribute to the Maribyrnong community.
 
 [![](http://www.trocaderoartspace.com.au/wp-content/uploads/2018/05/Smaller-Nookie-Pic-2-.jpg)](http://www.trocaderoartspace.com.au/wp-content/uploads/2018/05/Smaller-Nookie-Pic-2-.jpg)
 

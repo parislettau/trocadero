@@ -1,26 +1,26 @@
 Title: Nina Sanadze / Living Room / Siying Zhou
 ----
-Date: 11/20/2021
+Startdate: 11/20/2021
 ----
-Category: 
+Artists: 
 ----
 
 Artists:
 
 ----
 
-Startdate:
+StartStartdate:
 
 ----
 
-Enddate: 
+EndStartdate: 
 
 ----
 Gallery:
 
 ----
 
-Category: Exhibition
+Artists: Exhibition
 
 ----
 
@@ -32,7 +32,7 @@ Tags:
 ----
 Cover:
 ----
-Information:   
+Text:   
 Siying Zhou  
 21 November 2021
 ---------------------------------

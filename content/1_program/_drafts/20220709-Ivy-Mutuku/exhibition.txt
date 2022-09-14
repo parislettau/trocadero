@@ -1,26 +1,26 @@
 Title: Ivy Mutuku
 ----
-Date: 07/09/2022
+Startdate: 07/09/2022
 ----
-Category: 
+Artists: 
 ----
 
 Artists:
 
 ----
 
-Startdate:
+StartStartdate:
 
 ----
 
-Enddate: 
+EndStartdate: 
 
 ----
 Gallery:
 
 ----
 
-Category: Exhibition
+Artists: Exhibition
 
 ----
 
@@ -32,7 +32,7 @@ Tags:
 ----
 Cover:
 ----
-Information: ***Frizz,* 2017**  
+Text: ***Frizz,* 2017**  
 **Video work excerpt**
 
 An excerpt from FRIZZ; a 2017 - first extension short documentary featuring young African women responding to their Afro-Textured Hair exclusion while still taking pride and redefining Australian beauty standards.

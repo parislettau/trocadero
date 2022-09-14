@@ -1,26 +1,26 @@
 Title: TEST
 ----
-Date: 08/30/2022
+Startdate: 08/30/2022
 ----
-Category: 
+Artists: 
 ----
 
 Artists:
 
 ----
 
-Startdate:
+StartStartdate:
 
 ----
 
-Enddate: 
+EndStartdate: 
 
 ----
 Gallery:
 
 ----
 
-Category: Exhibition
+Artists: Exhibition
 
 ----
 
@@ -32,4 +32,4 @@ Tags:
 ----
 Cover:
 ----
-Information: ![](http://www.trocaderoartspace.com.au/wp-content/uploads/2022/08/Capture.png)Loading…
+Text: ![](http://www.trocaderoartspace.com.au/wp-content/uploads/2022/08/Capture.png)Loading…

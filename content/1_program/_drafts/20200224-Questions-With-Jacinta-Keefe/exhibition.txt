@@ -1,26 +1,26 @@
 Title: Questions With Jacinta Keefe
 ----
-Date: 02/24/2020
+Startdate: 02/24/2020
 ----
-Category: 
+Artists: 
 ----
 
 Artists:
 
 ----
 
-Startdate:
+StartStartdate:
 
 ----
 
-Enddate: 
+EndStartdate: 
 
 ----
 Gallery:
 
 ----
 
-Category: Exhibition
+Artists: Exhibition
 
 ----
 
@@ -32,7 +32,7 @@ Tags:
 ----
 Cover:
 ----
-Information: *Trocadero in conversation with Jacinta Keefe on her current exhibition ‘The Spirits Still Walk Among the Hills’.* *Jacinta Keefe discusses why photography is her choice of medium and her connection to her ancestor and the land upon which she walks, Naarm, The City of Melbourne and bush town Condobolin of NSW.*  
+Text: *Trocadero in conversation with Jacinta Keefe on her current exhibition ‘The Spirits Still Walk Among the Hills’.* *Jacinta Keefe discusses why photography is her choice of medium and her connection to her ancestor and the land upon which she walks, Naarm, The City of Melbourne and bush town Condobolin of NSW.*  
   
   
  ***Could you please describe the process of taking and editing your photographs? What is going through your mind when you take a photograph?***

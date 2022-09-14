@@ -1,26 +1,26 @@
 Title: Nina Sanadze / Living Room / Claire Lambe
 ----
-Date: 10/26/2021
+Startdate: 10/26/2021
 ----
-Category: 
+Artists: 
 ----
 
 Artists:
 
 ----
 
-Startdate:
+StartStartdate:
 
 ----
 
-Enddate: 
+EndStartdate: 
 
 ----
 Gallery:
 
 ----
 
-Category: Exhibition
+Artists: Exhibition
 
 ----
 
@@ -32,7 +32,7 @@ Tags:
 ----
 Cover:
 ----
-Information:   
+Text:   
 Claire Lambe  
 27 October 2021
 ---------------------------------

@@ -1,26 +1,26 @@
 Title: TROC QUICK PROPOSALS
 ----
-Date: 07/28/2021
+Startdate: 07/28/2021
 ----
-Category: 
+Artists: 
 ----
 
 Artists:
 
 ----
 
-Startdate:
+StartStartdate:
 
 ----
 
-Enddate: 
+EndStartdate: 
 
 ----
 Gallery:
 
 ----
 
-Category: Exhibition
+Artists: Exhibition
 
 ----
 
@@ -32,7 +32,7 @@ Tags:
 ----
 Cover:
 ----
-Information: Trocadero is accepting quick response proposals for exhibitions, projects or programs in the gallery between **August – October 2021**. This quick call out seeks to provide a space for individuals or groups to develop their creative practices and explore new ideas.  
+Text: Trocadero is accepting quick response proposals for exhibitions, projects or programs in the gallery between **August – October 2021**. This quick call out seeks to provide a space for individuals or groups to develop their creative practices and explore new ideas.  
   
 You can propose a range of projects: an exhibition (get out your postponed or rejected proposals!), mini residency, collaborative work between artists, weekly discussions among peers, small group talks or workshops, a space to film or photograph and more.
 

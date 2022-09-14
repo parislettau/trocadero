@@ -1,26 +1,26 @@
 Title: Chelle Destefano
 ----
-Date: 07/09/2022
+Startdate: 07/09/2022
 ----
-Category: 
+Artists: 
 ----
 
 Artists:
 
 ----
 
-Startdate:
+StartStartdate:
 
 ----
 
-Enddate: 
+EndStartdate: 
 
 ----
 Gallery:
 
 ----
 
-Category: Exhibition
+Artists: Exhibition
 
 ----
 
@@ -32,7 +32,7 @@ Tags:
 ----
 Cover:
 ----
-Information: ***Hold a Safe Space.... that Deaf Experience. No captions or audio - you get the Deaf experience***, **2020  
+Text: ***Hold a Safe Space.... that Deaf Experience. No captions or audio - you get the Deaf experience***, **2020  
 Video work projection**
 
 In this video I use my hands to inform Deaf experiences of isolation, need for safe space where our language Auslan is used and where we can be comfortable communicating with everyone and where interpreters come in to support us. The hands serve as the visual vehicle where we are hidden often, from audism and oppressive attitudes that occur to Deaf people in many situations.

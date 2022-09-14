@@ -1,26 +1,26 @@
 Title: TROC TALKS ONLINE
 ----
-Date: 01/15/2014
+Startdate: 01/15/2014
 ----
-Category: 
+Artists: 
 ----
 
 Artists:
 
 ----
 
-Startdate:
+StartStartdate:
 
 ----
 
-Enddate: 
+EndStartdate: 
 
 ----
 Gallery:
 
 ----
 
-Category: Exhibition
+Artists: Exhibition
 
 ----
 
@@ -32,4 +32,4 @@ Tags:
 ----
 Cover:
 ----
-Information: [TROC TALKS ONLINE](http://www.trocaderoartspace.com.au/uncategorized/troc-talks-online/)
+Text: [TROC TALKS ONLINE](http://www.trocaderoartspace.com.au/uncategorized/troc-talks-online/)

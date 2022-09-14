@@ -1,26 +1,26 @@
 Title: VISIT
 ----
-Date: 05/07/2021
+Startdate: 05/07/2021
 ----
-Category: 
+Artists: 
 ----
 
 Artists:
 
 ----
 
-Startdate:
+StartStartdate:
 
 ----
 
-Enddate: 
+EndStartdate: 
 
 ----
 Gallery:
 
 ----
 
-Category: Exhibition
+Artists: Exhibition
 
 ----
 
@@ -32,7 +32,7 @@ Tags:
 ----
 Cover:
 ----
-Information: #### **Trocadero Projects**
+Text: #### **Trocadero Projects**
 
 Trocadero is an Artist-Run space based in the western suburbs of Naarm / Melbourne on the traditional lands of the Woiwurrung. We currently operate online and through offsite pop-up exhibitions and events in Footscray and the greater Maribyrnong area. #### **COVIDSafe Information**
 

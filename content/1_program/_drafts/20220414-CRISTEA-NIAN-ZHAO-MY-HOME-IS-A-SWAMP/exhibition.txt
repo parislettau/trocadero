@@ -1,26 +1,26 @@
 Title: CRISTEA NIAN ZHAO / MY HOME IS A SWAMP
 ----
-Date: 04/14/2022
+Startdate: 04/14/2022
 ----
-Category: 
+Artists: 
 ----
 
 Artists:
 
 ----
 
-Startdate:
+StartStartdate:
 
 ----
 
-Enddate: 
+EndStartdate: 
 
 ----
 Gallery:
 
 ----
 
-Category: Exhibition
+Artists: Exhibition
 
 ----
 
@@ -32,7 +32,7 @@ Tags:
 ----
 Cover:
 ----
-Information: Cristea Nian Zhao
+Text: Cristea Nian Zhao
 
 **My home is on a Swamp**   
 **(the Practice of Belonging and Un-belonging)**

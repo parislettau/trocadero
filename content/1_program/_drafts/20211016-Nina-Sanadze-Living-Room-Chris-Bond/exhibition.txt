@@ -1,26 +1,26 @@
 Title: Nina Sanadze / Living Room / Chris Bond
 ----
-Date: 10/16/2021
+Startdate: 10/16/2021
 ----
-Category: 
+Artists: 
 ----
 
 Artists:
 
 ----
 
-Startdate:
+StartStartdate:
 
 ----
 
-Enddate: 
+EndStartdate: 
 
 ----
 Gallery:
 
 ----
 
-Category: Exhibition
+Artists: Exhibition
 
 ----
 
@@ -32,7 +32,7 @@ Tags:
 ----
 Cover:
 ----
-Information:   
+Text:   
 Chris Bond  
 17 October 2021
 -------------------------------

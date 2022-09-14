@@ -1,26 +1,26 @@
 Title: TROC PEER-TO-PEER
 ----
-Date: 08/20/2021
+Startdate: 08/20/2021
 ----
-Category: 
+Artists: 
 ----
 
 Artists:
 
 ----
 
-Startdate:
+StartStartdate:
 
 ----
 
-Enddate: 
+EndStartdate: 
 
 ----
 Gallery:
 
 ----
 
-Category: Exhibition
+Artists: Exhibition
 
 ----
 
@@ -32,7 +32,7 @@ Tags:
 ----
 Cover:
 ----
-Information: TROC PEER-TO-PEER
+Text: TROC PEER-TO-PEER
 =================
 
 ![](http://www.trocaderoartspace.com.au/wp-content/uploads/2021/08/IMG_4507-1024x683.jpg)**TROC Peer-to-Peer** is a new program for emerging artists to engage in peer learning, professional development, networking and skill sharing as a way to improve practice, equity and access in the arts. It prioritises artists who do not currently have access to institutional support or training.

@@ -1,26 +1,26 @@
 Title: APPLY
 ----
-Date: 02/09/2014
+Startdate: 02/09/2014
 ----
-Category: 
+Artists: 
 ----
 
 Artists:
 
 ----
 
-Startdate:
+StartStartdate:
 
 ----
 
-Enddate: 
+EndStartdate: 
 
 ----
 Gallery:
 
 ----
 
-Category: Exhibition
+Artists: Exhibition
 
 ----
 
@@ -32,7 +32,7 @@ Tags:
 ----
 Cover:
 ----
-Information: ---
+Text: ---
 
 **[![](http://www.trocaderoartspace.com.au/wp-content/uploads/2020/03/Across_the_Haze_promo_low_res.jpg)](http://www.trocaderoartspace.com.au/wp-content/uploads/2020/03/Across_the_Haze_promo_low_res.jpg)**
 

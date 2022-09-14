@@ -1,26 +1,26 @@
 Title: Lena Becerra
 ----
-Date: 07/08/2022
+Startdate: 07/08/2022
 ----
-Category: 
+Artists: 
 ----
 
 Artists:
 
 ----
 
-Startdate:
+StartStartdate:
 
 ----
 
-Enddate: 
+EndStartdate: 
 
 ----
 Gallery:
 
 ----
 
-Category: Exhibition
+Artists: Exhibition
 
 ----
 
@@ -32,7 +32,7 @@ Tags:
 ----
 Cover:
 ----
-Information: ***Frunce*, 2021**   
+Text: ***Frunce*, 2021**   
 **Video work**
 
 The word "Frünce” is defined as a set of small, parallel pleats. My pieces will try to rub the complex limits of inhabiting a striated social fabric. In this simulation of cut, I explore everything that does not end up being defined or fit into the imposed structures. Muscular shapes and thin threads are put in tension. Pieces of my body and scraps of skin, narratives of vulnerability, perhaps could be conceived as scales that I expose in order to address new questions: what is this soft, flexible and adaptable mass made of? Is it possible to cultivate pleats in a world that worships silence?

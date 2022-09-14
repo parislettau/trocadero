@@ -1,26 +1,26 @@
 Title: OUTSIDE THE BOX
 ----
-Date: 04/20/2021
+Startdate: 04/20/2021
 ----
-Category: 
+Artists: 
 ----
 
 Artists:
 
 ----
 
-Startdate:
+StartStartdate:
 
 ----
 
-Enddate: 
+EndStartdate: 
 
 ----
 Gallery:
 
 ----
 
-Category: Exhibition
+Artists: Exhibition
 
 ----
 
@@ -32,7 +32,7 @@ Tags:
 ----
 Cover:
 ----
-Information: ![](http://www.trocaderoartspace.com.au/wp-content/uploads/2021/04/EVENTBRITE-COVER-1024x512.png)**Outside the Box | Conversations**
+Text: ![](http://www.trocaderoartspace.com.au/wp-content/uploads/2021/04/EVENTBRITE-COVER-1024x512.png)**Outside the Box | Conversations**
 
 *Outside the Box* is a four-part conversation series that sets out to explore and celebrate cultural shifts influenced by diverse creators in Australia.
 

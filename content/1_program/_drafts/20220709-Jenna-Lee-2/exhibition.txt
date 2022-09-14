@@ -1,26 +1,26 @@
 Title: Jenna Lee 2
 ----
-Date: 07/09/2022
+Startdate: 07/09/2022
 ----
-Category: 
+Artists: 
 ----
 
 Artists:
 
 ----
 
-Startdate:
+StartStartdate:
 
 ----
 
-Enddate: 
+EndStartdate: 
 
 ----
 Gallery:
 
 ----
 
-Category: Exhibition
+Artists: Exhibition
 
 ----
 
@@ -32,7 +32,7 @@ Tags:
 ----
 Cover:
 ----
-Information: ***Her Heritage,*** **2021  
+Text: ***Her Heritage,*** **2021  
 Video work projection**
 
 In this video work, Lee has explored the introductory text of the 1965 Aboriginal word dictionary ‘Aboriginal words and place names’ complied by A.W.Reed. This so-called dictionary presents deeply flawed data in the listing of words with no reference to people or place. Instead, this book homogenises the 250 unique languages spoken by First Nations people presenting them as inspiration for the naming of ‘houses, children and boats’. Lee highlights how the mass collection and homogenisation of languages by early settlers and missionaries now play a role as both an obstacle and an aid as First Nations people seek to re-learn their traditional languages.

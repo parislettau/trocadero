@@ -22,7 +22,7 @@ Category: Outside the Box
 
 ----
 
-Information:
+Text:
 
 Outside the Box | Conversations
 

@@ -12,7 +12,7 @@
 <div class="main-exhibition-text-container">
     <?= $page->title() ?><br>
     <?= $page->startDate()->toDate("d.m.Y") ?><?php if ($page->startDate()->isNotEmpty() && $page->endDate()->isNotEmpty()) : ?>—<?php endif ?><?= $page->endDate()->toDate("d.m.Y") ?><br><br>
-    <?= $page->information()->kt() ?>
+    <?= $page->text()->kt() ?>
 </div>
 
 <div class="layouts">

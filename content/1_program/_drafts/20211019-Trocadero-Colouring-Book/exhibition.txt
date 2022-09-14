@@ -1,26 +1,26 @@
 Title: Trocadero Colouring Book
 ----
-Date: 10/19/2021
+Startdate: 10/19/2021
 ----
-Category: 
+Artists: 
 ----
 
 Artists:
 
 ----
 
-Startdate:
+StartStartdate:
 
 ----
 
-Enddate: 
+EndStartdate: 
 
 ----
 Gallery:
 
 ----
 
-Category: Exhibition
+Artists: Exhibition
 
 ----
 
@@ -32,7 +32,7 @@ Tags:
 ----
 Cover:
 ----
-Information: Introducing the Trocadero Colouring Book!
+Text: Introducing the Trocadero Colouring Book!
 -----------------------------------------
 
 ---

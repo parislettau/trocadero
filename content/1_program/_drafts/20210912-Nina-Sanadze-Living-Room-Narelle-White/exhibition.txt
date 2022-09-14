@@ -1,26 +1,26 @@
 Title: Nina Sanadze / Living Room / Narelle White
 ----
-Date: 09/12/2021
+Startdate: 09/12/2021
 ----
-Category: 
+Artists: 
 ----
 
 Artists:
 
 ----
 
-Startdate:
+StartStartdate:
 
 ----
 
-Enddate: 
+EndStartdate: 
 
 ----
 Gallery:
 
 ----
 
-Category: Exhibition
+Artists: Exhibition
 
 ----
 
@@ -32,7 +32,7 @@ Tags:
 ----
 Cover:
 ----
-Information:   
+Text:   
 Narelle White  
 ****24 July 202****1
 ---------------------------------------

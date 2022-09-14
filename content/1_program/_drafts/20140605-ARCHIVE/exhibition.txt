@@ -1,26 +1,26 @@
 Title: ARCHIVE
 ----
-Date: 06/05/2014
+Startdate: 06/05/2014
 ----
-Category: 
+Artists: 
 ----
 
 Artists:
 
 ----
 
-Startdate:
+StartStartdate:
 
 ----
 
-Enddate: 
+EndStartdate: 
 
 ----
 Gallery:
 
 ----
 
-Category: Exhibition
+Artists: Exhibition
 
 ----
 
@@ -32,4 +32,4 @@ Tags:
 ----
 Cover:
 ----
-Information: ![](http://www.trocaderoartspace.com.au/wp-content/uploads/2020/05/TROC-SQUARE-LOGO2-1024x770.jpg)
+Text: ![](http://www.trocaderoartspace.com.au/wp-content/uploads/2020/05/TROC-SQUARE-LOGO2-1024x770.jpg)

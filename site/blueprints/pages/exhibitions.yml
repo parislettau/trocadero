@@ -1,14 +1,15 @@
 title: Exhibitions
 
 sections:
-  date:
-    type: fields
-    fields:
-      date:
-        type: number
+  # date:
+  #   type: fields
+  #   fields:
+  #     date:
+  #       type: number
   programs:
     type: pages
     layout: cards
+    limit: 1000
     templates:
       - exhibition
       - program

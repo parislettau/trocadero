@@ -1,26 +1,26 @@
 Title: Sticks, Leaves, Shells and Bones: The Collected Avrille Burrows, Claire Weigall and Stephanie Shu-jen
 ----
-Date: 03/17/2022
+Startdate: 03/17/2022
 ----
-Category: 
+Artists: 
 ----
 
 Artists:
 
 ----
 
-Startdate:
+StartStartdate:
 
 ----
 
-Enddate: 
+EndStartdate: 
 
 ----
 Gallery:
 
 ----
 
-Category: Exhibition
+Artists: Exhibition
 
 ----
 
@@ -32,7 +32,7 @@ Tags:
 ----
 Cover:
 ----
-Information: Sticks, Leaves, Shells and Bones: The Collected   
+Text: Sticks, Leaves, Shells and Bones: The Collected   
 Avrille Burrows, Claire Weigall and Stephanie Shu-jen
 --------------------------------------------------------------------------------------------------------
 

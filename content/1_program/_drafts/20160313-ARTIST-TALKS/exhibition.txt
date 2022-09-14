@@ -1,26 +1,26 @@
 Title: ARTIST TALKS
 ----
-Date: 03/13/2016
+Startdate: 03/13/2016
 ----
-Category: 
+Artists: 
 ----
 
 Artists:
 
 ----
 
-Startdate:
+StartStartdate:
 
 ----
 
-Enddate: 
+EndStartdate: 
 
 ----
 Gallery:
 
 ----
 
-Category: Exhibition
+Artists: Exhibition
 
 ----
 
@@ -32,7 +32,7 @@ Tags:
 ----
 Cover:
 ----
-Information: ##### **Trocadero's Artist Talks provide exhibiting artists with the opportunity to expand upon the concepts and processes in their practice.**
+Text: ##### **Trocadero's Artist Talks provide exhibiting artists with the opportunity to expand upon the concepts and processes in their practice.**
 
 ##### Recordings are made available via **[Soundcloud ](https://soundcloud.com/trocaderoartspace)**or **[YouTube](https://www.youtube.com/channel/UCvVTHuwN7zSuR97MdrROe8w)**
 

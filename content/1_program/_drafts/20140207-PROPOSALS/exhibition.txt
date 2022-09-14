@@ -1,26 +1,26 @@
 Title: PROPOSALS
 ----
-Date: 02/07/2014
+Startdate: 02/07/2014
 ----
-Category: 
+Artists: 
 ----
 
 Artists:
 
 ----
 
-Startdate:
+StartStartdate:
 
 ----
 
-Enddate: 
+EndStartdate: 
 
 ----
 Gallery:
 
 ----
 
-Category: Exhibition
+Artists: Exhibition
 
 ----
 
@@ -32,7 +32,7 @@ Tags:
 ----
 Cover:
 ----
-Information: ### EXHIBITION PROPOSALS
+Text: ### EXHIBITION PROPOSALS
 
  Trocadero is not taking exhibition proposals at this time.
 

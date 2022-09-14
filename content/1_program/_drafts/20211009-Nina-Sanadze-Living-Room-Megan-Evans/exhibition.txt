@@ -1,26 +1,26 @@
 Title: Nina Sanadze / Living Room / Megan Evans
 ----
-Date: 10/09/2021
+Startdate: 10/09/2021
 ----
-Category: 
+Artists: 
 ----
 
 Artists:
 
 ----
 
-Startdate:
+StartStartdate:
 
 ----
 
-Enddate: 
+EndStartdate: 
 
 ----
 Gallery:
 
 ----
 
-Category: Exhibition
+Artists: Exhibition
 
 ----
 
@@ -32,7 +32,7 @@ Tags:
 ----
 Cover:
 ----
-Information:   
+Text:   
 Megan Evans  
 10 October 2021
 --------------------------------

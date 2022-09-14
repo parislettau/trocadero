@@ -1,26 +1,26 @@
 Title: Nina Sanadze / Living Room / Chelle Destefano
 ----
-Date: 09/18/2021
+Startdate: 09/18/2021
 ----
-Category: 
+Artists: 
 ----
 
 Artists:
 
 ----
 
-Startdate:
+StartStartdate:
 
 ----
 
-Enddate: 
+EndStartdate: 
 
 ----
 Gallery:
 
 ----
 
-Category: Exhibition
+Artists: Exhibition
 
 ----
 
@@ -32,7 +32,7 @@ Tags:
 ----
 Cover:
 ----
-Information:   
+Text:   
 Chelle Destefano  
 9 August 2021
 -----------------------------------

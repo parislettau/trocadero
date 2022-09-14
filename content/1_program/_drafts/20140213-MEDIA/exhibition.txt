@@ -1,26 +1,26 @@
 Title: MEDIA
 ----
-Date: 02/13/2014
+Startdate: 02/13/2014
 ----
-Category: 
+Artists: 
 ----
 
 Artists:
 
 ----
 
-Startdate:
+StartStartdate:
 
 ----
 
-Enddate: 
+EndStartdate: 
 
 ----
 Gallery:
 
 ----
 
-Category: Exhibition
+Artists: Exhibition
 
 ----
 
@@ -32,4 +32,4 @@ Tags:
 ----
 Cover:
 ----
-Information: 
+Text: 

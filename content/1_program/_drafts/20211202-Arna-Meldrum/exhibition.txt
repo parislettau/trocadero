@@ -1,26 +1,26 @@
 Title: Arna Meldrum
 ----
-Date: 12/02/2021
+Startdate: 12/02/2021
 ----
-Category: 
+Artists: 
 ----
 
 Artists:
 
 ----
 
-Startdate:
+StartStartdate:
 
 ----
 
-Enddate: 
+EndStartdate: 
 
 ----
 Gallery:
 
 ----
 
-Category: Exhibition
+Artists: Exhibition
 
 ----
 
@@ -32,7 +32,7 @@ Tags:
 ----
 Cover:
 ----
-Information: Arna Meldrum ‘in this bed’
+Text: Arna Meldrum ‘in this bed’
 --------------------------
 
 *“I walk with my dog; I hold a pen to a sketchbook; my walking body dictates 'accidental' scribbles. These walking-drawings are an embodied recording; they are an archive”*

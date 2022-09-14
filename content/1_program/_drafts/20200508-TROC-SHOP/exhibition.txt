@@ -1,26 +1,26 @@
 Title: TROC SHOP
 ----
-Date: 05/08/2020
+Startdate: 05/08/2020
 ----
-Category: 
+Artists: 
 ----
 
 Artists:
 
 ----
 
-Startdate:
+StartStartdate:
 
 ----
 
-Enddate: 
+EndStartdate: 
 
 ----
 Gallery:
 
 ----
 
-Category: Exhibition
+Artists: Exhibition
 
 ----
 
@@ -32,7 +32,7 @@ Tags:
 ----
 Cover:
 ----
-Information: [**ENTER THE TROC** ](https://trocaderoartspace.bigcartel.com/category/trocadero-fundraiser-2021)**[SHOP](http://www.trocaderoprojects.bigcartel.com)**
+Text: [**ENTER THE TROC** ](https://trocaderoartspace.bigcartel.com/category/trocadero-fundraiser-2021)**[SHOP](http://www.trocaderoprojects.bigcartel.com)**
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ---

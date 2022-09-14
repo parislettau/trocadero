@@ -1,26 +1,26 @@
 Title: Nina Sanadze / Living Room / Tina Stefanou
 ----
-Date: 09/18/2021
+Startdate: 09/18/2021
 ----
-Category: 
+Artists: 
 ----
 
 Artists:
 
 ----
 
-Startdate:
+StartStartdate:
 
 ----
 
-Enddate: 
+EndStartdate: 
 
 ----
 Gallery:
 
 ----
 
-Category: Exhibition
+Artists: Exhibition
 
 ----
 
@@ -32,7 +32,7 @@ Tags:
 ----
 Cover:
 ----
-Information:   
+Text:   
 Tina Stefanou  
 13 August 2021
 ---------------------------------

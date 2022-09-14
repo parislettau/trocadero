@@ -1,26 +1,26 @@
 Title: MAILING LIST
 ----
-Date: 05/04/2018
+Startdate: 05/04/2018
 ----
-Category: 
+Artists: 
 ----
 
 Artists:
 
 ----
 
-Startdate:
+StartStartdate:
 
 ----
 
-Enddate: 
+EndStartdate: 
 
 ----
 Gallery:
 
 ----
 
-Category: Exhibition
+Artists: Exhibition
 
 ----
 
@@ -32,4 +32,4 @@ Tags:
 ----
 Cover:
 ----
-Information: ---
+Text: ---

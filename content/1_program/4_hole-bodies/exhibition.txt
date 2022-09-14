@@ -26,7 +26,7 @@ Category: Exhibition
 
 ----
 
-Information:
+Text:
 
 Hole Bodies
 

@@ -1,26 +1,26 @@
 Title: Kalu Oji
 ----
-Date: 07/09/2022
+Startdate: 07/09/2022
 ----
-Category: 
+Artists: 
 ----
 
 Artists:
 
 ----
 
-Startdate:
+StartStartdate:
 
 ----
 
-Enddate: 
+EndStartdate: 
 
 ----
 Gallery:
 
 ----
 
-Category: Exhibition
+Artists: Exhibition
 
 ----
 
@@ -32,7 +32,7 @@ Tags:
 ----
 Cover:
 ----
-Information: ***Practicing My Serve,* 2019**  
+Text: ***Practicing My Serve,* 2019**  
 **Video work**
 
 Kalu Oji is an Igbo-Australian filmmaker, writer, and visual artist. Firmly established as one of Australia’s new generation of emerging filmmakers, his work primarily explores notions of identity, in particular the African-Australian experience.

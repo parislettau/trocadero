@@ -1,26 +1,26 @@
 Title: SUPPORT
 ----
-Date: 06/03/2015
+Startdate: 06/03/2015
 ----
-Category: 
+Artists: 
 ----
 
 Artists:
 
 ----
 
-Startdate:
+StartStartdate:
 
 ----
 
-Enddate: 
+EndStartdate: 
 
 ----
 Gallery:
 
 ----
 
-Category: Exhibition
+Artists: Exhibition
 
 ----
 
@@ -32,7 +32,7 @@ Tags:
 ----
 Cover:
 ----
-Information:   
+Text:   
 [**DONATE TO TROC**](https://trocaderoprojects.bigcartel.com/product/donate-now)
 -----------------------------------------------------------------------------------
 
