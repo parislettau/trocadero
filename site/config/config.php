@@ -1,9 +1,9 @@
 <?php
 
 return [
-    'panel' => [
-        'install' => true // https://getkirby.com/docs/reference/system/options/panel
-    ],
+    // 'panel' => [
+    //     'install' => true // https://getkirby.com/docs/reference/system/options/panel
+    // ],
 
     'debug' => true, // turn to false once finished
 
