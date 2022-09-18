@@ -22,6 +22,10 @@ Category: Outside the Box
 
 ----
 
+Tags: 
+
+----
+
 Text:
 
 Outside the Box | Conversations
@@ -87,6 +91,4 @@ Layout:
 
 ----
 
-Cover:
-
-- eventbrite-cover.png
+Cover: - eventbrite-cover.png

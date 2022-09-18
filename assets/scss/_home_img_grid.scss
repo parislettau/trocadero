@@ -33,7 +33,8 @@
     // filter: grayscale(1);
     // filter: invert(25%) sepia(50%) grayscale(80%) contrast(200%) saturate(25%);
     // filter: contrast(10) grayscale(90%) sepia(50%) opacity(80%);
-    filter: grayscale(1);
+
+    filter: var(--filter);
 
     &:hover {
       mix-blend-mode: normal !important;

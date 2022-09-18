@@ -5,6 +5,11 @@
   grid-gap: $global-gap-width;
   // min-height: calc(100vh - 120px);
   margin-top: 50px;
+  .exhibitions-item a {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
   @media (max-width: $tablet) {
     grid-template-columns: 1fr;
     margin-top: $global-gap-width;
@@ -23,13 +28,17 @@
       .gallery {
         text-align: right;
         text-decoration: underline;
+        text-decoration-thickness: 1px;
       }
     }
     &-image {
-      filter: grayscale(1);
+      filter: var(--filter);
+      flex-grow: 1;
       // filter: contrast(10) grayscale(95%) sepia(0%) opacity(80%);
       img {
         width: 100%;
+        object-fit: cover;
+        height: 100%;
       }
 
       &:hover {

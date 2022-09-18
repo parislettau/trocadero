@@ -46,6 +46,10 @@ class ComposerStaticInit318012e4d56f2445b5aa2af1a9d2cdd4
         array (
             'Kirby\\' => 6,
         ),
+        'H' => 
+        array (
+            'Hananils\\' => 9,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -90,6 +94,10 @@ class ComposerStaticInit318012e4d56f2445b5aa2af1a9d2cdd4
             0 => __DIR__ . '/../..' . '/kirby/src',
             1 => __DIR__ . '/..' . '/getkirby/composer-installer/src',
         ),
+        'Hananils\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/site/plugins/kirby-colors/lib',
+        ),
     );
 
     public static $fallbackDirsPsr4 = array (
@@ -127,6 +135,9 @@ class ComposerStaticInit318012e4d56f2445b5aa2af1a9d2cdd4
         'Coyl\\Git\\GitException' => __DIR__ . '/..' . '/coyl/git/src/Coyl/Git/GitException.php',
         'Coyl\\Git\\GitRepo' => __DIR__ . '/..' . '/coyl/git/src/Coyl/Git/GitRepo.php',
         'Coyl\\Git\\RepoUtils' => __DIR__ . '/..' . '/coyl/git/src/Coyl/Git/RepoUtils.php',
+        'Hananils\\Color' => __DIR__ . '/../..' . '/site/plugins/kirby-colors/lib/Color.php',
+        'Hananils\\Converter' => __DIR__ . '/../..' . '/site/plugins/kirby-colors/lib/Converter.php',
+        'Hananils\\Readability' => __DIR__ . '/../..' . '/site/plugins/kirby-colors/lib/Readability.php',
         'Kirby\\Api\\Api' => __DIR__ . '/../..' . '/kirby/src/Api/Api.php',
         'Kirby\\Api\\Collection' => __DIR__ . '/../..' . '/kirby/src/Api/Collection.php',
         'Kirby\\Api\\Model' => __DIR__ . '/../..' . '/kirby/src/Api/Model.php',

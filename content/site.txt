@@ -2,6 +2,14 @@ Title: Trocadero Projects
 
 ----
 
+Filter: false
+
+----
+
+Theme: 
+
+----
+
 Acknowledgment: We acknowledge that we are on the traditional lands of the Boon Wurrung and Woi Wurrung people of the Kulin Nation. We offer our respect to the Elders of these traditional lands and, through them, to all Aboriginal and Torres Strait Islander peoples.
 
 ----
@@ -190,6 +198,10 @@ Robots-noimageindex: enabled
 ----
 
 Robots-nosnippet: enabled
+
+----
+
+Palette: - ...
 
 ----
 

@@ -27,9 +27,9 @@ columns:
           #   help: Please enter dates in DD.MM.YYYY — DD.MM.YYYY format
           gallery:
             label: Gallery
-            type: multiselect
-            options: Gallery 1
-              Gallery 2
+            type: tags
+            # options: Gallery 1
+            #   Gallery 2
             width: 1/2
             help: If the item is an exhibition, please select the gallery.
           category:

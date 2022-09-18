@@ -2,4 +2,12 @@ Title: Program
 
 ----
 
+Filter: true
+
+----
+
+Greyscale: 1
+
+----
+
 Date: 2021

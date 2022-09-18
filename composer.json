@@ -6,7 +6,9 @@
     "diesdasdigital/kirby-meta-knight": "^1.2",
     "d4l/kirby-static-site-generator": "^1.5",
     "medienbaecker/autoresize": "^2.1",
-    "thathoff/kirby-git-content": "^4.1"
+    "thathoff/kirby-git-content": "^4.1",
+    "sylvainjule/color-palette": "^1.0",
+    "hananils/kirby-colors": "^1.6"
   },
   "config": {
     "optimize-autoloader": true,

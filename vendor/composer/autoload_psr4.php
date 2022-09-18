@@ -16,5 +16,6 @@ return array(
     'PHPMailer\\PHPMailer\\' => array($vendorDir . '/phpmailer/phpmailer/src'),
     'Laminas\\Escaper\\' => array($vendorDir . '/laminas/laminas-escaper/src'),
     'Kirby\\' => array($baseDir . '/kirby/src', $vendorDir . '/getkirby/composer-installer/src'),
+    'Hananils\\' => array($baseDir . '/site/plugins/kirby-colors/lib'),
     '' => array($vendorDir . '/coyl/git/src', $vendorDir . '/league/color-extractor/src'),
 );

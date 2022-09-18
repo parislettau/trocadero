@@ -4,6 +4,22 @@ tabs:
   tab1:
     label: Home
     sections:
+      options:
+        type: fields
+        fields:
+          filter:
+            label: Toggle colour?
+            type: toggle
+            default: false
+            text:
+              - "greyscale"
+              - "colour"
+         theme:
+          type: colors
+          label: Background colour
+          alpha: true
+          default: '#dfa280'
+          contrast: true
       information:
         type: pages
         help: Select each page to edit the content. <br> To edit the homepage grid, first add the exhibition details in the 'Programs' page. <br>Next, navigate to the 'Trocadero Projects Home' section and select the desired program to include in the grid.<br>Please ensure it is selected in one of the first four positions. <br><br>To update the address in both the footer and the 'Visit' section, make the edits within the 'Footer' tab.

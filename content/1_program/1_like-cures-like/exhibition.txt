@@ -18,7 +18,11 @@ Gallery: Gallery 1
 
 ----
 
-Category: Exhibition, Talk
+Category: Exhibition, Talk, Category
+
+----
+
+Tags: Exhibition, Performance
 
 ----
 
@@ -161,9 +165,7 @@ Layout:
 
 ----
 
-Cover:
-
-- chunxiao_edits-7272.jpg
+Cover: - chunxiao_edits-7272.jpg
 
 ----
 
@@ -172,10 +174,6 @@ Date:
 ----
 
 Blocks: [{"content":{"images":["chunxiao_edits-7272.jpg","image-2.jpg"]},"id":"46c73f03-3502-4245-afec-66c0a2a4a023","isHidden":false,"type":"gallery"}]
-
-----
-
-Tags: Exhibition, Performance
 
 ----
 

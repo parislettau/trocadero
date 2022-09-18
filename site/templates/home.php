@@ -3,11 +3,6 @@
 <?php snippet('nav') ?>
 <!-- content -->
 <main id="main" class="page-container">
-    <?php
-    exec('whoami', $output, $retval);
-    dump($output);
-    dump($retval);
-    ?>
     <div class="main-container">
         <?php snippet('home/grid') ?>
     </div>
