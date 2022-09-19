@@ -2,28 +2,55 @@ title: Site
 
 tabs:
   tab1:
+    label: Pages
+    sections:
+      information:
+        type: pages
+        help: Select each page to edit the content. <br> To edit the homepage grid, first add the exhibition details in the 'Programs' page. <br>Next, navigate to the 'Trocadero Projects Home' section and select the desired program to include in the grid.<br>Please ensure it is selected in one of the first four positions. <br><br>To update the address in both the footer and the 'Visit' section, make the edits within the 'Footer' tab.
+  tab2:
     label: Home
     sections:
       options:
         type: fields
         fields:
           filter:
-            label: Toggle colour?
+            label: Images
             type: toggle
             default: false
+            width: 1/2
             text:
               - "greyscale"
               - "colour"
-         theme:
-          type: colors
-          label: Background colour
-          alpha: true
-          default: '#dfa280'
-          contrast: true
-      information:
-        type: pages
-        help: Select each page to edit the content. <br> To edit the homepage grid, first add the exhibition details in the 'Programs' page. <br>Next, navigate to the 'Trocadero Projects Home' section and select the desired program to include in the grid.<br>Please ensure it is selected in one of the first four positions. <br><br>To update the address in both the footer and the 'Visit' section, make the edits within the 'Footer' tab.
-  tab2:
+          theme:
+            type: colors
+            label: Background colour
+            alpha: true
+            default: "#dfa280"
+            contrast: true
+            width: 1/2
+          manual:
+            label: Homepage Layout
+            type: toggle
+            default: false
+            text:
+              - "automatic"
+              - "manual"
+          slice:
+            label: Number of pages
+            type: number
+            default: 4
+            width: 1/2
+            help: Enter the number of pages to show on the home page. Pages will be displayed in chronological order.
+            when:
+              manual: false
+          layout:
+            type: pages
+            size: large
+            layout: cards
+            query: site.find('program')
+            when:
+              manual: true
+  tab3:
     label: Info
     fields:
       staticSiteGenerator:
@@ -32,32 +59,11 @@ tabs:
         width: 1
         type: textarea
         size: small
-      # footerAddress:
-      #   width: 1/4
-      #   label: Footer Address
-      #   type: textarea
-      #   size: small
-      #   help: To create a line break, insert <br> between lines.
-      # footerHours:
-      #   width: 1/4
-      #   label: Footer Hours & Access
-      #   type: textarea
-      #   size: small
       footerCopyright:
         width: 1/2
         label: Footer Copyright
         type: textarea
         size: small
-      # footerInfo:
-      #   width: 1/2
-      #   label: Footer Access
-      #   type: textarea
-      #   size: small
-      # footerInfo:
-      #   width: 1/2
-      #   label: Footer Access
-      #   type: textarea
-      #   size: small
       footerInfo:
         width: 1/2
         label: Footer Info

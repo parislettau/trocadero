@@ -1,0 +1,16 @@
+name: Article
+# icon: page
+tabs:
+  main:
+    label: Main
+    fields:
+      article:
+        type: pages
+        # query: site.find('reviews').children.flip
+        query: site.index.filterBy('template', 'in', ['exhibition', 'review']).flip
+        flip: true
+        image: page.cover.toFile
+        multiple: false
+        width: 1/2
+        layout: cards
+        # size: small
