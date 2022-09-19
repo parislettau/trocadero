@@ -1,7 +1,7 @@
 <div class="main-card-box">
         <?php foreach ($site->find('program')->children()->listed()->limit(4) as $program) : ?>
                 <div class="card-tile">
-                        <div class="fill-img" style="<?php if ($site->filter() == 'false') : ?>grayscale(1) <?php else : ?>unset <?php endif ?>">
+                        <div class="fill-img" style="--filter:<?php if ($site->filter() == 'false') : ?>grayscale(1) <?php else : ?>unset <?php endif ?>">
                                 <?php if ($program->cover()->toFile()) : ?>
                                         <a href=" <?= $program->url() ?>">
                                                 <?php $image = $program->cover()->toFile() ?>

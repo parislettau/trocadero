@@ -35,12 +35,14 @@
 }
 
 .top-sidebar {
+  --theme: var(--backgroundColor);
+  background-color: var(--theme);
   height: 50vh;
   width: 100%;
   position: fixed;
   z-index: 9999;
   left: 0;
-  background-color: var(--backgroundColor);
+  // background-color: var(--backgroundColor);
   overflow-x: hidden;
 
   padding: $global-gap-width;

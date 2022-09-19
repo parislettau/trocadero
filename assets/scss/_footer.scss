@@ -4,7 +4,11 @@
   display: flex;
   flex-direction: row;
   gap: $global-gap-width;
-  margin-bottom: $global-gap-width;
+  padding: 0 $global-gap-width;
+  padding-bottom: $global-gap-width;
+  --theme: var(--backgroundColor);
+  background-color: var(--theme);
+
   @media (max-width: $mobile) {
     flex-direction: column;
     gap: 0;

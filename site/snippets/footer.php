@@ -1,4 +1,4 @@
-<div class="main-footer" id="mainFooter">
+<div class="main-footer" id="mainFooter" style="--theme:<?= $site->theme() ?>">
     <div class="footer-section">
         <div class="title">
             <?= $site->title()->kt() ?>

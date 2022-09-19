@@ -27,7 +27,7 @@
 
                 <!-- image -->
                 <div class="exhibitions-item-image" style="--filter:
- <?php if ($site->filter() == 'false') : ?>grayscale(1) <?php else : ?>unset <?php endif ?>">
+ <?php if ($site->filter() == 'false') : ?>grayscale(1) <?php else : ?>unset<?php endif ?>">
                     <?php
                     if ($program->cover()->toFile()) {
                         $original = $program->cover()->toFile();

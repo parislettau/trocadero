@@ -1,4 +1,4 @@
-<div id="myTopSidebar" class="top-sidebar">
+<div id="myTopSidebar" class="top-sidebar" style="--theme:<?= $site->theme() ?>">
     <!-- <div id="myTopSidebar" class="top-sidebar" style="display:none"> -->
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">CLOSE</a>
     <div class="about-container">
