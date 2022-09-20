@@ -1,4 +1,4 @@
-<?= $kirby->root('site') ?>
+<?= $kirby->root('media') ?>
 
 
 <?php if ($site->manual() == "true") : ?>
