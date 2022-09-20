@@ -113,7 +113,9 @@ class Media
 			$job     = $root . '/.jobs/' . $filename . '.json';
 			$options = Data::read($job);
 
-			echo ($thumb .  " + " . $job . " + " . $options);
+			echo ("Media.php thumb: " . $thumb);
+			echo ("Media.php job: " . $job);
+			echo ("Media.php options: " . $options);
 
 			if (empty($options) === true) {
 				return false;
