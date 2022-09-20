@@ -100,10 +100,10 @@ class Media
 		// assets
 		if (is_string($model) === true) {
 			$root = $kirby->root('media') . '/assets/' . $model . '/' . $hash;
-		// parent files for file model that already included hash
+			// parent files for file model that already included hash
 		} elseif (is_a($model, '\Kirby\Cms\File')) {
 			$root = dirname($model->mediaRoot());
-		// model files
+			// model files
 		} else {
 			$root = $model->mediaRoot() . '/' . $hash;
 		}
@@ -112,6 +112,8 @@ class Media
 			$thumb   = $root . '/' . $filename;
 			$job     = $root . '/.jobs/' . $filename . '.json';
 			$options = Data::read($job);
+
+			echo ($thumb .  " + " . $job . " + " . $options);
 
 			if (empty($options) === true) {
 				return false;

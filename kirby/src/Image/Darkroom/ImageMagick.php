@@ -159,6 +159,8 @@ class ImageMagick extends Darkroom
 		// try to execute the command
 		exec($command, $output, $return);
 
+		echo ($command);
+
 		// log broken commands
 		if ($return !== 0) {
 			throw new Exception('The imagemagick convert command could not be executed: ' . $command);
