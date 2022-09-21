@@ -157,7 +157,7 @@ class ImageMagick extends Darkroom
 		$command = implode(' ', array_filter($command));
 
 		// debuggin
-		echo "ImageMagick command: " . $command . $output . $return;
+		echo "ImageMagick command: " . $command;
 
 		// try to execute the command
 		exec($command, $output, $return);
