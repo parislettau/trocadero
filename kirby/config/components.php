@@ -347,7 +347,8 @@ return [
 		$root     = (new Filename($src, $dst, $options))->toString();
 
 		// try to execute the command
-		exec($command, $output, $return);
+		echo ("thumb command: ROOT: " . $root . " OPTIONS: " . $options);
+
 
 		F::copy($src, $root, true);
 		$darkroom->process($root, $options);
