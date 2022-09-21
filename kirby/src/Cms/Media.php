@@ -38,6 +38,8 @@ class Media
 		// fix issues with spaces in filenames
 		$filename = urldecode($filename);
 
+		echo $filename;
+
 		// try to find a file by model and filename
 		// this should work for all original files
 		if ($file = $model->file($filename)) {
