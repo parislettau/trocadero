@@ -243,12 +243,12 @@ return [
 					$item->searchScore += 16 * $score;
 					$item->searchHits  += 1;
 
-				// check for exact beginning matches
+					// check for exact beginning matches
 				} elseif ($options['words'] === false && Str::startsWith($lowerValue, $lowerQuery) === true) {
 					$item->searchScore += 8 * $score;
 					$item->searchHits  += 1;
 
-				// check for exact query matches
+					// check for exact query matches
 				} elseif ($matches = preg_match_all('!' . $exactQuery . '!i', $value, $r)) {
 					$item->searchScore += 2 * $score;
 					$item->searchHits  += $matches;
@@ -345,6 +345,9 @@ return [
 		);
 		$options  = $darkroom->preprocess($src, $options);
 		$root     = (new Filename($src, $dst, $options))->toString();
+
+		// try to execute the command
+		exec($command, $output, $return);
 
 		F::copy($src, $root, true);
 		$darkroom->process($root, $options);

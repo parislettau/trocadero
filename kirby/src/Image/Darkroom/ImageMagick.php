@@ -153,16 +153,15 @@ class ImageMagick extends Darkroom
 		$command[] = $this->blur($file, $options);
 		$command[] = $this->save($file, $options);
 
+		// remove all null values and join the parts
+		$command = implode(' ', array_filter($command));
+
+		// debuggin
+		echo ("ImageMagick command: " . $command);
 
 		// try to execute the command
 		exec($command, $output, $return);
 
-		// remove all null values and join the parts
-		$command = implode(' ', array_filter($command));
-
-
-
-		// echo ("ImageMagick command: " . $command);
 
 		// log broken commands
 		if ($return !== 0) {
