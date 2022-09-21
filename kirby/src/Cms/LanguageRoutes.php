@@ -23,6 +23,7 @@ class LanguageRoutes
 		$baseurl = $kirby->url();
 
 		foreach ($kirby->languages() as $language) {
+
 			// ignore languages with a different base url
 			if ($language->baseurl() !== $baseurl) {
 				continue;
@@ -65,6 +66,7 @@ class LanguageRoutes
 			'method'  => 'ALL',
 			'env'     => 'site',
 			'action'  => function (string $path) use ($kirby) {
+
 				// check for content representations or files
 				$extension = F::extension($path);
 
@@ -113,6 +115,7 @@ class LanguageRoutes
 			'method'  => 'ALL',
 			'env'     => 'site',
 			'action'  => function () use ($kirby) {
+
 				// find all languages with the same base url as the current installation
 				$languages = $kirby->languages()->filter('baseurl', $kirby->url());
 

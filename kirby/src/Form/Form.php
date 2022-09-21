@@ -73,6 +73,7 @@ class Form
 		$this->values = [];
 
 		foreach ($fields as $name => $props) {
+
 			// inject stuff from the form constructor (model, etc.)
 			$props = array_merge($inject, $props);
 
@@ -103,6 +104,7 @@ class Form
 		}
 
 		if ($strict !== true) {
+
 			// use all given values, no matter
 			// if there's a field or not.
 			$input = array_merge($values, $input);

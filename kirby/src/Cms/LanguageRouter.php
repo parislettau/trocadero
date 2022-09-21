@@ -60,6 +60,7 @@ class LanguageRouter
 
 		// only keep the scoped language routes
 		$routes = array_values(array_filter($routes, function ($route) use ($language) {
+
 			// no language scope
 			if (empty($route['language']) === true) {
 				return false;
@@ -81,6 +82,7 @@ class LanguageRouter
 		foreach ($routes as $index => $route) {
 			if ($pageId = ($route['page'] ?? null)) {
 				if ($page = $kirby->page($pageId)) {
+
 					// convert string patterns to arrays
 					$patterns = A::wrap($route['pattern']);
 

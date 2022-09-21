@@ -38,11 +38,10 @@ class Media
 		// fix issues with spaces in filenames
 		$filename = urldecode($filename);
 
-		echo $filename;
-
 		// try to find a file by model and filename
 		// this should work for all original files
 		if ($file = $model->file($filename)) {
+
 			// check if the request contained an outdated media hash
 			if ($file->mediaHash() !== $hash) {
 				// if at least the token was correct, redirect
@@ -114,10 +113,6 @@ class Media
 			$thumb   = $root . '/' . $filename;
 			$job     = $root . '/.jobs/' . $filename . '.json';
 			$options = Data::read($job);
-
-			echo "Media.php thumb: " . $thumb;
-			echo "Media.php job: " . $job;
-			echo "Media.php options: " . $options;
 
 			if (empty($options) === true) {
 				return false;

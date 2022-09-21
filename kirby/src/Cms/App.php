@@ -461,6 +461,7 @@ class App
 		}
 
 		if ($contentType !== 'html') {
+
 			// no luck for a specific representation controller?
 			// let's try the html controller instead
 			if ($controller = $this->controllerLookup($name)) {

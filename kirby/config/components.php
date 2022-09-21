@@ -101,6 +101,7 @@ return [
 
 		// check if the thumb already exists
 		if (file_exists($thumbRoot) === false) {
+
 			// if not, create job file
 			$job = $mediaRoot . '/.jobs/' . $thumbName . '.json';
 
@@ -345,9 +346,6 @@ return [
 		);
 		$options  = $darkroom->preprocess($src, $options);
 		$root     = (new Filename($src, $dst, $options))->toString();
-
-		// try to execute the command
-		echo "thumb command triggered components.php at line 350";
 
 		F::copy($src, $root, true);
 		$darkroom->process($root, $options);

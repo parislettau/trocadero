@@ -66,7 +66,10 @@ trait PageActions
 			}
 
 			// overwrite the child in the parent page
-			static::updateParentCollections($newPage, 'set');
+			$newPage
+				->parentModel()
+				->children()
+				->set($newPage->id(), $newPage);
 
 			return $newPage;
 		});
@@ -120,13 +123,17 @@ trait PageActions
 				}
 
 				// remove from the siblings
-				static::updateParentCollections($oldPage, 'remove');
+				$oldPage->parentModel()->children()->remove($oldPage);
 
 				Dir::remove($oldPage->mediaRoot());
 			}
 
 			// overwrite the new page in the parent collection
-			static::updateParentCollections($newPage, 'set');
+			if ($newPage->isDraft() === true) {
+				$newPage->parentModel()->drafts()->set($newPage->id(), $newPage);
+			} else {
+				$newPage->parentModel()->children()->set($newPage->id(), $newPage);
+			}
 
 			return $newPage;
 		});
@@ -160,12 +167,7 @@ trait PageActions
 				$slug = null;
 			}
 
-			$newPage = $page->save(['slug' => $slug], $languageCode);
-
-			// overwrite the updated page in the parent collection
-			static::updateParentCollections($newPage, 'set');
-
-			return $newPage;
+			return $page->save(['slug' => $slug], $languageCode);
 		});
 	}
 
@@ -317,7 +319,11 @@ trait PageActions
 			}
 
 			// update the parent collection
-			static::updateParentCollections($page, 'set');
+			if ($page->isDraft() === true) {
+				$page->parentModel()->drafts()->set($page->id(), $page);
+			} else {
+				$page->parentModel()->children()->set($page->id(), $page);
+			}
 
 			return $page;
 		});
@@ -337,7 +343,11 @@ trait PageActions
 			$page = $page->save(['title' => $title], $languageCode);
 
 			// flush the parent cache to get children and drafts right
-			static::updateParentCollections($page, 'set');
+			if ($page->isDraft() === true) {
+				$page->parentModel()->drafts()->set($page->id(), $page);
+			} else {
+				$page->parentModel()->children()->set($page->id(), $page);
+			}
 
 			return $page;
 		});
@@ -447,7 +457,11 @@ trait PageActions
 		}
 
 		// add copy to siblings
-		static::updateParentCollections($copy, 'append', $parentModel);
+		if ($isDraft === true) {
+			$parentModel->drafts()->append($copy->id(), $copy);
+		} else {
+			$parentModel->children()->append($copy->id(), $copy);
+		}
 
 		return $copy;
 	}
@@ -478,6 +492,7 @@ trait PageActions
 
 		// run the hooks and creation action
 		$page = $page->commit('create', ['page' => $page, 'input' => $props], function ($page, $props) {
+
 			// always create pages in the default language
 			if ($page->kirby()->multilang() === true) {
 				$languageCode = $page->kirby()->defaultLanguage()->code();
@@ -489,7 +504,11 @@ trait PageActions
 			$page = $page->save($page->content()->toArray(), $languageCode);
 
 			// flush the parent cache to get children and drafts right
-			static::updateParentCollections($page, 'append');
+			if ($page->isDraft() === true) {
+				$page->parentModel()->drafts()->append($page->id(), $page);
+			} else {
+				$page->parentModel()->children()->append($page->id(), $page);
+			}
 
 			return $page;
 		});
@@ -593,6 +612,7 @@ trait PageActions
 	public function delete(bool $force = false): bool
 	{
 		return $this->commit('delete', ['page' => $this, 'force' => $force], function ($page, $force) {
+
 			// delete all files individually
 			foreach ($page->files() as $file) {
 				$file->delete();
@@ -605,6 +625,7 @@ trait PageActions
 
 			// actually remove the page from disc
 			if ($page->exists() === true) {
+
 				// delete all public media files
 				Dir::remove($page->mediaRoot());
 
@@ -622,9 +643,10 @@ trait PageActions
 				}
 			}
 
-			static::updateParentCollections($page, 'remove');
-
-			if ($page->isDraft() === false) {
+			if ($page->isDraft() === true) {
+				$page->parentModel()->drafts()->remove($page);
+			} else {
+				$page->parentModel()->children()->remove($page);
 				$page->resortSiblingsAfterUnlisting();
 			}
 
@@ -642,6 +664,7 @@ trait PageActions
 	 */
 	public function duplicate(string $slug = null, array $options = [])
 	{
+
 		// create the slug for the duplicate
 		$slug = Str::slug($slug ?? $this->slug() . '-' . Str::slug(I18n::translate('page.duplicate.appendix')));
 
@@ -699,14 +722,8 @@ trait PageActions
 		}
 
 		// remove the page from the parent drafts and add it to children
-		$parentModel = $page->parentModel();
-		$parentModel->drafts()->remove($page);
-		$parentModel->children()->append($page->id(), $page);
-
-		// update the childrenAndDrafts() cache if it is initialized
-		if ($parentModel->childrenAndDrafts !== null) {
-			$parentModel->childrenAndDrafts()->set($page->id(), $page);
-		}
+		$page->parentModel()->drafts()->remove($page);
+		$page->parentModel()->children()->append($page->id(), $page);
 
 		return $page;
 	}
@@ -717,14 +734,13 @@ trait PageActions
 	 */
 	public function purge()
 	{
-		$this->blueprint         = null;
-		$this->children          = null;
-		$this->childrenAndDrafts = null;
-		$this->content           = null;
-		$this->drafts            = null;
-		$this->files             = null;
-		$this->inventory         = null;
-		$this->translations      = null;
+		$this->blueprint    = null;
+		$this->children     = null;
+		$this->content      = null;
+		$this->drafts       = null;
+		$this->files        = null;
+		$this->inventory    = null;
+		$this->translations = null;
 
 		return $this;
 	}
@@ -772,7 +788,6 @@ trait PageActions
 
 		$parent = $this->parentModel();
 		$parent->children = $parent->children()->sort('num', 'asc');
-		$parent->childrenAndDrafts = null;
 
 		return true;
 	}
@@ -797,7 +812,6 @@ trait PageActions
 			}
 
 			$parent->children = $siblings->sort('num', 'asc');
-			$parent->childrenAndDrafts = null;
 		}
 
 		return true;
@@ -831,14 +845,8 @@ trait PageActions
 		}
 
 		// remove the page from the parent children and add it to drafts
-		$parentModel = $page->parentModel();
-		$parentModel->children()->remove($page);
-		$parentModel->drafts()->append($page->id(), $page);
-
-		// update the childrenAndDrafts() cache if it is initialized
-		if ($parentModel->childrenAndDrafts !== null) {
-			$parentModel->childrenAndDrafts()->set($page->id(), $page);
-		}
+		$page->parentModel()->children()->remove($page);
+		$page->parentModel()->drafts()->append($page->id(), $page);
 
 		$page->resortSiblingsAfterUnlisting();
 
@@ -866,37 +874,6 @@ trait PageActions
 			$page = $page->changeNum($page->createNum());
 		}
 
-		// overwrite the updated page in the parent collection
-		static::updateParentCollections($page, 'set');
-
 		return $page;
-	}
-
-	/**
-	 * Updates parent collections with the new page object
-	 * after a page action
-	 *
-	 * @param \Kirby\Cms\Page $page
-	 * @param string $method Method to call on the parent collections
-	 * @param \Kirby\Cms\Page|null $parentMdel
-	 * @return void
-	 */
-	protected static function updateParentCollections($page, string $method, $parentModel = null): void
-	{
-		$parentModel ??= $page->parentModel();
-
-		// method arguments depending on the called method
-		$args = $method === 'remove' ? [$page] : [$page->id(), $page];
-
-		if ($page->isDraft() === true) {
-			$parentModel->drafts()->$method(...$args);
-		} else {
-			$parentModel->children()->$method(...$args);
-		}
-
-		// update the childrenAndDrafts() cache if it is initialized
-		if ($parentModel->childrenAndDrafts !== null) {
-			$parentModel->childrenAndDrafts()->$method(...$args);
-		}
 	}
 }

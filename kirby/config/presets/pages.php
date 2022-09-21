@@ -3,6 +3,7 @@
 use Kirby\Toolkit\I18n;
 
 return function (array $props) {
+
 	// load the general templates setting for all sections
 	$templates = $props['templates'] ?? null;
 
