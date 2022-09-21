@@ -7,6 +7,7 @@
     }
     ?>
     <img src="<?= $image->placeholderUri() ?>" data-src="<?= $image->url() ?>" data-lazyload alt="<?= $image->alt() ?>" />
+    <img src="<?= $image->url() ?>" alt="<?= $image->alt() ?>" />
 
 </div>
 <?php
