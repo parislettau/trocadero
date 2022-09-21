@@ -347,7 +347,7 @@ return [
 		$root     = (new Filename($src, $dst, $options))->toString();
 
 		// try to execute the command
-		echo ("thumb command: ROOT: " . $root . " OPTIONS: " . $options);
+		echo ("thumb command: " . $options);
 
 
 		F::copy($src, $root, true);
