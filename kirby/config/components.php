@@ -347,8 +347,7 @@ return [
 		$root     = (new Filename($src, $dst, $options))->toString();
 
 		// try to execute the command
-		echo ("thumb command: " . $options);
-
+		echo "thumb command triggered components.php at line 350";
 
 		F::copy($src, $root, true);
 		$darkroom->process($root, $options);
