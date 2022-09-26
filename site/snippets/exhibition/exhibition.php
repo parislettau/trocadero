@@ -33,7 +33,8 @@ endif;
 
 
 <div class="main-exhibition-text-container">
-    <strong>Image URL: <?= $image->url() ?></strong>
+    <br><br>
+    <strong>Image URL: <br><br><?= $image->url() ?></strong><br><br>
     <?= $page->title() ?><br>
     <?= $page->startDate()->toDate("d.m.Y") ?><?php if ($page->startDate()->isNotEmpty() && $page->endDate()->isNotEmpty()) : ?>—<?php endif ?><?= $page->endDate()->toDate("d.m.Y") ?><br><br>
     <?= $page->text()->kt() ?>
