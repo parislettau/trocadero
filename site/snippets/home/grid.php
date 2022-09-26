@@ -1,6 +1,3 @@
-<?= $kirby->root('media') ?>
-
-
 <?php if ($site->manual() == "true") : ?>
 
         <div class="main-card-box">
