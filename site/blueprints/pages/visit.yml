@@ -1,4 +1,6 @@
 title: Visit
+options:
+  hideStatus: true
 
 sections:
   covid:

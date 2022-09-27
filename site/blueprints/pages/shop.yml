@@ -1,4 +1,6 @@
 title: Shop
+options:
+  hideStatus: true
 
 sections:
   link:

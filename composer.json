@@ -8,7 +8,8 @@
     "medienbaecker/autoresize": "^2.1",
     "thathoff/kirby-git-content": "^4.1",
     "sylvainjule/color-palette": "^1.0",
-    "hananils/kirby-colors": "^1.6"
+    "hananils/kirby-colors": "^1.6",
+    "mullema/k3-panel-view-extended": "^5.0"
   },
   "config": {
     "optimize-autoloader": true,

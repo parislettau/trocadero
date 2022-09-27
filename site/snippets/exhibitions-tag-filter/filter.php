@@ -59,10 +59,11 @@
         <div style="margin-top:var(--small);">
             <div class="tag-filter filter-trigger" style="">
                 <div class="filter-label category">Category</div>
-                <div class="filter-trigger-icon"></div>
+                <div class="filter-trigger-icon rotate"></div>
             </div>
 
-            <div class="filters filters-artists" style="list-style:none;display:none;">
+            <!-- <div class="filters filters-artists" style="list-style:none;display:none;"> -->
+            <div class="filters filters-artists" style="list-style:none;">
                 <!-- category -->
                 <div class="tag-filter">
                     <?php $tags = $pluck->pluck('category', ',', true) ?>

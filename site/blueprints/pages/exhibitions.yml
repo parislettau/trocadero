@@ -1,10 +1,25 @@
 title: Exhibitions
+options:
+  hideStatus: true
 
 sections:
   programs:
     type: pages
-    layout: cards
-    limit: 1000
+    # layout: cards
+    layout: table
+    image: page.cover.toFile 
+    columns:
+      info: false
+      artists: true
+        type: tags
+        mobile: false
+      startDate: true
+        label: Date
+        mobile: false
+      category: true
+        type: tags
+        mobile: false
+    limit: 200
     templates:
       - exhibition
       - program

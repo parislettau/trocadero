@@ -744,6 +744,47 @@
             "install-path": "../michelf/php-smartypants"
         },
         {
+            "name": "mullema/k3-panel-view-extended",
+            "version": "5.0",
+            "version_normalized": "5.0.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mullema/k3-panel-view-extended.git",
+                "reference": "3bc4518ef89d0c21fbec40f4d0164a4f1c5751ed"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mullema/k3-panel-view-extended/zipball/3bc4518ef89d0c21fbec40f4d0164a4f1c5751ed",
+                "reference": "3bc4518ef89d0c21fbec40f4d0164a4f1c5751ed",
+                "shasum": ""
+            },
+            "require": {
+                "getkirby/composer-installer": "^1.2"
+            },
+            "conflict": {
+                "getkirby/cms": "<3.7"
+            },
+            "time": "2022-06-25T15:19:17+00:00",
+            "type": "kirby-plugin",
+            "installation-source": "dist",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Matthias Müller",
+                    "email": "moeli@moeli.com"
+                }
+            ],
+            "description": "Allow single language pages/site/users in a multi language setup, hide buttons in topbar and sections.",
+            "support": {
+                "issues": "https://github.com/mullema/k3-panel-view-extended/issues",
+                "source": "https://github.com/mullema/k3-panel-view-extended/tree/5.0.0"
+            },
+            "install-path": "../../site/plugins/k3-panel-view-extended"
+        },
+        {
             "name": "phpmailer/phpmailer",
             "version": "v6.6.4",
             "version_normalized": "6.6.4.0",

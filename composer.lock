@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a42407116082230cdd2c6d6c71b3cf77",
+    "content-hash": "5212600761478fb0d62d7f4190fadf15",
     "packages": [
         {
             "name": "claviska/simpleimage",
@@ -709,6 +709,44 @@
                 "source": "https://github.com/michelf/php-smartypants/tree/1.8.1"
             },
             "time": "2016-12-13T01:01:17+00:00"
+        },
+        {
+            "name": "mullema/k3-panel-view-extended",
+            "version": "5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mullema/k3-panel-view-extended.git",
+                "reference": "3bc4518ef89d0c21fbec40f4d0164a4f1c5751ed"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mullema/k3-panel-view-extended/zipball/3bc4518ef89d0c21fbec40f4d0164a4f1c5751ed",
+                "reference": "3bc4518ef89d0c21fbec40f4d0164a4f1c5751ed",
+                "shasum": ""
+            },
+            "require": {
+                "getkirby/composer-installer": "^1.2"
+            },
+            "conflict": {
+                "getkirby/cms": "<3.7"
+            },
+            "type": "kirby-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Matthias Müller",
+                    "email": "moeli@moeli.com"
+                }
+            ],
+            "description": "Allow single language pages/site/users in a multi language setup, hide buttons in topbar and sections.",
+            "support": {
+                "issues": "https://github.com/mullema/k3-panel-view-extended/issues",
+                "source": "https://github.com/mullema/k3-panel-view-extended/tree/5.0.0"
+            },
+            "time": "2022-06-25T15:19:17+00:00"
         },
         {
             "name": "phpmailer/phpmailer",

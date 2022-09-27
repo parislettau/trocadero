@@ -1,4 +1,6 @@
 title: About
+options:
+  hideStatus: true
 
 sections:
   info:
@@ -20,4 +22,3 @@ sections:
         width: 1/2
       past:
         type: textarea
-      

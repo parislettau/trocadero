@@ -2,7 +2,7 @@ Title: Trocadero Projects
 
 ----
 
-Filter: false
+Filter: true
 
 ----
 
