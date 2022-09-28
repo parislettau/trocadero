@@ -8,9 +8,11 @@
     if ($page->cover()->toFile()) {
         $image = $page->cover()->toFile();
     } else {
-        $image = $site->placeholder()->toFile();
+
         if ($page->hasImages()) {
             $image = $page->image();
+        } else {
+            $image = $site->placeholder()->toFile();
         }
     }
     ?>
