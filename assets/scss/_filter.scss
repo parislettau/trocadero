@@ -24,7 +24,7 @@
       white-space: nowrap;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      margin-bottom: $global-gap-width;
+      margin-bottom: calc(#{$global-gap-width} / 2);
 
       .dates {
       }
@@ -57,7 +57,7 @@
       font-size: 1rem;
       text-align: justify;
       color: #393939;
-      margin-top: 14px;
+      margin-top: calc(#{$global-gap-width} / 2);
       white-space: nowrap;
       // display: -webkit-box;
       // -webkit-line-clamp: 6;
