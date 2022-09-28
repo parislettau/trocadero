@@ -18,9 +18,11 @@ tabs:
             layout: cards
             size: tiny
             max: 1
-            min: 1
+            required: true
+            width: 50%
           files:
             type: files
+            width: 50%
 
   tab2:
     label: Home
