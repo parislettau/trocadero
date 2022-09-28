@@ -58,11 +58,14 @@
       text-align: justify;
       color: #393939;
       margin-top: calc(#{$global-gap-width} / 2);
-      white-space: nowrap;
+      // white-space: nowrap;
       // display: -webkit-box;
       // -webkit-line-clamp: 6;
       // -webkit-box-orient: vertical;
-      overflow: hidden;
+      // white-space: nowrap;
+      // overflow: hidden;
+      // text-overflow: ellipsis;
+      // overflow: hidden;
     }
   }
 }

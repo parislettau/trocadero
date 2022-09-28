@@ -6,6 +6,7 @@ sections:
   programs:
     type: pages
     # layout: cards
+    sortBy: startDate desc
     layout: table
     image: page.cover.toFile 
     columns:
@@ -19,7 +20,7 @@ sections:
       category: true
         type: tags
         mobile: false
-    limit: 200
+    limit: 1000
     templates:
       - exhibition
       - program

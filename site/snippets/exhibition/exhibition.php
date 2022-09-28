@@ -1,9 +1,17 @@
 <div class="main-img-container">
     <?php
+    // if ($page->cover()->toFile()) {
+    //     $image = $page->cover()->toFile();
+    // } else {
+    //     $image = $page->image();
+    // }
     if ($page->cover()->toFile()) {
         $image = $page->cover()->toFile();
     } else {
-        $image = $page->image();
+        $image = $site->placeholder()->toFile();
+        if ($page->hasImages()) {
+            $image = $page->image();
+        }
     }
     ?>
     <img src="<?= $image->placeholderUri() ?>" data-src="<?= $image->url() ?>" data-lazyload alt="<?= $image->alt() ?>" />

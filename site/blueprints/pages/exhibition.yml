@@ -80,7 +80,7 @@ columns:
           cover:
             extends: sections/cover
             template: cover
-            required: true
+            # required: true
 
       images:
         type: files

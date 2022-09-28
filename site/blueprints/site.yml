@@ -9,6 +9,16 @@ tabs:
         options:
           hideStatus: true
         help: Select each page to edit the content. <br> To edit the homepage grid, first add the exhibition details in the 'Programs' page. <br>Next, navigate to the 'Trocadero Projects Home' section and select the desired program to include in the grid.<br>Please ensure it is selected in one of the first four positions. <br><br>To update the address in both the footer and the 'Visit' section, make the edits within the 'Footer' tab.
+      placeholder:
+        type: fields
+        fields:
+          placeholder:
+            help: Placeholder for pages with missing images.
+            type: files
+            layout: cards
+            size: tiny
+            max: 1
+
   tab2:
     label: Home
     sections:

@@ -1,5 +1,5 @@
 <div class="exhibitions-filtered-container filtered">
-    <?php foreach ($kirby->collection("exhibitions") as $program) : ?>
+    <?php foreach ($kirby->collection("exhibitions")->flip() as $program) : ?>
 
         <!--      ARTICLE ITEMS WITH FILTER TAGS-->
         <div class="exhibition exhibitions-item h2" data-tags="
@@ -32,7 +32,11 @@
                     if ($program->cover()->toFile()) {
                         $original = $program->cover()->toFile();
                     } else {
-                        $original = $program->image();
+                        if ($program->hasImages()) {
+                            $original = $program->image();
+                        } else {
+                            $original = $site->placeholder()->toFile();
+                        }
                     }
                     $cropped = $original->crop(500, 400);
                     ?>
