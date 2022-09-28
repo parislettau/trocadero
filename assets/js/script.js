@@ -3,7 +3,6 @@ $(document).ready(function () {
   //   var inputValue = $(this).attr("value");
   //   $("." + inputValue).toggle();
   // });
-
   // Lightbox
   Array.from(document.querySelectorAll("[data-lightbox]")).forEach(
     (element) => {
@@ -16,12 +15,16 @@ $(document).ready(function () {
 });
 
 function openNav() {
+  var offsetHeight = document.getElementById("myTopSidebar").offsetHeight;
+  // var offsetHeight = $("#myTopSidebar").height();
   $("body").addClass("top-sidebar-open");
+  $("body").css("margin-top", offsetHeight + "px");
   $("#myTopSidebar").addClass("top-sidebar-open");
   $("#nav").addClass("top-sidebar-open");
 }
 
 function closeNav() {
+  $("body").css("margin-top", "0");
   $("body").removeClass("top-sidebar-open");
   $("#myTopSidebar").removeClass("top-sidebar-open");
   $("#nav").removeClass("top-sidebar-open");

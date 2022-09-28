@@ -16,7 +16,7 @@
         ">
 
             <!-- link -->
-            <a class=" " href="<?= $program->url() ?>">
+            <a class=" " href="<?= $program->url() ?>" style="--theme:unset">
                 <!-- head -->
                 <div class="exhibitions-item-head">
                     <div class="dates">

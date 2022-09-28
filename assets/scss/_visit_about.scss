@@ -37,7 +37,7 @@
 .top-sidebar {
   --theme: var(--backgroundColor);
   background-color: var(--theme);
-  height: 50vh;
+  // height: 50vh;
   width: 100%;
   position: fixed;
   z-index: 9999;
@@ -95,4 +95,7 @@
   position: absolute;
   font-size: var(--bigFont);
   color: #393939;
+  &:hover {
+    color: #393939;
+  }
 }

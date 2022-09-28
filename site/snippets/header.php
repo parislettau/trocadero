@@ -26,6 +26,6 @@
 
 </head>
 
-<body id="body" [date-template]="<?= $page->template() ?>" style="">
+<body id="body" [date-template]="<?= $page->template() ?>" style="--theme:<?= $site->theme() ?>">
     <?php snippet('visit_about') ?>
     <?php snippet('acknowledgment') ?>

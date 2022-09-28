@@ -17,11 +17,13 @@
                 <a href="<?= page('shop')->link() ?>" class="active-open" target="_blank">SHOP</a>
             </li>
             <li>
-                <button class="openbtn active-open" onClick="openNav()">VISIT</button>
+                <button class="openbtn active-open" onClick="openNav()"><a href="javascript:;">VISIT</a>
+                </button>
 
             </li>
             <li>
-                <button class="openbtn active-open" onClick="openNav()">ABOUT</button>
+                <button class="openbtn active-open" onClick="openNav()"><a href="javascript:;">ABOUT</a>
+
             </li>
         </ul>
     </nav>
