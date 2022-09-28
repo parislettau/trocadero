@@ -57,10 +57,11 @@
       font-size: 1rem;
       text-align: justify;
       color: #393939;
-
-      display: -webkit-box;
-      -webkit-line-clamp: 6;
-      -webkit-box-orient: vertical;
+      margin-top: 14px;
+      white-space: nowrap;
+      // display: -webkit-box;
+      // -webkit-line-clamp: 6;
+      // -webkit-box-orient: vertical;
       overflow: hidden;
     }
   }
