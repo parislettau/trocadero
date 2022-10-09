@@ -1,10 +1,11 @@
 <!-- header -->
 <?php snippet('header') ?>
+<!-- nav -->
 
+<?php snippet('nav') ?>
 <!-- content -->
 <div class="page-container page-wrapper">
-    <!-- nav -->
-    <?php snippet('nav') ?>
+
     <main id="main" class="main-container">
         <!-- container -->
 

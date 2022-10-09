@@ -3,6 +3,10 @@ header {
   justify-content: space-between;
   font-size: var(--bigFont);
   width: 100%;
+  mix-blend-mode: difference;
+  width: 100vw;
+  z-index: 1000;
+  color: #fefefe;
   padding: 0 $global-gap-width;
   // display: flex;
   // justify-content: space-between;
@@ -36,6 +40,7 @@ header {
 .logo-container {
   // width: 50vw;
   /* margin-top: -10px; */
+  all: unset;
   @media (max-width: $mobile) {
     // width: unset;
   }
@@ -43,6 +48,13 @@ header {
   a,
   img {
     width: 100%;
+  }
+
+  a.logo {
+    color: #c5c5c5;
+    svg {
+      color: #c5c5c5;
+    }
   }
 }
 
@@ -54,6 +66,13 @@ nav.nav-menu {
   @media (max-width: $mobile) {
     font-size: var(--normalFont);
     margin: 0;
+  }
+
+  a {
+    color: #c5c5c5;
+    &:hover {
+      color: var(--theme);
+    }
   }
 }
 
