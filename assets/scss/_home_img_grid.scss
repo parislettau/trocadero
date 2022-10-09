@@ -16,7 +16,8 @@
     img {
       height: calc(100vw / 3);
       @media (max-width: $mobile) {
-        height: unset;
+        // height: unset;
+        height: 250px;
       }
     }
   }
