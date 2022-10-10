@@ -55,6 +55,17 @@ header {
     svg {
       color: #c5c5c5;
     }
+
+    path {
+      mix-blend-mode: difference;
+      fill: #c5c5c5;
+    }
+
+    &:hover {
+      path {
+        fill: #75ae99;
+      }
+    }
   }
 }
 
