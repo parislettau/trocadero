@@ -38,7 +38,7 @@
   color: rgba(57, 57, 57, 1);
   margin-bottom: $global-gap-width;
   font-size: var(--normalFont);
-  line-height: 1.1;
+  line-height: $global-line-height;
   text-align: justify;
   word-break: break-word;
   hyphens: auto;

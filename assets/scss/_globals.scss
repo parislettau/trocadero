@@ -1,7 +1,7 @@
 html {
   // font-size: calc(calc(60% + 0.8vmin));
   font-size: $global-font-size;
-  line-height: 1.1;
+  line-height: $global-line-height;
 }
 
 body {
