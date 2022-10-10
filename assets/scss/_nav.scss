@@ -63,7 +63,7 @@ header {
 
     &:hover {
       path {
-        fill: #75ae99;
+        fill: var(--theme);
       }
     }
   }
