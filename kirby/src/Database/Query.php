@@ -404,18 +404,7 @@ class Query
 	 */
 	public function orWhere(...$args)
 	{
-		$mode = A::last($args);
-
-		// if there's a where clause mode attribute attached…
-		if (in_array($mode, ['AND', 'OR']) === true) {
-			// remove that from the list of arguments
-			array_pop($args);
-		}
-
-		// make sure to always attach the OR mode indicator
-		$args[] = 'OR';
-
-		$this->where(...$args);
+		$this->where = $this->filterQuery($args, $this->where, 'OR');
 		return $this;
 	}
 
@@ -428,18 +417,7 @@ class Query
 	 */
 	public function andWhere(...$args)
 	{
-		$mode = A::last($args);
-
-		// if there's a where clause mode attribute attached…
-		if (in_array($mode, ['AND', 'OR']) === true) {
-			// remove that from the list of arguments
-			array_pop($args);
-		}
-
-		// make sure to always attach the AND mode indicator
-		$args[] = 'AND';
-
-		$this->where(...$args);
+		$this->where = $this->filterQuery($args, $this->where, 'AND');
 		return $this;
 	}
 
@@ -522,41 +500,38 @@ class Query
 	{
 		$sql = $this->database->sql();
 
-		switch ($type) {
-			case 'select':
-				return $sql->select([
-					'table'    => $this->table,
-					'columns'  => $this->select,
-					'join'     => $this->join,
-					'distinct' => $this->distinct,
-					'where'    => $this->where,
-					'group'    => $this->group,
-					'having'   => $this->having,
-					'order'    => $this->order,
-					'offset'   => $this->offset,
-					'limit'    => $this->limit,
-					'bindings' => $this->bindings
-				]);
-			case 'update':
-				return $sql->update([
-					'table'    => $this->table,
-					'where'    => $this->where,
-					'values'   => $this->values,
-					'bindings' => $this->bindings
-				]);
-			case 'insert':
-				return $sql->insert([
-					'table'    => $this->table,
-					'values'   => $this->values,
-					'bindings' => $this->bindings
-				]);
-			case 'delete':
-				return $sql->delete([
-					'table'    => $this->table,
-					'where'    => $this->where,
-					'bindings' => $this->bindings
-				]);
-		}
+		return match ($type) {
+			'select' => $sql->select([
+				'table'    => $this->table,
+				'columns'  => $this->select,
+				'join'     => $this->join,
+				'distinct' => $this->distinct,
+				'where'    => $this->where,
+				'group'    => $this->group,
+				'having'   => $this->having,
+				'order'    => $this->order,
+				'offset'   => $this->offset,
+				'limit'    => $this->limit,
+				'bindings' => $this->bindings
+			]),
+			'update' => $sql->update([
+				'table'    => $this->table,
+				'where'    => $this->where,
+				'values'   => $this->values,
+				'bindings' => $this->bindings
+			]),
+			'insert' => $sql->insert([
+				'table'    => $this->table,
+				'values'   => $this->values,
+				'bindings' => $this->bindings
+			]),
+			'delete' => $sql->delete([
+				'table'    => $this->table,
+				'where'    => $this->where,
+				'bindings' => $this->bindings
+			]),
+			default => null
+		};
 	}
 
 	/**
@@ -923,9 +898,8 @@ class Query
 		if (preg_match('!^findBy([a-z]+)!i', $method, $match)) {
 			$column = Str::lower($match[1]);
 			return $this->findBy($column, $arguments[0]);
-		} else {
-			throw new InvalidArgumentException('Invalid query method: ' . $method, static::ERROR_INVALID_QUERY_METHOD);
 		}
+		throw new InvalidArgumentException('Invalid query method: ' . $method, static::ERROR_INVALID_QUERY_METHOD);
 	}
 
 	/**
@@ -935,18 +909,9 @@ class Query
 	 * @param mixed $current Current value (like $this->where)
 	 * @return string
 	 */
-	protected function filterQuery(array $args, $current)
+	protected function filterQuery(array $args, $current, string $mode = 'AND')
 	{
-		$mode   = A::last($args);
 		$result = '';
-
-		// if there's a where clause mode attribute attached…
-		if (in_array($mode, ['AND', 'OR'])) {
-			// remove that from the list of arguments
-			array_pop($args);
-		} else {
-			$mode = 'AND';
-		}
 
 		switch (count($args)) {
 			case 1:
@@ -956,14 +921,12 @@ class Query
 
 				// ->where('username like "myuser"');
 				} elseif (is_string($args[0]) === true) {
-
 					// simply add the entire string to the where clause
 					// escaping or using bindings has to be done before calling this method
 					$result = $args[0];
 
 				// ->where(['username' => 'myuser']);
 				} elseif (is_array($args[0]) === true) {
-
 					// simple array mode (AND operator)
 					$sql = $this->database->sql()->values($this->table, $args[0], ' AND ', true, true);
 
@@ -990,7 +953,6 @@ class Query
 
 				// ->where('username like :username', ['username' => 'myuser'])
 				if (is_string($args[0]) === true && is_array($args[1]) === true) {
-
 					// prepared where clause
 					$result = $args[0];
 
@@ -999,7 +961,6 @@ class Query
 
 				// ->where('username like ?', 'myuser')
 				} elseif (is_string($args[0]) === true && is_string($args[1]) === true) {
-
 					// prepared where clause
 					$result = $args[0];
 
@@ -1012,7 +973,6 @@ class Query
 
 				// ->where('username', 'like', 'myuser');
 				if (is_string($args[0]) === true && is_string($args[1]) === true) {
-
 					// validate column
 					$sql = $this->database->sql();
 					$key = $sql->columnName($this->table, $args[0]);
@@ -1061,14 +1021,13 @@ class Query
 				}
 
 				break;
-
 		}
 
 		// attach the where clause
 		if (empty($current) === false) {
 			return $current . ' ' . $mode . ' ' . $result;
-		} else {
-			return $result;
 		}
+
+		return $result;
 	}
 }

@@ -6,6 +6,6 @@ sections:
   covid:
     type: fields
     fields:
-      covidsafe:
+      info:
         type: textarea
-        label: COVIDSafe Information
+        label: Information

@@ -79,11 +79,7 @@ class PageBlueprint extends Blueprint
 			'sort' => 'default',
 		];
 
-		if (isset($aliases[$num]) === true) {
-			return $aliases[$num];
-		}
-
-		return $num;
+		return $aliases[$num] ?? $num;
 	}
 
 	/**
@@ -119,7 +115,6 @@ class PageBlueprint extends Blueprint
 
 		// clean up and translate each status
 		foreach ($status as $key => $options) {
-
 			// skip invalid status definitions
 			if (in_array($key, ['draft', 'listed', 'unlisted']) === false || $options === false) {
 				unset($status[$key]);
@@ -145,9 +140,7 @@ class PageBlueprint extends Blueprint
 			}
 
 			// also make sure to have the text field set
-			if (isset($status[$key]['text']) === false) {
-				$status[$key]['text'] = null;
-			}
+			$status[$key]['text'] ??= null;
 
 			// translate text and label if necessary
 			$status[$key]['label'] = $this->i18n($status[$key]['label'], $status[$key]['label']);

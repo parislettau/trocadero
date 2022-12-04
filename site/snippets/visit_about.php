@@ -3,40 +3,38 @@
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">CLOSE</a>
     <div class="about-container">
         <span class="top-title">ABOUT</span><br>
-        <p><?= page('about')->text() ?></p>
+        <p><?= $site->text() ?></p>
 
     </div>
 
     <div class="people-container">
         <span class="top-title">PEOPLE</span>
         <div class="people-bio">
-            <p><?= page('about')->bio() ?></p>
+            <?= $site->bio()->kt() ?>
         </div>
         <div class="members-volunteers">
             <div class="members">
                 <br>
                 <span>COMMITTEE MEMBERS</span><br>
-                <?= page('about')->committee() ?>
+                <?= $site->committee()->kt() ?>
             </div>
             <div class="volunteers">
                 <br>
                 <span>VOLUNTEERS</span><br>
-                <?= page('about')->volunteers() ?>
+                <?= $site->volunteers()->kt() ?>
             </div>
         </div>
         <div class="past-members">
+            <br>
             <span>Past Committee Members (2021-)</span>
-            <p><?= page('about')->past() ?></p>
+            <?= $site->past()->kt() ?>
         </div>
     </div>
 
     <div class="visit-container">
         <span class="top-title">VISIT</span><br>
-        <?= $site->footeraddress() ?><br><br>
-        <?= $site->footerhours() ?><br><br>
-        <span>ACCESS</span><br><br>
-        <?= $site->footeraccess() ?><br><br>
-        <span>COVIDSafe Information</span><br><br>
-        <?= page('visit')->covidsafe() ?>
+        <?= $site->footeraddress()->kt() ?><br>
+        <?= $site->footerhours()->kt() ?><br>
+        <?= $site->footeraccess()->kt() ?><br><br>
     </div>
 </div>

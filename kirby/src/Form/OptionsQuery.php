@@ -5,10 +5,10 @@ namespace Kirby\Form;
 use Kirby\Cms\Field;
 use Kirby\Exception\InvalidArgumentException;
 use Kirby\Exception\NotFoundException;
+use Kirby\Query\Query;
 use Kirby\Toolkit\Collection;
 use Kirby\Toolkit\Obj;
 use Kirby\Toolkit\Properties;
-use Kirby\Toolkit\Query;
 use Kirby\Toolkit\Str;
 
 /**
@@ -22,6 +22,8 @@ use Kirby\Toolkit\Str;
  * @link      https://getkirby.com
  * @copyright Bastian Allgeier
  * @license   https://opensource.org/licenses/MIT
+ *
+ * @deprecated 3.8.0 Use `Kirby\Option\OptionsQuery` instead
  */
 class OptionsQuery
 {
@@ -115,8 +117,8 @@ class OptionsQuery
 		}
 
 		$data    = $this->data();
-		$query   = new Query($this->query(), $data);
-		$result  = $query->result();
+		$query   = new Query($this->query());
+		$result  = $query->resolve($data);
 		$result  = $this->resultToCollection($result);
 		$options = [];
 
@@ -154,7 +156,7 @@ class OptionsQuery
 
 		// slow but precise resolving
 		foreach ($this->aliases as $className => $alias) {
-			if (is_a($object, $className) === true) {
+			if ($object instanceof $className) {
 				return $alias;
 			}
 		}
@@ -181,7 +183,7 @@ class OptionsQuery
 			$result = new Collection($result);
 		}
 
-		if (is_a($result, 'Kirby\Toolkit\Collection') === false) {
+		if ($result instanceof Collection === false) {
 			throw new InvalidArgumentException('Invalid query result data');
 		}
 
@@ -192,7 +194,7 @@ class OptionsQuery
 	 * @param array|null $aliases
 	 * @return $this
 	 */
-	protected function setAliases(?array $aliases = null)
+	protected function setAliases(array|null $aliases = null)
 	{
 		$this->aliases = $aliases;
 		return $this;

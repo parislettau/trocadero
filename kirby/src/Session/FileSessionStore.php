@@ -7,6 +7,7 @@ use Kirby\Exception\Exception;
 use Kirby\Exception\LogicException;
 use Kirby\Exception\NotFoundException;
 use Kirby\Filesystem\Dir;
+use Kirby\Filesystem\F;
 use Kirby\Toolkit\Str;
 
 /**
@@ -156,7 +157,9 @@ class FileSessionStore extends SessionStore
 		// check if the file is already unlocked or doesn't exist
 		if (!isset($this->isLocked[$name])) {
 			return;
-		} elseif ($this->exists($expiryTime, $id) === false) {
+		}
+
+		if ($this->exists($expiryTime, $id) === false) {
 			unset($this->isLocked[$name]);
 			return;
 		}
@@ -322,7 +325,7 @@ class FileSessionStore extends SessionStore
 		}
 
 		// file still exists, delete it
-		if (@unlink($path) !== true) {
+		if (@F::unlink($path) !== true) {
 			// @codeCoverageIgnoreStart
 			throw new Exception([
 				'key'       => 'session.filestore.unexpectedFilesystemError',

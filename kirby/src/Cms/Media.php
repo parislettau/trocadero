@@ -41,16 +41,15 @@ class Media
 		// try to find a file by model and filename
 		// this should work for all original files
 		if ($file = $model->file($filename)) {
-
 			// check if the request contained an outdated media hash
 			if ($file->mediaHash() !== $hash) {
 				// if at least the token was correct, redirect
 				if (Str::startsWith($hash, $file->mediaToken() . '-') === true) {
 					return Response::redirect($file->mediaUrl(), 307);
-				} else {
-					// don't leak the correct token, render the error page
-					return false;
 				}
+
+				// don't leak the correct token, render the error page
+				return false;
 			}
 
 			// send the file to the browser
@@ -101,10 +100,10 @@ class Media
 		// assets
 		if (is_string($model) === true) {
 			$root = $kirby->root('media') . '/assets/' . $model . '/' . $hash;
-			// parent files for file model that already included hash
-		} elseif (is_a($model, '\Kirby\Cms\File')) {
+		// parent files for file model that already included hash
+		} elseif ($model instanceof File) {
 			$root = dirname($model->mediaRoot());
-			// model files
+		// model files
 		} else {
 			$root = $model->mediaRoot() . '/' . $hash;
 		}
@@ -128,11 +127,11 @@ class Media
 				$kirby->thumb($source, $thumb, $options);
 				F::remove($job);
 				return Response::file($thumb);
-			} catch (Throwable $e) {
+			} catch (Throwable) {
 				F::remove($thumb);
 				return Response::file($source);
 			}
-		} catch (Throwable $e) {
+		} catch (Throwable) {
 			return false;
 		}
 	}

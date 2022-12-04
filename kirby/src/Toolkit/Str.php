@@ -2,11 +2,13 @@
 
 namespace Kirby\Toolkit;
 
+use Closure;
 use DateTime;
 use Exception;
 use IntlDateFormatter;
-use Kirby\Cms\Helpers;
 use Kirby\Exception\InvalidArgumentException;
+use Kirby\Query\Query;
+use Throwable;
 
 /**
  * The String class provides a set
@@ -326,14 +328,14 @@ class Str
 	 * @param string $handler date, intl or strftime
 	 * @return string|int
 	 */
-	public static function date(?int $time = null, $format = null, string $handler = 'date')
+	public static function date(int|null $time = null, $format = null, string $handler = 'date')
 	{
 		if (is_null($format) === true) {
 			return $time;
 		}
 
 		// $format is an IntlDateFormatter instance
-		if (is_a($format, 'IntlDateFormatter') === true) {
+		if ($format instanceof IntlDateFormatter) {
 			return $format->format($time ?? time());
 		}
 
@@ -469,7 +471,12 @@ class Str
 	public static function excerpt($string, $chars = 140, $strip = true, $rep = ' …')
 	{
 		if ($strip === true) {
-			$string = strip_tags(str_replace('<', ' <', $string));
+			// ensure that opening tags are preceded by a space, so that
+			// when tags are skipped we can be sure that words stay separate
+			$string = preg_replace('#\s*<([^\/])#', ' <${1}', $string);
+
+			// in strip mode, we always return plain text
+			$string = strip_tags($string);
 		}
 
 		// replace line breaks with spaces
@@ -553,21 +560,6 @@ class Str
 	}
 
 	/**
-	 * Checks if the given string is a URL
-	 *
-	 * @param string|null $string
-	 * @return bool
-	 * @deprecated 3.6.0 use `Kirby\Toolkit\V::url()` instead
-	 * @todo Remove in 3.8.0
-	 * @codeCoverageIgnore
-	 */
-	public static function isURL(?string $string = null): bool
-	{
-		Helpers::deprecated('Toolkit\Str::isUrl() has been deprecated and will be removed in Kirby 3.8.0. Use Toolkit\V::url() instead.');
-		return filter_var($string, FILTER_VALIDATE_URL) !== false;
-	}
-
-	/**
 	 * Convert a string to kebab case.
 	 *
 	 * @param string $value
@@ -629,23 +621,14 @@ class Str
 				$pool = array_merge($pool, static::pool($t));
 			}
 		} else {
-			switch (strtolower($type)) {
-				case 'alphalower':
-					$pool = range('a', 'z');
-					break;
-				case 'alphaupper':
-					$pool = range('A', 'Z');
-					break;
-				case 'alpha':
-					$pool = static::pool(['alphaLower', 'alphaUpper']);
-					break;
-				case 'num':
-					$pool = range(0, 9);
-					break;
-				case 'alphanum':
-					$pool = static::pool(['alpha', 'num']);
-					break;
-			}
+			$pool = match (strtolower($type)) {
+				'alphalower' => range('a', 'z'),
+				'alphaupper' => range('A', 'Z'),
+				'alpha'      => static::pool(['alphaLower', 'alphaUpper']),
+				'num'        => range(0, 9),
+				'alphanum'   => static::pool(['alpha', 'num']),
+				default      => $pool
+			};
 		}
 
 		return $array ? $pool : implode('', $pool);
@@ -684,7 +667,7 @@ class Str
 	 */
 	public static function query(string $query, array $data = [])
 	{
-		return (new Query($query, $data))->result();
+		return Query::factory($query)->resolve($data);
 	}
 
 	/**
@@ -735,19 +718,20 @@ class Str
 	 *                         defaults to no limit
 	 * @return string|array String with replaced values;
 	 *                      if $string is an array, array of strings
+	 * @psalm-return ($string is array ? array : string)
 	 */
 	public static function replace($string, $search, $replace, $limit = -1)
 	{
 		// convert Kirby collections to arrays
-		if (is_a($string, 'Kirby\Toolkit\Collection') === true) {
+		if ($string instanceof Collection) {
 			$string = $string->toArray();
 		}
 
-		if (is_a($search, 'Kirby\Toolkit\Collection') === true) {
+		if ($search instanceof Collection) {
 			$search  = $search->toArray();
 		}
 
-		if (is_a($replace, 'Kirby\Toolkit\Collection') === true) {
+		if ($replace instanceof Collection) {
 			$replace = $replace->toArray();
 		}
 
@@ -846,11 +830,9 @@ class Str
 			if (is_int($replacement['limit']) === false) {
 				throw new Exception('Invalid limit "' . $replacement['limit'] . '".');
 			} elseif ($replacement['limit'] === -1) {
-
 				// no limit, we don't need our special replacement routine
 				$string = str_replace($replacement['search'], $replacement['replace'], $string);
 			} elseif ($replacement['limit'] > 0) {
-
 				// limit given, only replace for $replacement['limit'] times per replacement
 				$position = -1;
 
@@ -903,8 +885,8 @@ class Str
 	 */
 	public static function safeTemplate(string $string = null, array $data = [], array $options = []): string
 	{
-		$callback = is_a(($options['callback'] ?? null), 'Closure') === true ? $options['callback'] : null;
-		$fallback = $options['fallback'] ?? '';
+		$callback = ($options['callback'] ?? null) instanceof Closure ? $options['callback'] : null;
+		$fallback = $options['fallback'] ?? null;
 
 		// replace and escape
 		$string = static::template($string, $data, [
@@ -1101,7 +1083,7 @@ class Str
 	 * and it has a built-in way to skip values
 	 * which are too short.
 	 *
-	 * @param string $string The string to split
+	 * @param string|array|null $string The string to split
 	 * @param string $separator The string to split by
 	 * @param int $length The min length of values.
 	 * @return array An array of found values
@@ -1194,40 +1176,44 @@ class Str
 	public static function template(string $string = null, array $data = [], array $options = []): string
 	{
 		$fallback = $options['fallback'] ?? null;
-		$callback = is_a(($options['callback'] ?? null), 'Closure') === true ? $options['callback'] : null;
+		$callback = ($options['callback'] ?? null) instanceof Closure ? $options['callback'] : null;
 		$start    = (string)($options['start'] ?? '{{');
 		$end      = (string)($options['end'] ?? '}}');
 
 		// make sure $string is string
 		$string ??= '';
 
-		return preg_replace_callback('!' . $start . '(.*?)' . $end . '!', function ($match) use ($data, $fallback, $callback) {
-			$query = trim($match[1]);
+		return preg_replace_callback(
+			'!' . $start . '(.*?)' . $end . '!',
+			function ($match) use ($data, $fallback, $callback) {
+				$query = trim($match[1]);
 
-			// if the placeholder contains a dot, it is a query
-			if (strpos($query, '.') !== false) {
 				try {
-					$result = (new Query($match[1], $data))->result();
-				} catch (Exception $e) {
+					$result = Query::factory($query)->resolve($data);
+				} catch (Throwable) {
 					$result = null;
 				}
-			} else {
-				$result = $data[$query] ?? null;
-			}
 
-			// if we don't have a result, use the fallback if given
-			if ($result === null && $fallback !== null) {
-				$result = $fallback;
-			}
+				// if we don't have a result, use the fallback if given
+				$result ??= $fallback;
 
-			// callback on result if given
-			if ($callback !== null) {
-				$result = $callback((string)$result, $query, $data);
-			}
+				// callback on result if given
+				if ($callback !== null) {
+					$callbackResult = $callback((string)$result, $query, $data);
 
-			// if we still don't have a result, keep the original placeholder
-			return $result ?? $match[0];
-		}, $string);
+					if ($result === null && $callbackResult === '') {
+						// the empty string came just from string casting,
+						// keep the null value and ignore the callback result
+					} else {
+						$result = $callbackResult;
+					}
+				}
+
+				// if we still don't have a result, keep the original placeholder
+				return $result ?? $match[0];
+			},
+			$string
+		);
 	}
 
 	/**
@@ -1270,21 +1256,13 @@ class Str
 			$type = gettype($type);
 		}
 
-		switch ($type) {
-			case 'array':
-				return (array)$string;
-			case 'bool':
-			case 'boolean':
-				return filter_var($string, FILTER_VALIDATE_BOOLEAN);
-			case 'double':
-			case 'float':
-				return (float)$string;
-			case 'int':
-			case 'integer':
-				return (int)$string;
-		}
-
-		return (string)$string;
+		return match ($type) {
+			'array'           => (array)$string,
+			'bool', 'boolean' => filter_var($string, FILTER_VALIDATE_BOOLEAN),
+			'double', 'float' => (float)$string,
+			'int', 'integer'  => (int)$string,
+			default           => (string)$string
+		};
 	}
 
 	/**

@@ -2,6 +2,7 @@
 
 namespace Kirby\Cms;
 
+use Closure;
 use Kirby\Exception\InvalidArgumentException;
 use Kirby\Toolkit\Str;
 
@@ -43,7 +44,67 @@ class Helpers
 	public static function dump($variable, bool $echo = true): string
 	{
 		$kirby = App::instance();
-		return ($kirby->component('dump'))($kirby, $variable, $echo);
+
+		if ($kirby->environment()->cli() === true) {
+			$output = print_r($variable, true) . PHP_EOL;
+		} else {
+			$output = '<pre>' . print_r($variable, true) . '</pre>';
+		}
+
+		if ($echo === true) {
+			echo $output;
+		}
+
+		return $output;
+	}
+
+	/**
+	 * Performs an action with custom handling
+	 * for all PHP errors and warnings
+	 * @since 3.7.4
+	 *
+	 * @param \Closure $action Any action that may cause an error or warning
+	 * @param \Closure $condition Closure that returns bool to determine if to
+	 *                            suppress an error, receives arguments for
+	 *                            `set_error_handler()`
+	 * @param mixed $fallback Value to return when error is suppressed
+	 * @return mixed Return value of the `$action` closure,
+	 *               possibly overridden by `$fallback`
+	 */
+	public static function handleErrors(Closure $action, Closure $condition, $fallback = null)
+	{
+		$override = null;
+
+		$handler = set_error_handler(function () use (&$override, &$handler, $condition, $fallback) {
+			// check if suppress condition is met
+			$suppress = $condition(...func_get_args());
+
+			if ($suppress !== true) {
+				// handle other warnings with Whoops if loaded
+				if (is_callable($handler) === true) {
+					return $handler(...func_get_args());
+				}
+
+				// otherwise use the standard error handler
+				return false; // @codeCoverageIgnore
+			}
+
+			// use fallback to override return for suppressed errors
+			$override = $fallback;
+
+			if (is_callable($override) === true) {
+				$override = $override();
+			}
+
+			// no additional error handling
+			return true;
+		});
+
+		$result = $action();
+
+		restore_error_handler();
+
+		return $override ?? $result;
 	}
 
 	/**

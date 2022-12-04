@@ -24,6 +24,7 @@ class StaticSiteGenerator
   protected $_originalBaseUrl;
   protected $_defaultLanguage;
   protected $_languages;
+  protected $_ignoreUntranslatedPages = false;
 
   protected $_skipCopyingMedia = false;
 
@@ -102,6 +103,11 @@ class StaticSiteGenerator
     $this->_customRoutes = $customRoutes;
   }
 
+  public function setIgnoreUntranslatedPages(bool $ignoreUntranslatedPages)
+  {
+    $this->_ignoreUntranslatedPages = $ignoreUntranslatedPages;
+  }
+
   protected function _setOriginalBaseUrl()
   {
     if (!$this->_kirby->urls()->base()) {
@@ -127,10 +133,28 @@ class StaticSiteGenerator
     $this->_kirby = $this->_kirby->clone(['urls' => $urls]);
   }
 
+  protected function _setCurrentPath(Page $page, string | null $languageCode)
+  {
+    $language = $languageCode ? $this->_kirby->languages()->find($languageCode) : null;
+    $path = trim(parse_url($page->url(), PHP_URL_PATH) ?? '', '/');
+
+    $this->_kirby = $this->_kirby->clone(
+      array_merge(
+        [],
+        $language ? ['language' => $language] : [],
+        $path ? ['path' => $path ] : []
+      )
+    );
+  }
+
   protected function _generatePagesByLanguage(string $baseUrl, string $languageCode = null)
   {
     foreach ($this->_pages->keys() as $key) {
       $page = $this->_pages->$key;
+      if($this->_ignoreUntranslatedPages && !$page->translation($languageCode)->exists()){
+        continue;
+      }
+
       $this->_setPageLanguage($page, $languageCode);
       $path = str_replace($this->_originalBaseUrl, '/', $page->url());
       $path = $this->_cleanPath($this->_outputFolder . $path . '/index.html');
@@ -142,10 +166,25 @@ class StaticSiteGenerator
     }
   }
 
+  protected function _getRouteContent(string $routePath)
+  {
+    if (!$routePath) {
+      return null;
+    }
+
+    $routeResult = kirby()->router()->call($routePath, 'GET');
+    if ($routeResult instanceof \Kirby\Http\Response) {
+      $routeResult = $routeResult->body();
+    }
+
+    return is_string($routeResult) ? $routeResult : null;
+  }
+
   protected function _generateCustomRoute(string $baseUrl, array $route)
   {
     $path = A::get($route, 'path');
     $page = A::get($route, 'page');
+    $routePath = A::get($route, 'route');
     $baseUrl = A::get($route, 'baseUrl', $baseUrl);
     $data = A::get($route, 'data', []);
     $languageCode = A::get($route, 'languageCode');
@@ -154,13 +193,25 @@ class StaticSiteGenerator
       $page = page($page);
     }
 
-    if (!$path || !$page) {
+    $hasPage = !!$page;
+
+    if (!$page) {
+      $page = new Page(['slug' => 'static-site-generator/' . uniqid()]);
+    }
+
+    $this->_setPageLanguage($page, $languageCode);
+
+    $routeContent = $hasPage && !$routePath ? null : $this->_getRouteContent($routePath ?: $path);
+
+    if (!$path || (!$hasPage && !$routeContent)) {
       return;
     }
 
-    $path = $this->_cleanPath($this->_outputFolder . '/' . $path . '/index.html');
-    $this->_setPageLanguage($page, $languageCode);
-    $this->_generatePage($page, $path, $baseUrl, $data);
+    $path = $this->_cleanPath(
+      $this->_outputFolder . '/' . $path . '/index.html'
+    );
+
+    $this->_generatePage($page, $path, $baseUrl, $data, $routeContent);
   }
 
   protected function _setPageLanguage(Page $page, string $languageCode = null)
@@ -189,6 +240,9 @@ class StaticSiteGenerator
     }
 
     $kirby->cache('pages')->flush();
+
+    $site->visit($page, $languageCode);
+    $this->_setCurrentPath($page, $languageCode);
     $site->visit($page, $languageCode);
   }
 
@@ -199,19 +253,19 @@ class StaticSiteGenerator
     })->bindTo($this->_kirby, 'Kirby\\Cms\\App')($this->_kirby);
   }
 
-  protected function _generatePage(Page $page, string $path, string $baseUrl, array $data = [])
+  protected function _generatePage(Page $page, string $path, string $baseUrl, array $data = [], string $content = null)
   {
     $page->setSite(null);
-    $html = $page->render($data);
+    $content = $content ?: $page->render($data);
 
     $jsonOriginalBaseUrl = trim(json_encode($this->_originalBaseUrl), '"');
     $jsonBaseUrl = trim(json_encode($baseUrl), '"');
-    $html = str_replace($this->_originalBaseUrl . '/', $baseUrl, $html);
-    $html = str_replace($this->_originalBaseUrl, $baseUrl, $html);
-    $html = str_replace($jsonOriginalBaseUrl . '\\/', $jsonBaseUrl, $html);
-    $html = str_replace($jsonOriginalBaseUrl, $jsonBaseUrl, $html);
+    $content = str_replace($this->_originalBaseUrl . '/', $baseUrl, $content);
+    $content = str_replace($this->_originalBaseUrl, $baseUrl, $content);
+    $content = str_replace($jsonOriginalBaseUrl . '\\/', $jsonBaseUrl, $content);
+    $content = str_replace($jsonOriginalBaseUrl, $jsonBaseUrl, $content);
 
-    F::write($path, $html);
+    F::write($path, $content);
 
     $this->_fileList = array_unique(array_merge($this->_fileList, [$path]));
   }

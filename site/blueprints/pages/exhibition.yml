@@ -1,4 +1,4 @@
-title: Exhibition
+title: Program
 status:
   draft: Draft
   listed: Published
@@ -46,11 +46,11 @@ columns:
             type: tags
           text:
             type: textarea
-            label: Exhibition Information
             help: When you are ready to publish the program, be sure to change the status from 'Draft', to 'Public' on this page.<br> The first image will be the program's cover image on the Programs page.
           layout:
             type: layout
             pretty: true
+            help: You can create custom layouts here, including videos, images, galleries, and text (called "blocks"). First add a row, select a row layout, then add a block. You can create as many rows as you like.
             layouts:
               - "1/1"
               - "1/2, 1/2"

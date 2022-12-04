@@ -33,7 +33,7 @@ Alternatively, create a `static-site-generator` folder in `site/plugins`, downlo
 
 ## What doesn't work
 
-- Dynamic routes
+- Dynamic routes (unless when called by custom route - click [here](#custom-routes) for more information)
 - Query parameters (unless processed by javascript)
 - Redirections / `die` or `exit` in the code (this also affects the compatibility with some other plugins)
 - Directly opening the html files in the browser with the file protocol (absolute base url `/`)
@@ -78,8 +78,9 @@ return [
         'base_url' => '/', # if the static site is not mounted to the root folder of your domain, change accordingly here
         'skip_media' => false, # set to true to skip copying media files, e.g. when they are already on a CDN; combinable with 'preserve' => ['media']
         'skip_templates' => [], # ignore pages with given templates (home is always rendered)
-        'custom_routes' => [] # see below for more information on custom routes
-        'custom_filters' => [] # see below for more information on custom filters
+        'custom_routes' => [], # see below for more information on custom routes
+        'custom_filters' => [], # see below for more information on custom filters
+        'ignore_untranslated_pages' => false # set to true to ignore pages without an own language
       ]
     ]
 ];
@@ -103,17 +104,30 @@ error: Custom error message
 
 You can also use this plugin to render custom routes. This way, e.g. paginations can be created programmatically.
 
-Custom routes are passed as an array. Each item must contain `path` and `page` properties.
+Custom routes are passed as an array. Each item must contain at least a `path` property and if the path does not match a route, either the `page` or `route` property must be set.
 
 Here is an example array, showing the different configuration options:
 
 ```php
 $customRoutes = [
-  [ // minimal configuration
+  [ // minimal configuration to render a route (must match, else skipped)
+    'path' => 'my/route',
+  ],
+  [ // minimal configuration to render a page
     'path' => 'foo/bar',
     'page' => 'some-page-id'
   ],
-  [ // advanced configuration
+  [ // render a route with a page + language context (e.g. for pagination)
+    'path' => 'de/notes/2',
+    'page' => 'notes',
+    'route' => 'ssg/notes/page:2',
+    'languageCode' => 'de',
+  ],
+  [ // advanced configuration to render a route (write to different path)
+    'path' => 'sitemap.xml',
+    'route' => 'my/sitemap/route'
+  ],
+  [ // advanced configuration to render a page
     'path' => 'foo/baz',
     'page' => page('some-page-id'),
     'languageCode' => 'en',
@@ -124,6 +138,8 @@ $customRoutes = [
   ]
 ];
 ```
+
+Only `GET` routes without `language` scope are supported (you can of course add multiple custom routes for multiple languages). Patterns and action arguments are supported.
 
 `page` is provided as a string containing the page ID, or as a page object.
 

@@ -1,7 +1,7 @@
 .exhibitions-filtered-container {
   // margin-left: 25%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   grid-gap: $global-gap-width;
   // min-height: calc(100vh - 120px);
   margin-top: 50px;
@@ -14,7 +14,13 @@
     }
   }
   @media (max-width: $tablet) {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    margin-top: $global-gap-width;
+  }
+  @media (max-width: $mobile) {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+
     margin-top: $global-gap-width;
   }
   .exhibitions-item {
@@ -58,6 +64,18 @@
       text-align: justify;
       color: #393939;
       margin-top: calc(#{$global-gap-width} / 2);
+      p {
+        // max-width: 100%;
+        // white-space: nowrap;
+        // overflow: hidden;
+        // text-overflow: ellipsis;
+        word-break: break-word;
+        // // white-space: nowrap;
+        // display: -webkit-box;
+        // -webkit-line-clamp: 3;
+        // -webkit-box-orient: vertical;
+      }
+
       // white-space: nowrap;
       // display: -webkit-box;
       // -webkit-line-clamp: 6;

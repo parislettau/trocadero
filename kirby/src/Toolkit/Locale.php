@@ -117,11 +117,13 @@ class Locale
 			}
 
 			return $convertedLocale;
-		} elseif (is_string($locale)) {
-			return [LC_ALL => $locale];
-		} else {
-			throw new InvalidArgumentException('Locale must be string or array');
 		}
+
+		if (is_string($locale) === true) {
+			return [LC_ALL => $locale];
+		}
+
+		throw new InvalidArgumentException('Locale must be string or array');
 	}
 
 	/**
@@ -135,8 +137,17 @@ class Locale
 	{
 		$locale = static::normalize($locale);
 
+		// locale for core string functions
 		foreach ($locale as $key => $value) {
 			setlocale($key, $value);
+		}
+
+		// locale for the intl extension
+		if (
+			function_exists('locale_set_default') === true &&
+			$timeLocale = $locale[LC_TIME] ?? $locale[LC_ALL] ?? null
+		) {
+			locale_set_default($timeLocale);
 		}
 	}
 

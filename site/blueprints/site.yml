@@ -69,7 +69,7 @@ tabs:
             when:
               manual: true
   tab3:
-    label: Info
+    label: Footer
     fields:
       # staticSiteGenerator:
       #   label: Generate a static version of the site
@@ -144,4 +144,24 @@ tabs:
       #       id:
       #         type: text
       #         width: 1/2
+  tab4:
+    label: About
+    fields:
+      text:
+        type: textarea
+        width: 1/2
+      bio:
+        type: textarea
+        width: 1/2
+        label: People Section Bio
+      committee:
+        type: textarea
+        width: 1/2
+        help: Insert committee members' and volunteers' names here, to create a new line follow each name with a line break.
+      volunteers:
+        type: textarea
+        width: 1/2
+      past:
+        type: textarea
+
   seotab: seo

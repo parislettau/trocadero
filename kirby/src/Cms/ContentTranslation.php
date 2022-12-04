@@ -84,23 +84,17 @@ class ContentTranslation
 	 */
 	public function content(): array
 	{
-		$parent = $this->parent();
-
-		if ($this->content === null) {
-			$this->content = $parent->readContent($this->code());
-		}
-
-		$content = $this->content;
+		$parent  = $this->parent();
+		$content = $this->content ??= $parent->readContent($this->code());
 
 		// merge with the default content
-		if ($this->isDefault() === false && $defaultLanguage = $parent->kirby()->defaultLanguage()) {
-			$default = [];
-
-			if ($defaultTranslation = $parent->translation($defaultLanguage->code())) {
-				$default = $defaultTranslation->content();
+		if (
+			$this->isDefault() === false &&
+			$defaultLanguage = $parent->kirby()->defaultLanguage()
+		) {
+			if ($default = $parent->translation($defaultLanguage->code())?->content()) {
+				$content = array_merge($default, $content);
 			}
-
-			$content = array_merge($default, $content);
 		}
 
 		return $content;
@@ -118,12 +112,11 @@ class ContentTranslation
 
 	/**
 	 * Checks if the translation file exists
-	 *
-	 * @return bool
 	 */
 	public function exists(): bool
 	{
-		return file_exists($this->contentFile()) === true;
+		return empty($this->content) === false ||
+			   file_exists($this->contentFile()) === true;
 	}
 
 	/**
@@ -211,7 +204,7 @@ class ContentTranslation
 	 *
 	 * @return string|null
 	 */
-	public function slug(): ?string
+	public function slug(): string|null
 	{
 		return $this->slug ??= ($this->content()['slug'] ?? null);
 	}

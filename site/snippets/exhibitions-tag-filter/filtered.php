@@ -1,5 +1,5 @@
 <div class="exhibitions-filtered-container filtered">
-    <?php foreach ($kirby->collection("exhibitions")->flip() as $program) : ?>
+    <?php foreach ($site->find('program')->children()->listed()->flip() as $program) : ?>
 
         <!--      ARTICLE ITEMS WITH FILTER TAGS-->
         <div class="exhibition exhibitions-item h2" data-tags="
@@ -26,8 +26,7 @@
                 </div>
 
                 <!-- image -->
-                <div class="exhibitions-item-image" style="--filter:
- <?php if ($site->filter() == 'false') : ?>grayscale(1) <?php else : ?>unset<?php endif ?>">
+                <div class="exhibitions-item-image" style="--filter:<?php if ($site->filter() == 'false') : ?>grayscale(1) <?php else : ?>unset<?php endif ?>">
                     <?php
                     if ($program->cover()->toFile()) {
                         $original = $program->cover()->toFile();
@@ -48,7 +47,7 @@
                 <div class="exhibitions-item-text">
                     <?= $program->title()->kt() ?>
                     <?= $program->artist()->kt() ?>
-                    <?= $program->information()->excerpt($chars = 350, $strip = true, $rep = ' …')->kt() ?>
+                    <?= $program->text()->excerpt($chars = 150, $strip = true, $rep = ' …')->kt() ?>
                 </div>
             </a>
         </div>

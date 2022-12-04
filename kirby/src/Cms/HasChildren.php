@@ -19,16 +19,24 @@ trait HasChildren
 	/**
 	 * The list of available published children
 	 *
-	 * @var \Kirby\Cms\Pages
+	 * @var \Kirby\Cms\Pages|null
 	 */
 	public $children;
 
 	/**
 	 * The list of available draft children
 	 *
-	 * @var \Kirby\Cms\Pages
+	 * @var \Kirby\Cms\Pages|null
 	 */
 	public $drafts;
+
+	/**
+	 * The combined list of available published
+	 * and draft children
+	 *
+	 * @var \Kirby\Cms\Pages|null
+	 */
+	public $childrenAndDrafts;
 
 	/**
 	 * Returns all published children
@@ -37,7 +45,7 @@ trait HasChildren
 	 */
 	public function children()
 	{
-		if (is_a($this->children, 'Kirby\Cms\Pages') === true) {
+		if ($this->children instanceof Pages) {
 			return $this->children;
 		}
 
@@ -51,7 +59,11 @@ trait HasChildren
 	 */
 	public function childrenAndDrafts()
 	{
-		return $this->children()->merge($this->drafts());
+		if ($this->childrenAndDrafts instanceof Pages) {
+			return $this->childrenAndDrafts;
+		}
+
+		return $this->childrenAndDrafts = $this->children()->merge($this->drafts());
 	}
 
 	/**
@@ -106,7 +118,7 @@ trait HasChildren
 	 */
 	public function drafts()
 	{
-		if (is_a($this->drafts, 'Kirby\Cms\Pages') === true) {
+		if ($this->drafts instanceof Pages) {
 			return $this->drafts;
 		}
 
@@ -205,9 +217,9 @@ trait HasChildren
 	{
 		if ($drafts === true) {
 			return $this->childrenAndDrafts()->index($drafts);
-		} else {
-			return $this->children()->index();
 		}
+
+		return $this->children()->index();
 	}
 
 	/**
