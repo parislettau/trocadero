@@ -1,0 +1,35 @@
+Title: MAILING LIST
+----
+startDate: 2018-05-04
+----
+Artists: 
+----
+
+Artists:
+
+----
+
+StartStartdate:
+
+----
+
+EndStartdate: 
+
+----
+Gallery:
+
+----
+
+Artists: Exhibition
+
+----
+
+Layout: 
+
+----
+
+Tags: 
+----
+Cover:
+----
+Text: ---
