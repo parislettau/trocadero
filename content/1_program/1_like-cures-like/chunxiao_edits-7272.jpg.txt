@@ -1,0 +1,25 @@
+Caption: Caption
+
+----
+
+Alt: 
+
+----
+
+Photographer: 
+
+----
+
+License: 
+
+----
+
+Link: 
+
+----
+
+Sort: 3
+
+----
+
+Template: image
