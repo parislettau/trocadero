@@ -2,11 +2,11 @@ Title: Volliewood
 
 ----
 
-artists: Volliewood
+Artists: Patrick Zaia
 
 ----
 
-startDate: 2021-12-12
+Startdate: 2021-12-12
 
 ----
 
@@ -38,12 +38,12 @@ Cover: - volliewood.jpg
 
 ----
 
-artists: Patrick Zaia
-
-----
-
 Tags: Exhibition
 
 ----
 
 Image: 
+
+----
+
+Uuid: HNFIp0jZZbwfwVmB

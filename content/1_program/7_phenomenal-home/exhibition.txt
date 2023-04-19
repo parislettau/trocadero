@@ -2,11 +2,11 @@ Title: Phenomenal Home
 
 ----
 
-artists: 
+Artists: MARLO W
 
 ----
 
-startDate: 2021-23-06
+Startdate: 2021-23-06
 
 ----
 
@@ -38,4 +38,4 @@ Cover: - marlo-w-promo-72dpi-1.jpeg
 
 ----
 
-artists: MARLO W
+Uuid: bzx73OGDlUdXqDjc

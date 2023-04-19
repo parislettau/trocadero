@@ -2,11 +2,11 @@ Title: Across Pieces of Sky
 
 ----
 
-artists: Shraddha Borawake, Dongyan Chen, Rochyne Delaney Mcnulty, Ivetta Sunyoung Kang, Sophie Morrow, Marcia Vaitsman
+Artists: Group Show
 
 ----
 
-startDate: 2021-12-12
+Startdate: 2021-12-12
 
 ----
 
@@ -73,8 +73,8 @@ Cover:
 
 ----
 
-artists: Group Show
+Tags: Exhibition
 
 ----
 
-Tags: Exhibition
+Uuid: rZdKRjnHN5RAmtub

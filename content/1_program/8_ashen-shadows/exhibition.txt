@@ -6,7 +6,7 @@ Artists: Hannah Beilharz
 
 ----
 
-startDate: 2021-05-05
+Startdate: 2021-05-05
 
 ----
 
@@ -22,6 +22,10 @@ Category: Exhibition
 
 ----
 
+Tags: 
+
+----
+
 Text: Ashen Shadows explores the transformative potential of the processes of grief and mourning within the context of rapid climate change. It examines our position and shifting identity in relation to a disappearing natural world and the emotional effects of ecological loss, both in collective political denial and individual nostalgic yearning for an idealised time in the past. Through the mediums of installation, printmaking and video projection, the work will invite audiences into a reflective space of memorialised landscapes. Ashen Shadows will create a shared space to grieve ecological disappearance and imagine alternative futures with and beyond climate change.
 
 ----
@@ -33,8 +37,12 @@ Layout:
 Cover:
 
 - >
-  ashen-shadows-beilharz-2020-video-still-300dpi-2048x1258.jpeg
+  2screen-shot-2022-10-10-at-1.00.40-pm.jpg
 
 ----
 
 Date: 
+
+----
+
+Uuid: gAkCIVcUYDVTQQu6

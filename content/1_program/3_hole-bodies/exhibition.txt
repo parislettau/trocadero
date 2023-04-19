@@ -2,11 +2,11 @@ Title: Hole Bodies
 
 ----
 
-artists: Annie Yuchen Song
+Artists: Annie Yuchen Song
 
 ----
 
-startDate: 2020-05-02
+Startdate: 2020-05-02
 
 ----
 
@@ -45,8 +45,8 @@ Cover:
 
 ----
 
-artists: Annie Yuchen Song
+Tags: Talk
 
 ----
 
-Tags: Talk
+Uuid: UwYgNvQT47Wd4OI0

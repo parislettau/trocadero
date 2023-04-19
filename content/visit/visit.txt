@@ -1,3 +1,12 @@
 Title: Visit
+
 ----
-Covidsafe: Trocadero’s focus is to provide a COVIDSafe environment for our artists, visitors and the broader community.
+
+Covidsafe:
+
+COVIDSafe Information
+Trocadero’s focus is to provide a COVIDSafe environment for our artists, visitors and the broader community.
+
+----
+
+Uuid: Uq80iuoFCkNnKkyS

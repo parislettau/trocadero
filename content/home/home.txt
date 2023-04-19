@@ -1,45 +1,5 @@
-Title: Trocadero Projects Home
+Title: Home
 
 ----
 
-Homegrid-one:
-
-- exhibitions/exhibitionA
-
-----
-
-Homegrid-two:
-
-- exhibitions/exhibitionB
-
-----
-
-Homegrid-three:
-
-- exhibitions/exhibtion3
-
-----
-
-Homegrid-four:
-
-- exhibitions/fifth-exhibit
-
-----
-
-Homegridone: - exhibitions/exhibitionA
-
-----
-
-Homegridtwo: - exhibitions/exhibitionB
-
-----
-
-Homegridthree: - exhibitions/exhibtion3
-
-----
-
-Homegridfour: - exhibitions/exhibition4
-
-----
-
-Text: 
+Uuid: OjWGq7DN7yhIyb3T

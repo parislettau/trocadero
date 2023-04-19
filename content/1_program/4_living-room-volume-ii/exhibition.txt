@@ -2,11 +2,11 @@ Title: Living Room - Volume II
 
 ----
 
-artists: Nina Sanadze
+Artists: Nina Sanadze
 
 ----
 
-startDate: 2021-12-12
+Startdate: 2021-12-12
 
 ----
 
@@ -54,8 +54,8 @@ Cover:
 
 ----
 
-artists: Nina Sanadze
+Tags: Performance
 
 ----
 
-Tags: Performance
+Uuid: lmJwVB4zMDD3PlSF
