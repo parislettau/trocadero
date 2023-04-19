@@ -1,6 +1,8 @@
 <?php
 
 return [
+    'url' => 'https://trocadero-trocaderoprojects.9jgqd6.easypanel.host/',
+
     'panel' => [
         'install' => true   // https://getkirby.com/docs/reference/system/options/panel
         // turn to false once installed
