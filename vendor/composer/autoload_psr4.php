@@ -14,9 +14,10 @@ return array(
     'Symfony\\Polyfill\\Intl\\Idn\\' => array($vendorDir . '/symfony/polyfill-intl-idn'),
     'Psr\\Log\\' => array($vendorDir . '/psr/log/src'),
     'PHPMailer\\PHPMailer\\' => array($vendorDir . '/phpmailer/phpmailer/src'),
+    'League\\ColorExtractor\\' => array($vendorDir . '/league/color-extractor/src'),
     'Laminas\\Escaper\\' => array($vendorDir . '/laminas/laminas-escaper/src'),
     'Kirby\\' => array($vendorDir . '/getkirby/composer-installer/src', $baseDir . '/kirby/src'),
     'Hananils\\' => array($baseDir . '/site/plugins/kirby-colors/lib'),
     'Composer\\Semver\\' => array($vendorDir . '/composer/semver/src'),
-    '' => array($vendorDir . '/coyl/git/src', $vendorDir . '/league/color-extractor/src'),
+    '' => array($vendorDir . '/coyl/git/src'),
 );

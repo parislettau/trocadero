@@ -40,6 +40,7 @@ class ComposerStaticInit318012e4d56f2445b5aa2af1a9d2cdd4
         ),
         'L' => 
         array (
+            'League\\ColorExtractor\\' => 22,
             'Laminas\\Escaper\\' => 16,
         ),
         'K' => 
@@ -89,6 +90,10 @@ class ComposerStaticInit318012e4d56f2445b5aa2af1a9d2cdd4
         array (
             0 => __DIR__ . '/..' . '/phpmailer/phpmailer/src',
         ),
+        'League\\ColorExtractor\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/league/color-extractor/src',
+        ),
         'Laminas\\Escaper\\' => 
         array (
             0 => __DIR__ . '/..' . '/laminas/laminas-escaper/src',
@@ -110,7 +115,6 @@ class ComposerStaticInit318012e4d56f2445b5aa2af1a9d2cdd4
 
     public static $fallbackDirsPsr4 = array (
         0 => __DIR__ . '/..' . '/coyl/git/src',
-        1 => __DIR__ . '/..' . '/league/color-extractor/src',
     );
 
     public static $prefixesPsr0 = array (
@@ -185,12 +189,12 @@ class ComposerStaticInit318012e4d56f2445b5aa2af1a9d2cdd4
         'Kirby\\Cms\\AppPlugins' => __DIR__ . '/../..' . '/kirby/src/Cms/AppPlugins.php',
         'Kirby\\Cms\\AppTranslations' => __DIR__ . '/../..' . '/kirby/src/Cms/AppTranslations.php',
         'Kirby\\Cms\\AppUsers' => __DIR__ . '/../..' . '/kirby/src/Cms/AppUsers.php',
-        'Kirby\\Cms\\AppUsersImpersonateProxy' => __DIR__ . '/../..' . '/kirby/src/Cms/AppUsersImpersonateProxy.php',
         'Kirby\\Cms\\Auth' => __DIR__ . '/../..' . '/kirby/src/Cms/Auth.php',
         'Kirby\\Cms\\Auth\\Challenge' => __DIR__ . '/../..' . '/kirby/src/Cms/Auth/Challenge.php',
         'Kirby\\Cms\\Auth\\EmailChallenge' => __DIR__ . '/../..' . '/kirby/src/Cms/Auth/EmailChallenge.php',
         'Kirby\\Cms\\Auth\\Status' => __DIR__ . '/../..' . '/kirby/src/Cms/Auth/Status.php',
         'Kirby\\Cms\\Block' => __DIR__ . '/../..' . '/kirby/src/Cms/Block.php',
+        'Kirby\\Cms\\BlockConverter' => __DIR__ . '/../..' . '/kirby/src/Cms/BlockConverter.php',
         'Kirby\\Cms\\Blocks' => __DIR__ . '/../..' . '/kirby/src/Cms/Blocks.php',
         'Kirby\\Cms\\Blueprint' => __DIR__ . '/../..' . '/kirby/src/Cms/Blueprint.php',
         'Kirby\\Cms\\Collection' => __DIR__ . '/../..' . '/kirby/src/Cms/Collection.php',
@@ -271,7 +275,6 @@ class ComposerStaticInit318012e4d56f2445b5aa2af1a9d2cdd4
         'Kirby\\Cms\\StructureObject' => __DIR__ . '/../..' . '/kirby/src/Cms/StructureObject.php',
         'Kirby\\Cms\\System' => __DIR__ . '/../..' . '/kirby/src/Cms/System.php',
         'Kirby\\Cms\\System\\UpdateStatus' => __DIR__ . '/../..' . '/kirby/src/Cms/System/UpdateStatus.php',
-        'Kirby\\Cms\\Template' => __DIR__ . '/../..' . '/kirby/src/Cms/Template.php',
         'Kirby\\Cms\\Translation' => __DIR__ . '/../..' . '/kirby/src/Cms/Translation.php',
         'Kirby\\Cms\\Translations' => __DIR__ . '/../..' . '/kirby/src/Cms/Translations.php',
         'Kirby\\Cms\\Url' => __DIR__ . '/../..' . '/kirby/src/Cms/Url.php',
@@ -393,6 +396,7 @@ class ComposerStaticInit318012e4d56f2445b5aa2af1a9d2cdd4
         'Kirby\\Parsley\\Schema\\Plain' => __DIR__ . '/../..' . '/kirby/src/Parsley/Schema/Plain.php',
         'Kirby\\Query\\Argument' => __DIR__ . '/../..' . '/kirby/src/Query/Argument.php',
         'Kirby\\Query\\Arguments' => __DIR__ . '/../..' . '/kirby/src/Query/Arguments.php',
+        'Kirby\\Query\\Expression' => __DIR__ . '/../..' . '/kirby/src/Query/Expression.php',
         'Kirby\\Query\\Query' => __DIR__ . '/../..' . '/kirby/src/Query/Query.php',
         'Kirby\\Query\\Segment' => __DIR__ . '/../..' . '/kirby/src/Query/Segment.php',
         'Kirby\\Query\\Segments' => __DIR__ . '/../..' . '/kirby/src/Query/Segments.php',
@@ -409,6 +413,10 @@ class ComposerStaticInit318012e4d56f2445b5aa2af1a9d2cdd4
         'Kirby\\Session\\SessionData' => __DIR__ . '/../..' . '/kirby/src/Session/SessionData.php',
         'Kirby\\Session\\SessionStore' => __DIR__ . '/../..' . '/kirby/src/Session/SessionStore.php',
         'Kirby\\Session\\Sessions' => __DIR__ . '/../..' . '/kirby/src/Session/Sessions.php',
+        'Kirby\\Template\\Slot' => __DIR__ . '/../..' . '/kirby/src/Template/Slot.php',
+        'Kirby\\Template\\Slots' => __DIR__ . '/../..' . '/kirby/src/Template/Slots.php',
+        'Kirby\\Template\\Snippet' => __DIR__ . '/../..' . '/kirby/src/Template/Snippet.php',
+        'Kirby\\Template\\Template' => __DIR__ . '/../..' . '/kirby/src/Template/Template.php',
         'Kirby\\Text\\KirbyTag' => __DIR__ . '/../..' . '/kirby/src/Text/KirbyTag.php',
         'Kirby\\Text\\KirbyTags' => __DIR__ . '/../..' . '/kirby/src/Text/KirbyTags.php',
         'Kirby\\Text\\Markdown' => __DIR__ . '/../..' . '/kirby/src/Text/Markdown.php',
@@ -453,12 +461,13 @@ class ComposerStaticInit318012e4d56f2445b5aa2af1a9d2cdd4
         'Laminas\\Escaper\\Exception\\ExceptionInterface' => __DIR__ . '/..' . '/laminas/laminas-escaper/src/Exception/ExceptionInterface.php',
         'Laminas\\Escaper\\Exception\\InvalidArgumentException' => __DIR__ . '/..' . '/laminas/laminas-escaper/src/Exception/InvalidArgumentException.php',
         'Laminas\\Escaper\\Exception\\RuntimeException' => __DIR__ . '/..' . '/laminas/laminas-escaper/src/Exception/RuntimeException.php',
-        'League\\ColorExtractor\\Color' => __DIR__ . '/..' . '/league/color-extractor/src/League/ColorExtractor/Color.php',
-        'League\\ColorExtractor\\ColorExtractor' => __DIR__ . '/..' . '/league/color-extractor/src/League/ColorExtractor/ColorExtractor.php',
-        'League\\ColorExtractor\\Palette' => __DIR__ . '/..' . '/league/color-extractor/src/League/ColorExtractor/Palette.php',
+        'League\\ColorExtractor\\Color' => __DIR__ . '/..' . '/league/color-extractor/src/Color.php',
+        'League\\ColorExtractor\\ColorExtractor' => __DIR__ . '/..' . '/league/color-extractor/src/ColorExtractor.php',
+        'League\\ColorExtractor\\Palette' => __DIR__ . '/..' . '/league/color-extractor/src/Palette.php',
         'Michelf\\SmartyPants' => __DIR__ . '/..' . '/michelf/php-smartypants/Michelf/SmartyPants.php',
         'Michelf\\SmartyPantsTypographer' => __DIR__ . '/..' . '/michelf/php-smartypants/Michelf/SmartyPantsTypographer.php',
         'Normalizer' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/Resources/stubs/Normalizer.php',
+        'PHPMailer\\PHPMailer\\DSNConfigurator' => __DIR__ . '/..' . '/phpmailer/phpmailer/src/DSNConfigurator.php',
         'PHPMailer\\PHPMailer\\Exception' => __DIR__ . '/..' . '/phpmailer/phpmailer/src/Exception.php',
         'PHPMailer\\PHPMailer\\OAuth' => __DIR__ . '/..' . '/phpmailer/phpmailer/src/OAuth.php',
         'PHPMailer\\PHPMailer\\OAuthTokenProvider' => __DIR__ . '/..' . '/phpmailer/phpmailer/src/OAuthTokenProvider.php',
@@ -496,6 +505,9 @@ class ComposerStaticInit318012e4d56f2445b5aa2af1a9d2cdd4
         'Whoops\\Handler\\PlainTextHandler' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Handler/PlainTextHandler.php',
         'Whoops\\Handler\\PrettyPageHandler' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Handler/PrettyPageHandler.php',
         'Whoops\\Handler\\XmlResponseHandler' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Handler/XmlResponseHandler.php',
+        'Whoops\\Inspector\\InspectorFactory' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Inspector/InspectorFactory.php',
+        'Whoops\\Inspector\\InspectorFactoryInterface' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Inspector/InspectorFactoryInterface.php',
+        'Whoops\\Inspector\\InspectorInterface' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Inspector/InspectorInterface.php',
         'Whoops\\Run' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Run.php',
         'Whoops\\RunInterface' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/RunInterface.php',
         'Whoops\\Util\\HtmlDumperOutput' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Util/HtmlDumperOutput.php',
