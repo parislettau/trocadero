@@ -1,0 +1,46 @@
+Title: APPLY
+----
+startDate: 2014-02-09
+----
+Artists: 
+----
+
+Artists:
+
+----
+
+StartStartdate:
+
+----
+
+EndStartdate: 
+
+----
+Gallery:
+
+----
+
+Artists: Exhibition
+
+----
+
+Layout: 
+
+----
+
+Tags: 
+----
+Cover:
+----
+Text: ---
+
+**[![](http://www.trocaderoartspace.com.au/wp-content/uploads/2020/03/Across_the_Haze_promo_low_res.jpg)](http://www.trocaderoartspace.com.au/wp-content/uploads/2020/03/Across_the_Haze_promo_low_res.jpg)**
+
+**EXHIBIT** Trocadero is not taking exhibition proposals at this time.  
+**[Click here more information about exhibiting at Trocadero](http://www.trocaderoartspace.com.au/proposals-2/?preview_id=140&preview_nonce=ff21788453&preview=true)**
+
+**VOLUNTEER** Trocadero is not taking any new volunteers at this time.  
+[**Click here for more information about volunteering**](http://www.trocaderoartspace.com.au/apply/volunteer/)
+
+**TROC TALKS ONLINE** Trocadero is not taking project proposals at this time.  
+**[Click here for more information about Troc Talks Online proposals](http://www.trocaderoartspace.com.au/uncategorized/troc-talks-online-call-out/)**

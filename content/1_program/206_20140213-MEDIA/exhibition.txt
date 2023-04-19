@@ -1,0 +1,35 @@
+Title: MEDIA
+----
+startDate: 2014-02-13
+----
+Artists: 
+----
+
+Artists:
+
+----
+
+StartStartdate:
+
+----
+
+EndStartdate: 
+
+----
+Gallery:
+
+----
+
+Artists: Exhibition
+
+----
+
+Layout: 
+
+----
+
+Tags: 
+----
+Cover:
+----
+Text: 

@@ -1,7 +1,6 @@
 title: Site
 
 tabs:
-
   tab1:
     label: HOME
     sections:
@@ -57,4 +56,3 @@ tabs:
         label: Soundcloud link
         type: text
         size: small
-      

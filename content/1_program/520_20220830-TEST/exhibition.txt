@@ -1,0 +1,35 @@
+Title: TEST
+----
+startDate: 2022-08-30
+----
+Artists: 
+----
+
+Artists:
+
+----
+
+StartStartdate:
+
+----
+
+EndStartdate: 
+
+----
+Gallery:
+
+----
+
+Artists: Exhibition
+
+----
+
+Layout: 
+
+----
+
+Tags: 
+----
+Cover:
+----
+Text: ![](http://www.trocaderoartspace.com.au/wp-content/uploads/2022/08/Capture.png)Loading…
