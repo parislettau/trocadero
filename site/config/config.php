@@ -11,7 +11,9 @@ return [
     'debug' => true, // turn to false once finished
 
     # https://github.com/medienbaecker/kirby-autoresize
-    'medienbaecker.autoresize.maxWidth' => 1980,
+    'medienbaecker.autoresize.maxWidth' => 2000,
+    'medienbaecker.autoresize.maxHeight' => 2000,
+    'medienbaecker.autoresize.quality' => 90,
 
     # https://getkirby.com/docs/reference/objects/cms/file/srcset
     'thumbs' => [
