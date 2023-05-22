@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- plausible -->
+    <script defer data-domain="trocaderoprojects.org.au" src="https://plausible.memoreview.net/js/script.js"></script>
 
     <title><?= $site->title() ?></title>
     <!--    seo -->
