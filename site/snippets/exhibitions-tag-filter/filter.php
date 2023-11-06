@@ -33,27 +33,36 @@
 
             <div class="filters filters-artists" style="list-style:none;display:none;">
                 <!-- year -->
-
                 <div class="tag-filter">
                     <?php
-                    $events = page()->children();
+                    // Get all children that are listed
+                    $children = page()->children()->listed();
 
-                    $events = $events->map(function ($event) {
-                        $event->year = $event->startDate()->toDate('Y');
-                        return $event;
-                    });
+                    // Initialize an array to store the years
+                    $years = [];
 
-                    $tags = $events->pluck('year', ',', true);
-                    ?>
+                    // Loop through the children and add the year to the array if it's not already there
+                    foreach ($children as $child) {
+                        $year = $child->startDate()->toDate('Y');
+                        if ($year && !in_array($year, $years)) {
+                            $years[] = $year;
+                        }
+                    }
 
-                    <?php sort($tags); ?>
-                    <?php foreach ($tags as $tag) : ?>
-                        <a class="tag" href="#" style="display:block"><span class="underline" data-filter="<?= str::slug($tag) ?>"><?= $tag ?></span></a>
+                    // Sort the years array
+                    sort($years);
+
+                    // Now loop through the sorted years and create the filter links
+                    foreach ($years as $year) : ?>
+                        <a class="tag" href="#" style="display:block">
+                            <span class="underline" data-filter="<?= str::slug($year) ?>"><?= $year ?></span>
+                        </a>
                     <?php endforeach ?>
                 </div>
-
             </div>
         </div>
+
+
 
         <!-- category -->
         <div style="margin-top:var(--small);">

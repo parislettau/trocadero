@@ -43,7 +43,7 @@
     }
     &-image {
       filter: var(--filter);
-      flex-grow: 1;
+      // flex-grow: 1;
       // filter: contrast(10) grayscale(95%) sepia(0%) opacity(80%);
       img {
         width: 100%;
