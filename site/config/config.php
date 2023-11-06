@@ -1,14 +1,14 @@
 <?php
 
 return [
-    // 'url' => 'https://trocaderoprojects.org.au/',
+    'url' => 'https://trocaderoprojects.org.au/',
 
     // 'panel' => [
     //     'install' => true   // https://getkirby.com/docs/reference/system/options/panel
     //     // turn to false once installed
     // ],
 
-    'debug' => true, // turn to false once finished
+    // 'debug' => true, // turn to false once finished
 
     # https://github.com/medienbaecker/kirby-autoresize
     'medienbaecker.autoresize.maxWidth' => 2000,
