@@ -6,6 +6,7 @@ use Error;
 use Kirby\Cms\App;
 use Kirby\Cms\Page;
 use Kirby\Cms\Pages;
+use Kirby\Cms\Site;
 use Kirby\Toolkit\A;
 use Kirby\Toolkit\Dir;
 use Kirby\Toolkit\F;
@@ -212,35 +213,35 @@ class StaticSiteGenerator
     }
 
     $path = $this->_cleanPath($this->_outputFolder . '/' . $path . '/' . $this->_indexFileName);
-    $this->_setPageLanguage($page, $languageCode, $page->exists());
+    $this->_setPageLanguage($page, $languageCode, false);
     $this->_generatePage($page, $path, $baseUrl, $data, $routeContent);
   }
 
-  protected function _setPageLanguage(Page $page, string $languageCode = null, $reset = true)
+  protected function _resetPage(Page|Site $page) {
+    $page->content = null;
+
+    foreach ($page->children() as $child) {
+      $this->_resetPage($child);
+    }
+
+    foreach ($page->files() as $file) {
+      $file->content = null;
+    }
+  }
+
+  protected function _setPageLanguage(Page $page, string $languageCode = null, $forceReset = true)
   {
     $this->_resetCollections();
 
     $kirby = $this->_kirby;
+    $kirby->setCurrentTranslation($languageCode);
+    $kirby->setCurrentLanguage($languageCode);
+
     $site = $kirby->site();
-    $pages = $site->index();
+    $this->_resetPage($site);
 
-    if ($reset) {
-      $page->content = null;
-      foreach ($page->files() as $file) {
-        $file->content = null;
-      }
-
-      foreach ($pages as $pageItem) {
-        $pageItem->content = null;
-        foreach ($pageItem->files() as $file) {
-          $file->content = null;
-        }
-      }
-
-      $site->content = null;
-      foreach ($site->files() as $file) {
-        $file->content = null;
-      }
+    if ($page->exists() || $forceReset) {
+      $this->_resetPage($page);
     }
 
     $kirby->cache('pages')->flush();
@@ -280,7 +281,7 @@ class StaticSiteGenerator
     }
 
     $folderName = $this->_getFolderName($folder);
-    $targetPath = $outputFolder . DS . $folderName;
+    $targetPath = $outputFolder . '/' . $folderName;
 
     if (is_file($folder)) {
       return $this->_copyFile($folder, $targetPath);
@@ -391,7 +392,7 @@ class StaticSiteGenerator
       return realpath($path) ?: $path;
     }
 
-    $path = $this->_kirby->roots()->index() . DS . $path;
+    $path = $this->_kirby->roots()->index() . '/' . $path;
     return realpath($path) ?: $path;
   }
 

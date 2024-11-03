@@ -60,6 +60,77 @@ class A
 	}
 
 	/**
+	 * Checks if every element in the array passes the test
+	 *
+	 * <code>
+	 * $array = [1, 30, 39, 29, 10, 13];
+	 *
+	 * $isBelowThreshold = fn($value) => $value < 40;
+	 * echo A::every($array, $isBelowThreshold) ? 'true' : 'false';
+	 * // output: 'true'
+	 *
+	 * $isIntegerKey = fn($value, $key) => is_int($key);
+	 * echo A::every($array, $isIntegerKey) ? 'true' : 'false';
+	 * // output: 'true'
+	 * </code>
+	 *
+	 * @since 3.9.8
+	 * @param array $array
+	 * @param callable(mixed $value, int|string $key, array $array):bool $test
+	 * @return bool
+	 */
+	public static function every(array $array, callable $test): bool
+	{
+		foreach ($array as $key => $value) {
+			if (!$test($value, $key, $array)) {
+				return false;
+			}
+		}
+
+		return true;
+	}
+
+	/**
+	 * Finds the first element matching the given callback
+	 *
+	 * <code>
+	 * $array = [1, 30, 39, 29, 10, 13];
+	 *
+	 * $isAboveThreshold = fn($value) => $value > 30;
+	 * echo A::find($array, $isAboveThreshold);
+	 * // output: '39'
+	 *
+	 * $array = [
+	 *   'cat' => 'miao',
+	 *   'cow' => 'moo',
+	 *   'colibri' => 'humm',
+	 *   'dog' => 'wuff',
+	 *   'chicken' => 'cluck',
+	 *   'bird' => 'tweet'
+	 * ];
+	 *
+	 * $keyNotStartingWithC = fn($value, $key) => $key[0] !== 'c';
+	 * echo A::find($array, $keyNotStartingWithC);
+	 * // output: 'wuff'
+	 * </code>
+	 *
+	 * @since 3.9.8
+	 * @param array $array
+	 * @param callable(mixed $value, int|string $key, array $array):bool $callback
+	 * @return mixed
+	 */
+	public static function find(array $array, callable $callback): mixed
+	{
+		foreach ($array as $key => $value) {
+			if ($callback($value, $key, $array)) {
+				return $value;
+			}
+		}
+
+		return null;
+	}
+
+	/**
 	 * Gets an element of an array by key
 	 *
 	 * <code>
@@ -117,20 +188,23 @@ class A
 			$keys     = explode('.', $key);
 			$firstKey = array_shift($keys);
 
-			// if the input array also uses dot notation, try to find a subset of the $keys
+			// if the input array also uses dot notation,
+			// try to find a subset of the $keys
 			if (isset($array[$firstKey]) === false) {
 				$currentKey = $firstKey;
 
 				while ($innerKey = array_shift($keys)) {
 					$currentKey .= '.' . $innerKey;
 
-					// the element needs to exist and also needs to be an array; otherwise
-					// we cannot find the remaining keys within it (invalid array structure)
+					// the element needs to exist and also needs
+					// to be an array; otherwise we cannot find the
+					// remaining keys within it (invalid array structure)
 					if (
 						isset($array[$currentKey]) === true &&
 						is_array($array[$currentKey]) === true
 					) {
-						// $keys only holds the remaining keys that have not been shifted off yet
+						// $keys only holds the remaining keys
+						// that have not been shifted off yet
 						return static::get(
 							$array[$currentKey],
 							implode('.', $keys),
@@ -204,7 +278,10 @@ class A
 	 */
 	public static function keyBy(array $array, string|callable $keyBy): array
 	{
-		$keys = is_callable($keyBy) ? static::map($array, $keyBy) : static::pluck($array, $keyBy);
+		$keys =
+			is_callable($keyBy) ?
+			static::map($array, $keyBy) :
+			static::pluck($array, $keyBy);
 
 		if (count($keys) !== count($array)) {
 			throw new InvalidArgumentException('The "key by" argument must be a valid key or a callable');
@@ -399,6 +476,37 @@ class A
 		bool $preserveKeys = false
 	): array {
 		return array_slice($array, $offset, $length, $preserveKeys);
+	}
+
+	/**
+	 * Checks if at least one element in the array passes the test
+	 *
+	 * <code>
+	 * $array = [1, 30, 39, 29, 10, 'foo' => 12, 13];
+	 *
+	 * $isAboveThreshold = fn($value) => $value > 30;
+	 * echo A::some($array, $isAboveThreshold) ? 'true' : 'false';
+	 * // output: 'true'
+	 *
+	 * $isStringKey = fn($value, $key) => is_string($key);
+	 * echo A::some($array, $isStringKey) ? 'true' : 'false';
+	 * // output: 'true'
+	 * </code>
+	 *
+	 * @since 3.9.8
+	 * @param array $array
+	 * @param callable(mixed $value, int|string $key, array $array):bool $test
+	 * @return bool
+	 */
+	public static function some(array $array, callable $test): bool
+	{
+		foreach ($array as $key => $value) {
+			if ($test($value, $key, $array)) {
+				return true;
+			}
+		}
+
+		return false;
 	}
 
 	/**
@@ -600,7 +708,7 @@ class A
 			$key     = array_shift($subKeys);
 
 			// skip the magic for ignored keys
-			if (isset($ignore[$key]) === true && $ignore[$key] === true) {
+			if (($ignore[$key] ?? null) === true) {
 				$result[$fullKey] = $value;
 				continue;
 			}
@@ -618,8 +726,7 @@ class A
 			// merge arrays with previous results if necessary
 			// (needed when the same keys are used both with and without dot notation)
 			if (
-				isset($result[$key]) === true &&
-				is_array($result[$key]) === true &&
+				is_array($result[$key] ?? null) === true &&
 				is_array($value) === true
 			) {
 				$value = array_replace_recursive($result[$key], $value);
@@ -704,8 +811,12 @@ class A
 	 *                    PHP by sort flags
 	 * @return array The sorted array
 	 */
-	public static function sort(array $array, string $field, string $direction = 'desc', $method = SORT_REGULAR): array
-	{
+	public static function sort(
+		array $array,
+		string $field,
+		string $direction = 'desc',
+		$method = SORT_REGULAR
+	): array {
 		$direction = strtolower($direction) === 'desc' ? SORT_DESC : SORT_ASC;
 		$helper    = [];
 		$result    = [];
@@ -784,6 +895,8 @@ class A
 	 * //   'password' => 'super-secret'
 	 * // ];
 	 * </code>
+	 *
+	 * @psalm-suppress NamedArgumentNotAllowed
 	 */
 	public static function extend(array ...$arrays): array
 	{
@@ -818,7 +931,7 @@ class A
 	{
 		foreach ($update as $key => $value) {
 			if ($value instanceof Closure) {
-				$value = call_user_func($value, static::get($array, $key));
+				$value = $value(static::get($array, $key));
 			}
 
 			$array[$key] = $value;

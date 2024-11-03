@@ -1,7 +1,11 @@
 <?php
 
 return [
-    'url' => 'https://trocaderoprojects.org.au/',
+    // 'url' => 'https://trocaderoprojects.org.au/',
+
+    'url' => env('URL'),
+
+    'debug' => env('DEBUG'),
 
     // 'panel' => [
     //     'install' => true   // https://getkirby.com/docs/reference/system/options/panel

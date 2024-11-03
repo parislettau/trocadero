@@ -1,15 +1,15 @@
 {
   "require": {
-    "php": ">=8.0.0 <8.3.0",
+    "php": ">=8.2.0",
     "getkirby/cms": "^3.9",
     "johannschopplich/kirby-blurry-placeholder": "^1.5",
     "diesdasdigital/kirby-meta-knight": "^1.2",
     "d4l/kirby-static-site-generator": "^1.5",
     "medienbaecker/autoresize": "^2.1",
-    "thathoff/kirby-git-content": "^4.1",
     "sylvainjule/color-palette": "^1.0",
     "hananils/kirby-colors": "^1.6",
-    "mullema/k3-panel-view-extended": "^5.0"
+    "mullema/k3-panel-view-extended": "^5.0",
+    "johannschopplich/kirby-helpers": "^6.1"
   },
   "config": {
     "optimize-autoloader": true,

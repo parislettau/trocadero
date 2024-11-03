@@ -17,6 +17,7 @@
 namespace claviska;
 
 use Exception;
+use GdImage;
 use League\ColorExtractor\Color;
 use League\ColorExtractor\ColorExtractor;
 use League\ColorExtractor\Palette;
@@ -64,11 +65,11 @@ class SimpleImage
 
     protected array $flags;
 
-    protected $image;
+    protected $image = null;
 
     protected string $mimeType;
 
-    protected null|array|false $exif;
+    protected null|array|false $exif = null;
 
     //////////////////////////////////////////////////////////////////////////////////////////////////
     // Magic methods
@@ -115,17 +116,32 @@ class SimpleImage
      */
     public function __destruct()
     {
-        //Check for a valid GDimage instance
-        $type_check = (gettype($this->image) == 'object' && $this->image::class == 'GdImage');
-
-        if (is_resource($this->image) && $type_check) {
-            imagedestroy($this->image);
-        }
+        $this->reset();
     }
 
     //////////////////////////////////////////////////////////////////////////////////////////////////
     // Helper functions
     //////////////////////////////////////////////////////////////////////////////////////////////////
+
+    /**
+     * Checks if the SimpleImage object has loaded an image.
+     */
+    public function hasImage(): bool
+    {
+        return $this->image instanceof GdImage;
+    }
+
+    /**
+     * Destroys the image resource.
+     */
+    public function reset(): static
+    {
+        if ($this->hasImage()) {
+            imagedestroy($this->image);
+        }
+
+        return $this;
+    }
 
     /**
      * Set flag value.
@@ -315,7 +331,7 @@ class SimpleImage
      *
      * @throws Exception Thrown when WEBP support is not enabled or unsupported format.
      */
-    protected function generate(string $mimeType = null, array|int $options = []): array
+    public function generate(string $mimeType = null, array|int $options = 100): array
     {
         // Format defaults to the original mime type
         $mimeType = $mimeType ?: $this->mimeType;
@@ -585,7 +601,8 @@ class SimpleImage
      */
     public function getExif(): ?array
     {
-        return $this->exif ?? null;
+        // returns null if exif value is falsy: null, false or empty array.
+        return $this->exif ?: null;
     }
 
     /**
@@ -649,8 +666,8 @@ class SimpleImage
     /**
      * Same as PHP's imagecopymerge, but works with transparent images. Used internally for overlay.
      *
-     * @param  resource  $dstIm Destination image link resource.
-     * @param  resource  $srcIm Source image link resource.
+     * @param  GdImage  $dstIm Destination image.
+     * @param  GdImage  $srcIm Source image.
      * @param  int  $dstX x-coordinate of destination point.
      * @param  int  $dstY y-coordinate of destination point.
      * @param  int  $srcX x-coordinate of source point.
@@ -659,7 +676,7 @@ class SimpleImage
      * @param  int  $srcH Source height.
      * @return bool true if success.
      */
-    protected static function imageCopyMergeAlpha($dstIm, $srcIm, int $dstX, int $dstY, int $srcX, int $srcY, int $srcW, int $srcH, int $pct): bool
+    protected static function imageCopyMergeAlpha(GdImage $dstIm, GdImage $srcIm, int $dstX, int $dstY, int $srcX, int $srcY, int $srcW, int $srcH, int $pct): bool
     {
         // Are we merging with transparency?
         if ($pct < 100) {
@@ -1376,7 +1393,7 @@ class SimpleImage
     /**
      * Receives a text and breaks into LINES.
      */
-    private function textSeparateLines(string $text, string $fontFile, int $fontSize, int $maxWidth): array
+    private function textSeparateLines(string $text, string $fontFile, float $fontSize, int $maxWidth): array
     {
         $lines = [];
         $words = self::textSeparateWords($text);
@@ -1617,12 +1634,12 @@ class SimpleImage
      * @param  int  $width The ellipse width.
      * @param  int  $height The ellipse height.
      * @param  string|array  $color The ellipse color.
-     * @param  int|array  $thickness Line thickness in pixels or 'filled' (default 1).
+     * @param  string|int|array  $thickness Line thickness in pixels or 'filled' (default 1).
      * @return SimpleImage
      *
      * @throws Exception
      */
-    public function ellipse(int $x, int $y, int $width, int $height, string|array $color, int|array $thickness = 1): static
+    public function ellipse(int $x, int $y, int $width, int $height, string|array $color, string|int|array $thickness = 1): static
     {
         // Allocate the color
         $tempColor = $this->allocateColor($color);
@@ -2338,18 +2355,24 @@ class SimpleImage
             $hex = strval(preg_replace('/^#/', '', $color));
 
             // Support short and standard hex codes
-            if (strlen($hex) === 3) {
+            if (strlen($hex) === 3 || strlen($hex) === 4) {
                 [$red, $green, $blue] = [
                     $hex[0].$hex[0],
                     $hex[1].$hex[1],
                     $hex[2].$hex[2],
                 ];
-            } elseif (strlen($hex) === 6) {
+                if (strlen($hex) === 4) {
+                    $alpha = hexdec($hex[3]) / 255;
+                }
+            } elseif (strlen($hex) === 6 || strlen($hex) === 8) {
                 [$red, $green, $blue] = [
                     $hex[0].$hex[1],
                     $hex[2].$hex[3],
                     $hex[4].$hex[5],
                 ];
+                if (strlen($hex) === 8) {
+                    $alpha = hexdec($hex[6].$hex[7]) / 255;
+                }
             } else {
                 throw new Exception("Invalid color value: $color", self::ERR_INVALID_COLOR);
             }
