@@ -35,7 +35,6 @@ RUN apt-get update && \
 
 RUN apt-get update && \
     apt-get install -y imagemagick
-
 # Copy virtual host configuration from current path onto existing 000-default.conf
 COPY default.conf /etc/apache2/sites-available/000-default.conf
 
@@ -45,10 +44,18 @@ RUN rm /var/www/html/*
 # copy the Kirby site
 WORKDIR /var/www/html
 COPY ./ /var/www/html
-# RUN mkdir /var/www/html/content
+RUN mkdir /var/www/html/content
 
-# Fix files and directories ownership
-RUN chown -R www-data:www-data /var/www/html/
+# Set the environmental variables from EasyPanel during the build
+ARG URL
+ARG DEBUG
+
+# Create a .env file and set its contents to the environmental variables
+RUN echo "URL=$URL" >> .env && \
+    echo "DEBUG=$DEBUG" >> .env && \
+
+    # Fix files and directories ownership
+    RUN chown -R www-data:www-data /var/www/html/
 
 # Activate Apache modules headers & rewrite
 RUN a2enmod headers rewrite
