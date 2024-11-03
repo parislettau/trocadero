@@ -6,8 +6,9 @@ $base = dirname(__DIR__, 2);
 
 return [
     // 'url' => 'https://trocaderoprojects.org.au/',
+    'url' => 'https://trocadero-trocadero-server.vw8tcr.easypanel.host/',
 
-    'url' => env('URL'),
+    // 'url' => env('URL'),
 
     'debug' => env('DEBUG'),
 
