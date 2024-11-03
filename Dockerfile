@@ -52,7 +52,7 @@ ARG DEBUG
 
 # Create a .env file and set its contents to the environmental variables
 RUN echo "URL=$URL" >> .env && \
-    echo "DEBUG=$DEBUG" >> .env && 
+    echo "DEBUG=$DEBUG" >> .env
 
 # Fix files and directories ownership
 RUN chown -R www-data:www-data /var/www/html/
