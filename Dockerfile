@@ -49,7 +49,6 @@ RUN mkdir /var/www/html/content
 # Set the environmental variables from EasyPanel during the build
 ARG URL
 ARG DEBUG
-ARG PLAUSIBLE_SHARED_LINK
 
 # Create a .env file and set its contents to the environmental variables
 RUN echo "URL=$URL" >> .env && \
