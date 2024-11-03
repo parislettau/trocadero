@@ -49,13 +49,14 @@ RUN mkdir /var/www/html/content
 # Set the environmental variables from EasyPanel during the build
 ARG URL
 ARG DEBUG
+ARG PLAUSIBLE_SHARED_LINK
 
 # Create a .env file and set its contents to the environmental variables
 RUN echo "URL=$URL" >> .env && \
-    echo "DEBUG=$DEBUG" >> .env && \
+    echo "DEBUG=$DEBUG" >> .env && 
 
-    # Fix files and directories ownership
-    RUN chown -R www-data:www-data /var/www/html/
+# Fix files and directories ownership
+RUN chown -R www-data:www-data /var/www/html/
 
 # Activate Apache modules headers & rewrite
 RUN a2enmod headers rewrite
