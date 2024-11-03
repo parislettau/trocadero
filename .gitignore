@@ -16,6 +16,7 @@ Icon
 # Lock files
 # ---------------
 .lock
+.env
 
 # Editors
 # ---------------

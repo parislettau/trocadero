@@ -1,4 +1,8 @@
 <?php
+#https://github.com/johannschopplich/kirby-helpers
+// load dotenv plugins class so getenv can be used outside of closures
+$base = dirname(__DIR__, 2);
+\JohannSchopplich\Helpers\Env::load($base);
 
 return [
     // 'url' => 'https://trocaderoprojects.org.au/',
